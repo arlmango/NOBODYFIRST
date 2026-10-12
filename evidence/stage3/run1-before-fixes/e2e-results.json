@@ -1,0 +1,1242 @@
+{
+  "generatedBy": "scripts/chain/e2e/run.mjs",
+  "scenarios": {
+    "S1": {
+      "startedAt": "2026-10-12T12:14:33.523Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "mode notice exact text",
+          "ok": true,
+          "expected": "Local blockchain · Anvil",
+          "actual": "Local blockchain · Anvil"
+        },
+        {
+          "name": "no run before start (cast owner)",
+          "ok": true,
+          "expected": "0x0000000000000000000000000000000000000000",
+          "actual": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "name": "sentTransactions after Start run = 1 (startRun)",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "startRun receipt status",
+          "ok": true,
+          "expected": "0x1",
+          "actual": "0x1"
+        },
+        {
+          "name": "runOf after startRun (owner,active,solved)",
+          "ok": true,
+          "expected": "{\"owner\":\"0x70997970c51812dc3a010c7d01b50e0d17dc79c8\",\"active\":true,\"solved\":false}",
+          "actual": "{\"owner\":\"0x70997970c51812dc3a010c7d01b50e0d17dc79c8\",\"active\":true,\"solved\":false}"
+        },
+        {
+          "name": "BEFORE balances (cast) [A.KEY,A.COIN,B.KEY,B.COIN,C.KEY,C.COIN]",
+          "ok": true,
+          "expected": "[\"1\",\"0\",\"0\",\"1\",\"0\",\"0\"]",
+          "actual": "[\"1\",\"0\",\"0\",\"1\",\"0\",\"0\"]"
+        },
+        {
+          "name": "before Preview: body lacks success text",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "Preview ready shows Execute deal",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "preview transfers (UI)",
+          "ok": true,
+          "expected": "[\"A → B: 1 key\",\"B → A: 1 coin\"]",
+          "actual": "[\"A → B: 1 key\",\"B → A: 1 coin\"]"
+        },
+        {
+          "name": "sentTransactions after double click = 2 (startRun + execute)",
+          "ok": true,
+          "expected": "2",
+          "actual": "2"
+        },
+        {
+          "name": "execute receipt status",
+          "ok": true,
+          "expected": "0x1",
+          "actual": "0x1"
+        },
+        {
+          "name": "AFTER balances (cast)",
+          "ok": true,
+          "expected": "[\"0\",\"1\",\"1\",\"0\",\"0\",\"0\"]",
+          "actual": "[\"0\",\"1\",\"1\",\"0\",\"0\",\"0\"]"
+        },
+        {
+          "name": "runOf after execute (owner,active,solved,nonce)",
+          "ok": true,
+          "expected": "{\"owner\":\"0x70997970c51812dc3a010c7d01b50e0d17dc79c8\",\"active\":false,\"solved\":true,\"nonce\":\"1\"}",
+          "actual": "{\"owner\":\"0x70997970c51812dc3a010c7d01b50e0d17dc79c8\",\"active\":false,\"solved\":true,\"nonce\":\"1\"}"
+        },
+        {
+          "name": "proof Mode",
+          "ok": true,
+          "expected": "Local chain",
+          "actual": "Local chain"
+        },
+        {
+          "name": "proof Chain ID",
+          "ok": true,
+          "expected": "31337",
+          "actual": "31337"
+        },
+        {
+          "name": "proof Coordinator == manifest",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "0x603E1BD79259EbcbAaeD0c83eeC09cA0B89a5bcC"
+        },
+        {
+          "name": "proof Item ledger == manifest",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "0xa16E02E87b7454126E5E10d957A927A7F5B5d2be"
+        },
+        {
+          "name": "proof NPC A == manifest",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "proof NPC B == manifest",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "proof NPC C == manifest",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "proof Player == account",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+        },
+        {
+          "name": "proof Run ID == uint160(account)",
+          "ok": true,
+          "expected": "642829559307850963015472508762062935916233390536",
+          "actual": "642829559307850963015472508762062935916233390536"
+        },
+        {
+          "name": "proof startRun hash == sent[0]",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "0x2eddaee3e11a0b860840f5b65d978b1728294e2fd07a3f8a34c4bc8bb32d934b"
+        },
+        {
+          "name": "proof execute hash == sent[1]",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701"
+        },
+        {
+          "name": "proof startRun block",
+          "ok": true,
+          "expected": "2",
+          "actual": "2"
+        },
+        {
+          "name": "proof execute block",
+          "ok": true,
+          "expected": "3",
+          "actual": "3"
+        },
+        {
+          "name": "proof execute receipt status",
+          "ok": true,
+          "expected": "success",
+          "actual": "success"
+        },
+        {
+          "name": "proof startRun events",
+          "ok": true,
+          "expected": "[\"RunStarted\",\"InitialGranted\"]",
+          "actual": "[\"RunStarted\",\"InitialGranted\"]"
+        },
+        {
+          "name": "proof execute events",
+          "ok": true,
+          "expected": "[\"PermitIssued\",\"PermitIssued\",\"PermitConsumed\",\"ItemMoved\",\"PermitConsumed\",\"ItemMoved\",\"LevelSolved\"]",
+          "actual": "[\"PermitIssued\",\"PermitIssued\",\"PermitConsumed\",\"ItemMoved\",\"PermitConsumed\",\"ItemMoved\",\"LevelSolved\"]"
+        },
+        {
+          "name": "proof final balances == cast",
+          "ok": true,
+          "expected": "{\"A\":\"1 coin\",\"B\":\"1 key\",\"C\":\"empty\"}",
+          "actual": "{\"A\":\"1 coin\",\"B\":\"1 key\",\"C\":\"empty\"}"
+        },
+        {
+          "name": "success text present after confirmation",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "no \"Reset demo\" in local mode",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "no \"Preview Room 02\" in local mode",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "repeat-attempt sentence shown",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "total sentTransactions after success",
+          "ok": true,
+          "expected": "2",
+          "actual": "2"
+        }
+      ],
+      "observed": {
+        "account": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "startRunTx": "0x2eddaee3e11a0b860840f5b65d978b1728294e2fd07a3f8a34c4bc8bb32d934b",
+        "balancesBefore": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "previewTransfers": [
+          "A → B: 1 key",
+          "B → A: 1 coin"
+        ],
+        "executeTx": "0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701",
+        "balancesAfter": [
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "startRunEvents(receipt)": [
+          "RunStarted",
+          "InitialGranted"
+        ],
+        "executeEvents(receipt)": [
+          "PermitIssued",
+          "PermitIssued",
+          "PermitConsumed",
+          "ItemMoved",
+          "PermitConsumed",
+          "ItemMoved",
+          "LevelSolved"
+        ],
+        "proofPanel": {
+          "top": {
+            "Mode": "Local chain",
+            "Chain ID": "31337",
+            "RPC": "http://127.0.0.1:8545",
+            "Coordinator": "0x603E1BD79259EbcbAaeD0c83eeC09cA0B89a5bcC",
+            "Item ledger": "0xa16E02E87b7454126E5E10d957A927A7F5B5d2be",
+            "NPC A": "0xB7A5bd0345EF1Cc5E66bf61BdeC17D2461fBd968",
+            "NPC B": "0xeEBe00Ac0756308ac4AaBfD76c05c4F3088B8883",
+            "NPC C": "0x10C6E9530F1C1AF873a391030a1D9E8ed0630D26",
+            "Player": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+            "Run ID": "642829559307850963015472508762062935916233390536"
+          },
+          "sections": {
+            "Start run transaction": {
+              "rows": {
+                "Hash": "0x2eddaee3e11a0b860840f5b65d978b1728294e2fd07a3f8a34c4bc8bb32d934b",
+                "Status": "Confirmed",
+                "Block": "2",
+                "Block hash": "0x930d2f950c06d39bcb58e69ada6df2c04adf74247358bf0cf8a6ca99b0845b36",
+                "Receipt status": "success"
+              },
+              "events": [
+                "RunStarted(runId: 642829559307850963015472508762062935916233390536, player: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8)",
+                "InitialGranted(runId: 642829559307850963015472508762062935916233390536)"
+              ]
+            },
+            "Execute transaction": {
+              "rows": {
+                "Hash": "0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701",
+                "Status": "Confirmed",
+                "Block": "3",
+                "Block hash": "0xe45cb769df7598eac79a81668c85707142ef89070973360e87f143f5ffd11063",
+                "Receipt status": "success"
+              },
+              "events": [
+                "PermitIssued(runId: 642829559307850963015472508762062935916233390536, npcId: 0, offerId: 0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e, snapshotHash: 0x230957bc5d443ab6e6f1f25d16d086dcf113a5b27f53f52acabac604df85692a, planHash: 0x05f7509735c99f1aeb3ee26c11807ce61cdb0d96ebef430b0488154e09d9b066)",
+                "PermitIssued(runId: 642829559307850963015472508762062935916233390536, npcId: 1, offerId: 0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206, snapshotHash: 0x230957bc5d443ab6e6f1f25d16d086dcf113a5b27f53f52acabac604df85692a, planHash: 0x05f7509735c99f1aeb3ee26c11807ce61cdb0d96ebef430b0488154e09d9b066)",
+                "PermitConsumed(runId: 642829559307850963015472508762062935916233390536, npcId: 0, offerId: 0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e)",
+                "ItemMoved(runId: 642829559307850963015472508762062935916233390536, fromNpc: 0, toNpc: 1, item: 1, qty: 1)",
+                "PermitConsumed(runId: 642829559307850963015472508762062935916233390536, npcId: 1, offerId: 0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206)",
+                "ItemMoved(runId: 642829559307850963015472508762062935916233390536, fromNpc: 1, toNpc: 0, item: 2, qty: 1)",
+                "LevelSolved(runId: 642829559307850963015472508762062935916233390536, player: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8, newNonce: 1, snapshotHash: 0x230957bc5d443ab6e6f1f25d16d086dcf113a5b27f53f52acabac604df85692a, planHash: 0x05f7509735c99f1aeb3ee26c11807ce61cdb0d96ebef430b0488154e09d9b066)"
+              ]
+            },
+            "Final balances (read from the ledger)": {
+              "rows": {
+                "A": "1 coin",
+                "B": "1 key",
+                "C": "empty"
+              },
+              "events": []
+            }
+          }
+        }
+      },
+      "account": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+      "startRunTx": "0x2eddaee3e11a0b860840f5b65d978b1728294e2fd07a3f8a34c4bc8bb32d934b",
+      "executeTx": "0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701",
+      "recordedAt": "2026-10-12T12:14:36.884Z"
+    },
+    "S1b": {
+      "startedAt": "2026-10-12T12:14:36.884Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "sentTransactions after reload = 0 (no auto re-execution)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "no \"Start run\" button after reload",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "restored layout text",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "localStorage has no solved flag",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "localStorage holds no run result (no \"Everyone\" text)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "restored proof: execute hash == S1 execute receipt (from ledger logs)",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701"
+        },
+        {
+          "name": "restored chain reads still solved",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        }
+      ],
+      "observed": {
+        "localStorageKeys": [],
+        "restoredExecuteHash": "0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701",
+        "proofPanelRestored": {
+          "top": {
+            "Mode": "Local chain",
+            "Chain ID": "31337",
+            "RPC": "http://127.0.0.1:8545",
+            "Coordinator": "0x603E1BD79259EbcbAaeD0c83eeC09cA0B89a5bcC",
+            "Item ledger": "0xa16E02E87b7454126E5E10d957A927A7F5B5d2be",
+            "NPC A": "0xB7A5bd0345EF1Cc5E66bf61BdeC17D2461fBd968",
+            "NPC B": "0xeEBe00Ac0756308ac4AaBfD76c05c4F3088B8883",
+            "NPC C": "0x10C6E9530F1C1AF873a391030a1D9E8ed0630D26",
+            "Player": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+            "Run ID": "642829559307850963015472508762062935916233390536"
+          },
+          "sections": {
+            "Start run transaction": {
+              "rows": {
+                "Hash": "0x2eddaee3e11a0b860840f5b65d978b1728294e2fd07a3f8a34c4bc8bb32d934b",
+                "Status": "Confirmed",
+                "Block": "2",
+                "Block hash": "0x930d2f950c06d39bcb58e69ada6df2c04adf74247358bf0cf8a6ca99b0845b36",
+                "Receipt status": "success"
+              },
+              "events": [
+                "RunStarted(runId: 642829559307850963015472508762062935916233390536, player: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8)",
+                "InitialGranted(runId: 642829559307850963015472508762062935916233390536)"
+              ]
+            },
+            "Execute transaction": {
+              "rows": {
+                "Hash": "0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701",
+                "Status": "Confirmed",
+                "Block": "3",
+                "Block hash": "0xe45cb769df7598eac79a81668c85707142ef89070973360e87f143f5ffd11063",
+                "Receipt status": "success"
+              },
+              "events": [
+                "PermitIssued(runId: 642829559307850963015472508762062935916233390536, npcId: 0, offerId: 0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e, snapshotHash: 0x230957bc5d443ab6e6f1f25d16d086dcf113a5b27f53f52acabac604df85692a, planHash: 0x05f7509735c99f1aeb3ee26c11807ce61cdb0d96ebef430b0488154e09d9b066)",
+                "PermitIssued(runId: 642829559307850963015472508762062935916233390536, npcId: 1, offerId: 0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206, snapshotHash: 0x230957bc5d443ab6e6f1f25d16d086dcf113a5b27f53f52acabac604df85692a, planHash: 0x05f7509735c99f1aeb3ee26c11807ce61cdb0d96ebef430b0488154e09d9b066)",
+                "PermitConsumed(runId: 642829559307850963015472508762062935916233390536, npcId: 0, offerId: 0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e)",
+                "ItemMoved(runId: 642829559307850963015472508762062935916233390536, fromNpc: 0, toNpc: 1, item: 1, qty: 1)",
+                "PermitConsumed(runId: 642829559307850963015472508762062935916233390536, npcId: 1, offerId: 0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206)",
+                "ItemMoved(runId: 642829559307850963015472508762062935916233390536, fromNpc: 1, toNpc: 0, item: 2, qty: 1)",
+                "LevelSolved(runId: 642829559307850963015472508762062935916233390536, player: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8, newNonce: 1, snapshotHash: 0x230957bc5d443ab6e6f1f25d16d086dcf113a5b27f53f52acabac604df85692a, planHash: 0x05f7509735c99f1aeb3ee26c11807ce61cdb0d96ebef430b0488154e09d9b066)"
+              ]
+            },
+            "Final balances (read from the ledger)": {
+              "rows": {
+                "A": "1 coin",
+                "B": "1 key",
+                "C": "empty"
+              },
+              "events": []
+            }
+          }
+        }
+      },
+      "account": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+      "recordedAt": "2026-10-12T12:14:40.019Z"
+    },
+    "S2": {
+      "startedAt": "2026-10-12T12:14:40.019Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "startRun only after Start run",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "only A: explanation names a promise",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "This exchange would not work |  | A rejected the package: A's promise (1 key to B for 1 coin from B) needs B's promise of 1 coin, but B's promise is not selected. A will not give first. |  | Contract error: PlanRejected(0, 4) |  | Nothing w"
+        },
+        {
+          "name": "only A: no Execute deal",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "only A: sentTransactions only startRun",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "only A: no execute tx in provider",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "only B: explanation names a promise",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "This exchange would not work |  | A rejected the package: A would receive from B, but A's promise (1 key to B for 1 coin from B) is not selected, so A does not accept it. |  | Contract error: PlanRejected(0, 6) |  | Nothing was sent. Change"
+        },
+        {
+          "name": "only B: no Execute deal",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "only B: sentTransactions only startRun",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "chain: run still unsolved",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "runOf solved=false"
+        }
+      ],
+      "observed": {
+        "account": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "onlyA_status": "This exchange would not work\n\nA rejected the package: A's promise (1 key to B for 1 coin from B) needs B's promise of 1 coin, but B's promise is not selected. A will not give first.\n\nContract error: PlanRejected(0, 4)\n\nNothing was sent. Change your selection and preview again.",
+        "onlyB_status": "This exchange would not work\n\nA rejected the package: A would receive from B, but A's promise (1 key to B for 1 coin from B) is not selected, so A does not accept it.\n\nContract error: PlanRejected(0, 6)\n\nNothing was sent. Change your selection and preview again."
+      },
+      "account": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+      "onlyA": "This exchange would not work\n\nA rejected the package: A's promise (1 key to B for 1 coin from B) needs B's promise of 1 coin, but B's promise is not selected. A will not give first.\n\nContract error: PlanRejected(0, 4)\n\nNothing was sent. Change your selection and preview again.",
+      "onlyB": "This exchange would not work\n\nA rejected the package: A would receive from B, but A's promise (1 key to B for 1 coin from B) is not selected, so A does not accept it.\n\nContract error: PlanRejected(0, 6)\n\nNothing was sent. Change your selection and preview again.",
+      "recordedAt": "2026-10-12T12:14:42.180Z"
+    },
+    "S3": {
+      "startedAt": "2026-10-12T12:14:42.180Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "account 1 solved shown",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "after switch to account 3: no success text",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "after switch to account 3: Start run offered",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "account 3 has no run (cast owner)",
+          "ok": true,
+          "expected": "0x0000000000000000000000000000000000000000",
+          "actual": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "name": "switch back to account 1: solved result again",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "switch back: still no send",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "preview-ready for account 4: sentTransactions = startRun only",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "account 5 switch: no execute sent for account 4 preview",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "account 5: Execute deal not available",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "account 5: no run (cast owner)",
+          "ok": true,
+          "expected": "0x0000000000000000000000000000000000000000",
+          "actual": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "name": "account 4 still unsolved on chain",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "mid-op: execute sent for account 4 while automine is off",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "sent 0 -> 1"
+        },
+        {
+          "name": "mid-op: invalidated-operation notice shown",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "shown"
+        },
+        {
+          "name": "mid-op: account 5 shows no success",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "mid-op: account 5 has no run on chain",
+          "ok": true,
+          "expected": "0x0000000000000000000000000000000000000000",
+          "actual": "0x0000000000000000000000000000000000000000"
+        }
+      ],
+      "observed": {
+        "account4AfterMine": {
+          "owner": "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65",
+          "active": false,
+          "solved": true,
+          "nonce": "1"
+        }
+      },
+      "accounts": {
+        "a1": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "a3": "0x90f79bf6eb2c4f870365e785982e1f101e93b906",
+        "a4": "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65",
+        "a5": "0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc"
+      },
+      "note": "Part 2b is best-effort (automine off, block mined manually).",
+      "recordedAt": "2026-10-12T12:14:49.719Z"
+    },
+    "S4": {
+      "startedAt": "2026-10-12T12:14:49.719Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "wrong network heading shown",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "wrong network text shows chain 1",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "wrong network: no Start run / Execute deal / Preview",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "wrong network: Switch network offered",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "wrong network: provider sent nothing",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "after Switch network: chain override cleared",
+          "ok": true,
+          "expected": "null",
+          "actual": "null"
+        },
+        {
+          "name": "after Switch network: Wrong network gone",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "after Switch network: Start run offered again",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "chain still 31337 (cast eth_chainId)",
+          "ok": true,
+          "expected": "31337",
+          "actual": "31337"
+        },
+        {
+          "name": "no run created on wrong network",
+          "ok": true,
+          "expected": "0x0000000000000000000000000000000000000000",
+          "actual": "0x0000000000000000000000000000000000000000"
+        }
+      ],
+      "observed": {},
+      "account": "0x23618e81e3f5cdf7f54c3d65f7fbc0abf5b21e8f",
+      "wrongChainId": 1,
+      "manifestChainId": 31337,
+      "recordedAt": "2026-10-12T12:14:50.836Z"
+    },
+    "S5": {
+      "startedAt": "2026-10-12T12:14:50.836Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "preview-ready before rejection: sent = startRun only",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "declined text shown exactly",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "declined status does not use the word revert",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "sentTransactions unchanged after decline",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "eth_sendTransaction was attempted and declined",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "requests=2"
+        },
+        {
+          "name": "chain: run still unsolved after decline",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "chain: balances unchanged after decline",
+          "ok": true,
+          "expected": "[\"1\",\"0\",\"0\",\"1\",\"0\",\"0\"]",
+          "actual": "[\"1\",\"0\",\"0\",\"1\",\"0\",\"0\"]"
+        },
+        {
+          "name": "optional repeat Execute after decline: confirmed",
+          "ok": true,
+          "expected": "2",
+          "actual": "2"
+        },
+        {
+          "name": "chain after repeat: solved",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        }
+      ],
+      "observed": {
+        "declinedStatusText": "Request declined\n\nRequest declined. Nothing was sent.\n\nBack to review"
+      },
+      "account": "0x976ea74026e726554db657fa54763abd0c3a0aa9",
+      "optionalRepeatExecute": "confirmed",
+      "recordedAt": "2026-10-12T12:14:54.224Z"
+    },
+    "S6": {
+      "startedAt": "2026-10-12T12:14:54.225Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "abort+preview: no success text",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "abort+preview: no demo result",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "abort+preview: no Execute deal available",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "reload with RPC down: rpc-unavailable heading",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "reload with RPC down: Retry offered",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "reload with RPC down: no board / balances / success",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "after unroute + Retry: board back (run active)",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "after Retry: run still active on chain",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "after Retry: balances from chain",
+          "ok": true,
+          "expected": "[\"1\",\"0\",\"0\",\"1\",\"0\",\"0\"]",
+          "actual": "[\"1\",\"0\",\"0\",\"1\",\"0\",\"0\"]"
+        },
+        {
+          "name": "after Retry: no send in this page session (sentTransactions = 0)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        }
+      ],
+      "observed": {
+        "substitution": "Playwright page.route aborts every browser request to http://127.0.0.1:8545/** (direct RPC: wallet forwarding and viem reads)",
+        "afterAbortPreviewStatus": [
+          "This exchange would not work\n\nThe local chain could not be reached or answered with an error: HTTP request failed.\n\nNothing was sent. Change your selection and preview again."
+        ],
+        "requestFailedCount": 5,
+        "requestFailedSample": [
+          "POST http://127.0.0.1:8545/ net::ERR_FAILED",
+          "POST http://127.0.0.1:8545/ net::ERR_FAILED",
+          "POST http://127.0.0.1:8545/ net::ERR_FAILED"
+        ],
+        "providerStateAfterRepin": {
+          "authorized": true,
+          "accountIndex": 9,
+          "chainOverride": null,
+          "failRpc": false,
+          "pendingRejections": 0
+        }
+      },
+      "account": "0xa0ee7a142d267c1f36714e4a8f75612f20a79720",
+      "substitution": "page.route abort of http://127.0.0.1:8545/** (browser requests to the direct RPC)",
+      "failedRequests": 5,
+      "recordedAt": "2026-10-12T12:15:01.220Z"
+    },
+    "S7": {
+      "startedAt": "2026-10-12T12:15:01.220Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "external cast send exit",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "external execute receipt status",
+          "ok": true,
+          "expected": "0x1",
+          "actual": "0x1"
+        },
+        {
+          "name": "chain: run solved by the external tx",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "UI not yet updated before click (still preview-ready)",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "stale-preview heading shown",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "stale text: nothing was sent",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "no execute sent from the UI (sentTransactions unchanged)",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "no success text for the stale preview",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        }
+      ],
+      "observed": {
+        "externalArgs": {
+          "runId": "119096571092301921719253721560231391405901977941",
+          "package": "[(0,0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e),(1,0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206),(2,0x0000000000000000000000000000000000000000000000000000000000000000)]",
+          "nonce": "0",
+          "snapshotHash": "0xab75c99c58e7e381e8b54fa2ec28bd80d30b95f5f17bdf1e84cd50b9713b5e13"
+        },
+        "externalTxHash": "0xf9894d4c72059754f74f902d0b8e498fdc0ea83728ccda91023479fbbca1a163"
+      },
+      "account": "0x14dc79964da2c08b23698b3d3cc7ca32193d9955",
+      "substitution": "real execute() sent with cast send --unlocked from the same account before the UI click",
+      "externalTxHash": "0xf9894d4c72059754f74f902d0b8e498fdc0ea83728ccda91023479fbbca1a163",
+      "recordedAt": "2026-10-12T12:15:03.626Z"
+    },
+    "S8": {
+      "startedAt": "2026-10-12T12:15:03.626Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "stop exit",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "stop removed manifest",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "anvil stopped: deployment-error heading",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "anvil stopped: message names missing deployment file",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "anvil stopped: command to run shown",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "anvil stopped: no old run data",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "start (no deploy) exit",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "stale: message says deployment does not match running chain",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": ""
+        },
+        {
+          "name": "stale: no old run data (no success, no board)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "deploy exit",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "new deployment has a different deployBlockHash",
+          "ok": true,
+          "expected": "true",
+          "actual": "true",
+          "detail": "0x76bda251d219bf4f348cab30e3f5a836d231f0fa51a3ec2ca65b7a3c079b95c9 -> 0xb0156bd4c202f2c2d72eee8786a02663051ed436cb84ad6354f3d148759f88ea"
+        },
+        {
+          "name": "fresh chain: runOf(account 1) owner is zero (old solved run gone)",
+          "ok": true,
+          "expected": "0x0000000000000000000000000000000000000000",
+          "actual": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "name": "after deploy: Start a run offered (no old solved result)",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "after deploy: no success text",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        }
+      ],
+      "observed": {
+        "substitution": "restored the previous (pre-restart) manifest copy to simulate a stale deployment file after restart",
+        "staleDetail": "The deployment does not match the running chain (for example, Anvil was restarted). Deploy again.\n\nNo contract code at the coordinator address 0x603E1BD79259EbcbAaeD0c83eeC09cA0B89a5bcC. Anvil was probably restarted; deploy again.\n\nStart Anvil and deploy the contracts from the project folder, then check again:\n\nnode scripts/chain/local-chain.mjs start && node scripts/chain/local-chain.mjs deploy\nCheck again",
+        "deploymentBefore": {
+          "deployBlockHash": "0x76bda251d219bf4f348cab30e3f5a836d231f0fa51a3ec2ca65b7a3c079b95c9",
+          "deployTxHash": "0x982842ff6f2c0004a7498495c841ee10dd61e4f69fa4aeba7a083c7e9d43fe2b"
+        },
+        "deploymentAfter": {
+          "deployBlockHash": "0xb0156bd4c202f2c2d72eee8786a02663051ed436cb84ad6354f3d148759f88ea",
+          "deployTxHash": "0x982842ff6f2c0004a7498495c841ee10dd61e4f69fa4aeba7a083c7e9d43fe2b",
+          "coordinator": "0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc"
+        }
+      },
+      "oldDeployBlockHash": "0x76bda251d219bf4f348cab30e3f5a836d231f0fa51a3ec2ca65b7a3c079b95c9",
+      "newDeployBlockHash": "0xb0156bd4c202f2c2d72eee8786a02663051ed436cb84ad6354f3d148759f88ea",
+      "newCoordinator": "0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc",
+      "recordedAt": "2026-10-12T12:15:07.669Z"
+    },
+    "S9": {
+      "startedAt": "2026-10-12T12:15:07.669Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "dist does not contain __nfTestProvider",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain __NF_TEST",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain test-provider",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain ac0974bec39a…(64 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain mnemonic",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0x603e1bd792…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0xa16e02e87b…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0xb7a5bd0345…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0xeebe00ac07…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0x10c6e9530f…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0x5FbDB23156…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0x603e1bd792…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0xa16e02e87b…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0xb7a5bd0345…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0xeebe00ac07…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0x10c6e9530f…(42 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0x982842ff6f…(66 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "dist does not contain 0xb0156bd4c2…(66 chars)",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        },
+        {
+          "name": "src/ does not reference the test provider",
+          "ok": true,
+          "expected": "",
+          "actual": ""
+        },
+        {
+          "name": "src/ contains no manifest coordinator address",
+          "ok": true,
+          "expected": "",
+          "actual": ""
+        }
+      ],
+      "observed": {
+        "distHits": {
+          "__nfTestProvider": [],
+          "__NF_TEST": [],
+          "test-provider": [],
+          "ac0974bec39a17e3": [],
+          "mnemonic": [],
+          "0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc": [],
+          "0xa16e02e87b7454126e5e10d957a927a7f5b5d2be": [],
+          "0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968": [],
+          "0xeebe00ac0756308ac4aabfd76c05c4f3088b8883": [],
+          "0x10c6e9530f1c1af873a391030a1d9e8ed0630d26": [],
+          "0x5FbDB2315678afecb367f032d93F642f64180aa3": [],
+          "0x982842ff6f2c0004a7498495c841ee10dd61e4f69fa4aeba7a083c7e9d43fe2b": [],
+          "0xb0156bd4c202f2c2d72eee8786a02663051ed436cb84ad6354f3d148759f88ea": []
+        },
+        "localAnvilJsonMentionsInDist": [
+          "dist/assets/LevelOneChain-Dx7K7_g2.js"
+        ]
+      },
+      "note": "Scan of dist/ built by `npx vite build` (EXIT recorded in logs).",
+      "recordedAt": "2026-10-12T12:15:07.798Z"
+    },
+    "S10": {
+      "startedAt": "2026-10-12T12:15:07.798Z",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "demo notice exact text",
+          "ok": true,
+          "expected": "Design preview · No blockchain connected",
+          "actual": "Design preview · No blockchain connected"
+        },
+        {
+          "name": "demo: no Local chain provider present",
+          "ok": true,
+          "expected": "undefined",
+          "actual": "undefined"
+        },
+        {
+          "name": "demo result text",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "demo result: Everyone kept their promise.",
+          "ok": true,
+          "expected": "true",
+          "actual": "true"
+        },
+        {
+          "name": "mode switch offers Local chain link",
+          "ok": true,
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "name": "Local chain link target",
+          "ok": true,
+          "expected": "#/local/room/1",
+          "actual": "#/local/room/1"
+        },
+        {
+          "name": "Reset demo returns to the selection (no simulated result)",
+          "ok": true,
+          "expected": "false",
+          "actual": "false"
+        },
+        {
+          "name": "no requests to 127.0.0.1:8545 during demo flow",
+          "ok": true,
+          "expected": "0",
+          "actual": "0"
+        }
+      ],
+      "observed": {
+        "requestCount": 8,
+        "requestsSample": [
+          "http://127.0.0.1:4173/"
+        ]
+      },
+      "demoRequests": 8,
+      "rpcRequests": 0,
+      "recordedAt": "2026-10-12T12:15:09.420Z"
+    }
+  }
+}

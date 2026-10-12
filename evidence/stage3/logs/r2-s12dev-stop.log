@@ -1,0 +1,2 @@
+[local-chain] stopping anvil pid 6660
+{"ok":true,"command":"stop","stopped":true,"pid":6660,"port":8545,"portFree":true,"manifestRemoved":true}

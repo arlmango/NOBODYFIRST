@@ -1,0 +1,9 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/Level1NpcValidation.t.sol:Level1NpcValidationTest
+[PASS] test_NpcValidatePlan_Codes() (gas: 345158)
+[PASS] test_NpcValidatePlan_IncomingSourceQtyRecipientMultiplicity() (gas: 237261)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.88ms (1.13ms CPU time)
+
+Ran 1 test suite in 2.79ms (1.88ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+EXIT=0

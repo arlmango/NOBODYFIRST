@@ -1,0 +1,14 @@
+== S7
+  [PASS] external cast send exit: expected 0 | actual 0
+  [PASS] external execute receipt status: expected 0x1 | actual 0x1
+  [PASS] chain: run solved by the external tx: expected true | actual true
+  [PASS] UI still shows the preview before the click (review visible): expected 1 | actual 1
+  [PASS] UI sent NOTHING (sentTransactions unchanged): expected 1 | actual 1
+  [PASS] restored-from-chain result shown ("Restored from the local chain"): expected true | actual true
+  [PASS] not shown as confirmed by this session: expected false | actual false
+  [PASS] Execute deal no longer offered: expected 0 | actual 0
+  [PASS] restored proof names no other hash than the external execute tx: expected true | actual true
+  [PASS] chain: run solved, not active: expected {"solved":true,"active":false} | actual {"solved":true,"active":false}
+  screenshot chain-stale-preview-1440.png
+== S7 PASS
+EXIT=0

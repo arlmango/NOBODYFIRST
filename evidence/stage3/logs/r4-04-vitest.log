@@ -1,0 +1,10 @@
+
+ RUN  v5.0.3 /Users/mango/NOBODYFIRST
+
+
+ Test Files  8 passed (8)
+      Tests  126 passed (126)
+   Start at  19:47:13
+   Duration  2.01s (tests 52%, import 27%, transform 20%, worker 1%)
+
+EXIT=0

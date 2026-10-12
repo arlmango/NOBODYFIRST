@@ -1,0 +1,78 @@
+/* NOBODY FIRST — design tokens (values from DESIGN-HANDOFF.md). */
+:root {
+  /* Palette */
+  --paper: #f6f2e9;
+  --paper-deep: #ece5d8; /* quiet fills: disabled buttons, table rules */
+  --ink: #24211d;
+  --ink-2: #625d55;
+  --line: #c7beb0;
+  --accent: #742b28;
+  --accent-hover: #5c211f;
+  --on-accent: #fff9ef;
+  --ok: #46634c;
+  --err-bg: #f0deda;
+
+  /* Focus */
+  --focus-width: 2px;
+  --focus-offset: 3px;
+
+  /* Spacing scale: 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Type */
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --text-meta: 0.875rem; /* 14px floor for secondary metadata */
+  --text-small: 1rem;
+  --text-body: 1.0625rem; /* 17px */
+  --text-lead: 1.25rem;
+  --text-h3: 1.375rem;
+  --text-h2: 1.75rem;
+  --text-h1: 2rem; /* 32px mobile, 48px desktop */
+  --text-brand: 1.375rem; /* 22px mobile, 30px desktop */
+  --leading: 1.5;
+  --tracking-caps: 0.16em;
+
+  /* Shape */
+  --radius: 3px;
+  --rule: 1px solid var(--line);
+  --rule-strong: 1px solid var(--ink);
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 20px;
+  --target: 44px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 160ms;
+}
+
+@media (min-width: 760px) {
+  :root {
+    --text-body: 1.125rem; /* 18px */
+    --text-h1: 3rem; /* 48px */
+    --text-h2: 2rem;
+    --text-brand: 1.875rem; /* 30px */
+    --gutter: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --gutter: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: 0ms;
+  }
+}

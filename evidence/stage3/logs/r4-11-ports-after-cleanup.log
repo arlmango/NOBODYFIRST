@@ -1,0 +1,3 @@
+lsof -nP -iTCP:8545|4173 -sTCP:LISTEN (expect no lines)
+ps anvil/vite preview (expect none):
+(end)

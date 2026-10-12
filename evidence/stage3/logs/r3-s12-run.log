@@ -1,0 +1,45 @@
+== S12
+  [PASS] preview-ready: expected 1 | actual 1
+  [PASS] original tx visible to Anvil while pending (cast tx exit): expected 0 | actual 0
+  [PASS] original tx not mined yet (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] cancellation send (cast send --async) exit: expected 0 | actual 0
+  [PASS] cancel: "Transaction cancelled" notice shown
+  [PASS] no new send from the UI during replacement (only the original execute): expected 2 | actual 2
+  [PASS] notice contains the original hash
+  [PASS] notice contains the replacement hash
+  [PASS] proof: original shown as "Original hash": expected 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 | actual 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009
+  [PASS] proof: original has no receipt status row: expected undefined | actual undefined
+  [PASS] proof: original has no block row: expected undefined | actual undefined
+  [PASS] proof: replacement group present
+  [PASS] replacement receipt exit: expected 0 | actual 0
+  [PASS] proof: replacement shows its real hash
+  [PASS] replacement receipt status (cast): expected 0x1 | actual 0x1
+  [PASS] proof: replacement block equals cast receipt block: expected 3 | actual 3
+  [PASS] original tx has no receipt after mining (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] chain: run NOT solved after cancellation: expected false | actual false
+  [PASS] chain: run still active (cast): expected true | actual true
+  [PASS] chain: balances unchanged: expected ["1","0","0","1","0","0"] | actual ["1","0","0","1","0","0"]
+  [PASS] no success text: expected false | actual false
+  screenshot chain-cancelled-1440.png
+== S12 PASS
+== S12b
+  [PASS] preview-ready: expected 1 | actual 1
+  [PASS] original tx visible to Anvil while pending (cast tx exit): expected 0 | actual 0
+  [PASS] original tx not mined yet (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] identical-execute replacement send exit: expected 0 | actual 0
+  [PASS] no new send from the UI during replacement (only the original execute): expected 1 | actual 1
+  [PASS] notice contains the replacement hash
+  [PASS] proof: Hash row shows the replacement hash: expected 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f | actual 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f
+  [PASS] proof: Receipt status row (replacement): expected success | actual success
+  [PASS] proof: replacement group present
+  [PASS] replacement receipt exit: expected 0 | actual 0
+  [PASS] proof: replacement shows its real hash
+  [PASS] replacement receipt status (cast): expected 0x1 | actual 0x1
+  [PASS] proof: replacement block equals cast receipt block: expected 4 | actual 4
+  [PASS] original tx has no receipt after mining (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] chain: run solved by the replacement: expected true | actual true
+  [PASS] chain: balances after = expected: expected ["0","1","1","0","0","0"] | actual ["0","1","1","0","0","0"]
+  [PASS] UI: success or restored result after replacement
+  screenshot chain-replaced-identical-1440.png
+== S12b PASS
+EXIT=0

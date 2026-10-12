@@ -1,0 +1,33 @@
+== forge --version (exit 0)
+forge Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+
+== cast --version (exit 0)
+cast Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+
+== anvil --version (exit 0)
+anvil Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+
+== chisel --version (exit 0)
+chisel Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+
+== solc-0.8.37 --version (native arm64 slice, exit 0)
+solc, the solidity compiler commandline interface
+Version: 0.8.37+commit.f401782d.Darwin.appleclang
+
+== solc-0.8.37 --version under arch -x86_64 (exit 0)
+solc, the solidity compiler commandline interface
+Version: 0.8.37+commit.f401782d.Darwin.appleclang
+
+== forge-std HEAD: f3dae6e6ee381f25eb6a246f7da9b85c91a68219

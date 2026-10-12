@@ -1,0 +1,99 @@
+{
+  "verifiedAt": "2026-10-12T17:54:16.947Z",
+  "stagingDir": "build/public-staging",
+  "files": [
+    {
+      "path": "assets/a-BHiDs0OK.png",
+      "size": 581274
+    },
+    {
+      "path": "assets/b-CvVmL0-u.png",
+      "size": 584292
+    },
+    {
+      "path": "assets/c-CGopZbks.png",
+      "size": 484129
+    },
+    {
+      "path": "assets/coin-DOF7qmzK.png",
+      "size": 121977
+    },
+    {
+      "path": "assets/index-B6mvRO_M.js",
+      "size": 250207
+    },
+    {
+      "path": "assets/index-sIu2oiqh.css",
+      "size": 24706
+    },
+    {
+      "path": "assets/key-BH-IC6ae.png",
+      "size": 75743
+    },
+    {
+      "path": "index.html",
+      "size": 674
+    },
+    {
+      "path": "vercel.json",
+      "size": 1327
+    }
+  ],
+  "fileCount": 9,
+  "totalBytes": 2124329,
+  "notice": {
+    "text": "Interactive demo · No blockchain transaction is sent.",
+    "foundIn": [
+      "assets/index-B6mvRO_M.js"
+    ]
+  },
+  "description": {
+    "text": "Play the first level in your browser. The Solidity prototype has been tested locally; public testnet play is not available yet.",
+    "foundIn": [
+      "assets/index-B6mvRO_M.js",
+      "index.html"
+    ]
+  },
+  "urls": [
+    {
+      "url": "http://www.w3.org/1998/Math/MathML",
+      "files": [
+        "assets/index-B6mvRO_M.js"
+      ],
+      "status": "allowed-namespace"
+    },
+    {
+      "url": "http://www.w3.org/1999/xlink",
+      "files": [
+        "assets/index-B6mvRO_M.js"
+      ],
+      "status": "allowed-namespace"
+    },
+    {
+      "url": "http://www.w3.org/2000/svg",
+      "files": [
+        "assets/index-B6mvRO_M.js"
+      ],
+      "status": "allowed-namespace"
+    },
+    {
+      "url": "http://www.w3.org/XML/1998/namespace",
+      "files": [
+        "assets/index-B6mvRO_M.js"
+      ],
+      "status": "allowed-namespace"
+    },
+    {
+      "url": "https://react.dev/errors/",
+      "files": [
+        "assets/index-B6mvRO_M.js"
+      ],
+      "status": "explained",
+      "explanation": "React 19 production error-decoder prefix inside minified error text (react-dom). Only a string; the app issues no request to it and CSP connect-src is self-only."
+    }
+  ],
+  "manifestCheck": "match",
+  "warnings": [],
+  "violations": [],
+  "exit": 0
+}

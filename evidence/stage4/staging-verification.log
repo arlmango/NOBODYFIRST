@@ -1,0 +1,23 @@
+public staging verification 2026-10-12T17:54:16.947Z
+dir: build/public-staging
+files: 9, total bytes: 2124329
+     581274  assets/a-BHiDs0OK.png
+     584292  assets/b-CvVmL0-u.png
+     484129  assets/c-CGopZbks.png
+     121977  assets/coin-DOF7qmzK.png
+     250207  assets/index-B6mvRO_M.js
+      24706  assets/index-sIu2oiqh.css
+      75743  assets/key-BH-IC6ae.png
+        674  index.html
+       1327  vercel.json
+notice found in: assets/index-B6mvRO_M.js
+description found in: assets/index-B6mvRO_M.js, index.html
+absolute URLs: 5
+  [allowed-namespace] http://www.w3.org/1998/Math/MathML  <- assets/index-B6mvRO_M.js
+  [allowed-namespace] http://www.w3.org/1999/xlink  <- assets/index-B6mvRO_M.js
+  [allowed-namespace] http://www.w3.org/2000/svg  <- assets/index-B6mvRO_M.js
+  [allowed-namespace] http://www.w3.org/XML/1998/namespace  <- assets/index-B6mvRO_M.js
+  [explained] https://react.dev/errors/  <- assets/index-B6mvRO_M.js
+manifest: match
+RESULT: clean
+EXIT 0

@@ -1,0 +1,4 @@
+lsof -nP -iTCP:8545 -sTCP:LISTEN ; lsof -nP -iTCP:4173 -sTCP:LISTEN
+lsof listing lines above (none = free)
+ps anvil/vite preview:
+(none above = none left)

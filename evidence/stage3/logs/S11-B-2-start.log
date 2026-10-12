@@ -1,0 +1,16 @@
+$ node scripts/chain/local-chain.mjs start
+EXIT=0
+{"ok":true,"command":"start","pid":3460,"host":"127.0.0.1","port":8545,"rpcUrl":"http://127.0.0.1:8545","chainId":31337,"logFile":"scripts/chain/.run/anvil.log","manifestRemoved":false}
+[local-chain] anvil spawned pid 3460; waiting for eth_chainId on http://127.0.0.1:8545
+$ node scripts/chain/local-chain.mjs start
+EXIT=0
+{"ok":true,"command":"start","pid":7952,"host":"127.0.0.1","port":8545,"rpcUrl":"http://127.0.0.1:8545","chainId":31337,"logFile":"scripts/chain/.run/anvil.log","manifestRemoved":false}
+[local-chain] anvil spawned pid 7952; waiting for eth_chainId on http://127.0.0.1:8545
+$ node scripts/chain/local-chain.mjs start
+EXIT=0
+{"ok":true,"command":"start","pid":9218,"host":"127.0.0.1","port":8545,"rpcUrl":"http://127.0.0.1:8545","chainId":31337,"logFile":"scripts/chain/.run/anvil.log","manifestRemoved":false}
+[local-chain] anvil spawned pid 9218; waiting for eth_chainId on http://127.0.0.1:8545
+$ node scripts/chain/local-chain.mjs start
+EXIT=0
+{"ok":true,"command":"start","pid":18227,"host":"127.0.0.1","port":8545,"rpcUrl":"http://127.0.0.1:8545","chainId":31337,"logFile":"scripts/chain/.run/anvil.log","manifestRemoved":false}
+[local-chain] anvil spawned pid 18227; waiting for eth_chainId on http://127.0.0.1:8545

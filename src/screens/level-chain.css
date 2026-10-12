@@ -1,0 +1,227 @@
+/* Local chain mode additions: mode switch, status panels, proof panel.
+   Reuses tokens and the level layout (level-one.css, level-result.css); no restyling. */
+
+/* ---------- Mode switch (header, every width) ---------- */
+.mode-switch__bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mode-switch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-meta);
+}
+
+.mode-switch__label {
+  color: var(--ink-2);
+}
+
+.mode-switch__list {
+  display: flex;
+  align-items: center;
+}
+
+.mode-switch__list li + li {
+  border-left: var(--rule);
+}
+
+.mode-switch__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target);
+  padding-inline: var(--space-3);
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mode-switch__list li:last-child .mode-switch__link {
+  padding-right: 0;
+}
+
+.mode-switch__link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.mode-switch__link[aria-current='true'] {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+}
+
+/* ---------- Status panels (gates and outcomes) ---------- */
+.chain-status {
+  max-width: 640px;
+  margin: var(--space-6) auto 0;
+  padding-top: var(--space-5);
+  border-top: var(--rule-strong);
+  text-align: center;
+}
+
+.chain-status h2 {
+  font-size: var(--text-h3);
+}
+
+.chain-status--error h2 {
+  color: var(--accent);
+}
+
+.chain-status__body {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+}
+
+.chain-detail {
+  font-size: var(--text-meta);
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+.chain-code {
+  max-width: 100%;
+  margin: 0;
+  padding: var(--space-3);
+  background: var(--paper-deep);
+  border-radius: var(--radius);
+  font-size: var(--text-meta);
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.chain-note {
+  margin-top: var(--space-4);
+  font-size: var(--text-meta);
+  color: var(--ink-2);
+  text-align: center;
+}
+
+.chain-note--warn {
+  margin-top: 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--err-bg);
+  color: var(--ink);
+}
+
+/* Restored result: only the current holdings (no planned "before"). */
+.before-after--single {
+  grid-template-columns: 1fr;
+  max-width: 140px;
+}
+
+/* ---------- Proof panel ---------- */
+.proof {
+  margin-top: var(--space-6);
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+  font-size: var(--text-small);
+}
+
+.proof__summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--target);
+  padding-inline: var(--space-2);
+  cursor: pointer;
+}
+
+.proof__body {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-2) var(--space-2) var(--space-5);
+}
+
+.proof h3 {
+  font-size: var(--text-meta);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+  margin-bottom: var(--space-2);
+}
+
+.proof h4 {
+  margin: var(--space-3) 0 var(--space-1);
+  font-size: var(--text-meta);
+  font-weight: 600;
+}
+
+.proof__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 var(--space-4);
+  padding-block: var(--space-1);
+  border-bottom: var(--rule);
+}
+
+.proof__row dt {
+  color: var(--ink-2);
+  font-size: var(--text-meta);
+}
+
+.proof__value {
+  font-size: var(--text-meta);
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.proof__na {
+  color: var(--ink-2);
+  font-size: var(--text-meta);
+}
+
+.proof__events {
+  display: grid;
+  gap: var(--space-1);
+  padding-left: var(--space-5);
+  list-style: decimal;
+}
+
+@media (min-width: 760px) {
+  .proof__row {
+    grid-template-columns: 12rem minmax(0, 1fr);
+    align-items: baseline;
+  }
+}
+
+/* ---------- Replaced / cancelled transaction notice ---------- */
+.chain-replaced {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  text-align: left;
+}
+
+.chain-replaced__title {
+  font-size: var(--text-body);
+}
+
+.chain-replaced__list > div {
+  display: grid;
+  gap: 0 var(--space-3);
+  padding-block: var(--space-1);
+}
+
+.chain-replaced__list dd {
+  overflow-wrap: anywhere;
+}
+
+.proof__replacement {
+  margin-top: var(--space-3);
+  padding-left: var(--space-3);
+  border-left: var(--rule);
+}
+
+@media (min-width: 760px) {
+  .chain-replaced__list > div {
+    grid-template-columns: 14rem minmax(0, 1fr);
+  }
+}

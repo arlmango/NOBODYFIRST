@@ -1,0 +1,3 @@
+command: node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4173 --strictPort (pid 96627, started by haiku-e2e)
+GET / -> 200
+GET /local-deployment.json -> 200

@@ -1,0 +1,1038 @@
+{
+  "base": "https://nobody-first.vercel.app",
+  "label": "production",
+  "startedAt": "2026-10-12T17:55:43.317Z",
+  "checks": [
+    {
+      "name": "journey@1440: https://nobody-first.vercel.app/ served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "journey@1440",
+        "url": "https://nobody-first.vercel.app/",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/",
+        "redirects": 0,
+        "title": "NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "journey@1440: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "NOBODY FIRST"
+    },
+    {
+      "name": "journey@1440: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "journey@1440 rooms: exact notice",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 rooms: description paragraph",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 rooms: rooms 02 and 03 'Coming soon'",
+      "ok": true,
+      "detail": 2
+    },
+    {
+      "name": "journey@1440 rooms: no 'Complete Room'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 rooms: no 'Connect wallet'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 rooms: no ModeSwitch / 'Local chain' link",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "journey@1440 rooms: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "journey@1440 rooms: all 8 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@1440 level: opened at #/room/1",
+      "ok": true,
+      "detail": "https://nobody-first.vercel.app/#/room/1"
+    },
+    {
+      "name": "journey@1440 level: two 'Select promise' checkboxes",
+      "ok": true,
+      "detail": 2
+    },
+    {
+      "name": "journey@1440 level: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "journey@1440 level: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@1440 level: both promises selected",
+      "ok": true,
+      "detail": {
+        "checked": 2,
+        "boxCount": 2
+      }
+    },
+    {
+      "name": "journey@1440 review: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "journey@1440 review: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@1440 result: simulated disclaimer",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 result: 'Everyone kept their promise.'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 result: no 'Preview Room 02'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 result: no next-level control",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "journey@1440 result: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "journey@1440 result: all 7 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@1440 'Back to rooms' visible on result",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 back to rooms",
+      "ok": true,
+      "detail": "https://nobody-first.vercel.app/#/"
+    },
+    {
+      "name": "journey@1440 reset: initial board (no promise selected)",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "journey@1440 reset: no result shown",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 header brand returns to rooms",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 reload on #/room/1 renders level",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@1440 reload: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "journey@1440 reload: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "direct #/room/1@1440: https://nobody-first.vercel.app/#/room/1 served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "direct #/room/1@1440",
+        "url": "https://nobody-first.vercel.app/#/room/1",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/#/room/1",
+        "redirects": 0,
+        "title": "Room 01 · You First — NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "direct #/room/1@1440: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "Room 01 · You First — NOBODY FIRST"
+    },
+    {
+      "name": "direct #/room/1@1440: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "direct #/room/1@1440: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/room/1@1440: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "direct #/room/1@1440: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "direct #/local/room/1@1440: https://nobody-first.vercel.app/#/local/room/1 served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "direct #/local/room/1@1440",
+        "url": "https://nobody-first.vercel.app/#/local/room/1",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/#/local/room/1",
+        "redirects": 0,
+        "title": "Local chain mode not available — NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "direct #/local/room/1@1440: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "Local chain mode not available — NOBODY FIRST"
+    },
+    {
+      "name": "direct #/local/room/1@1440: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "direct #/local/room/1@1440: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/local/room/1@1440: explanation text",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/local/room/1@1440: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "direct #/local/room/1@1440: all 0 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "direct #/local@1440: https://nobody-first.vercel.app/#/local served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "direct #/local@1440",
+        "url": "https://nobody-first.vercel.app/#/local",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/#/local",
+        "redirects": 0,
+        "title": "Local chain mode not available — NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "direct #/local@1440: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "Local chain mode not available — NOBODY FIRST"
+    },
+    {
+      "name": "direct #/local@1440: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "direct #/local@1440: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/local@1440: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "direct #/local@1440: all 0 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "plain path /room/1@1440: https://nobody-first.vercel.app/room/1 served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "plain path /room/1@1440",
+        "url": "https://nobody-first.vercel.app/room/1",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/room/1",
+        "redirects": 0,
+        "title": "NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "plain path /room/1@1440: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "NOBODY FIRST"
+    },
+    {
+      "name": "plain path /room/1@1440: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "plain path /room/1@1440: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "plain path /room/1@1440: not an error page",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "plain path /room/1@1440: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "plain path /room/1@1440: all 8 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "unknown path@1440: https://nobody-first.vercel.app/does-not-exist served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "unknown path@1440",
+        "url": "https://nobody-first.vercel.app/does-not-exist",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/does-not-exist",
+        "redirects": 0,
+        "title": "NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "unknown path@1440: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "NOBODY FIRST"
+    },
+    {
+      "name": "unknown path@1440: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "unknown path@1440: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "unknown path@1440: not an error page",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "unknown path@1440: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "name": "unknown path@1440: all 8 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@390: https://nobody-first.vercel.app/ served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "journey@390",
+        "url": "https://nobody-first.vercel.app/",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/",
+        "redirects": 0,
+        "title": "NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "journey@390: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "NOBODY FIRST"
+    },
+    {
+      "name": "journey@390: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "journey@390 rooms: exact notice",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 rooms: description paragraph",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 rooms: rooms 02 and 03 'Coming soon'",
+      "ok": true,
+      "detail": 2
+    },
+    {
+      "name": "journey@390 rooms: no 'Complete Room'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 rooms: no 'Connect wallet'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 rooms: no ModeSwitch / 'Local chain' link",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "journey@390 rooms: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "journey@390 rooms: all 8 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@390 level: opened at #/room/1",
+      "ok": true,
+      "detail": "https://nobody-first.vercel.app/#/room/1"
+    },
+    {
+      "name": "journey@390 level: two 'Select promise' checkboxes",
+      "ok": true,
+      "detail": 2
+    },
+    {
+      "name": "journey@390 level: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "journey@390 level: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@390 level: both promises selected",
+      "ok": true,
+      "detail": {
+        "checked": 2,
+        "boxCount": 2
+      }
+    },
+    {
+      "name": "journey@390 review: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "journey@390 review: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@390 result: simulated disclaimer",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 result: 'Everyone kept their promise.'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 result: no 'Preview Room 02'",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 result: no next-level control",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "journey@390 result: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "journey@390 result: all 7 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "journey@390 'Back to rooms' visible on result",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 back to rooms",
+      "ok": true,
+      "detail": "https://nobody-first.vercel.app/#/"
+    },
+    {
+      "name": "journey@390 reset: initial board (no promise selected)",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "journey@390 reset: no result shown",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 header brand returns to rooms",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 reload on #/room/1 renders level",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "journey@390 reload: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "journey@390 reload: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "direct #/room/1@390: https://nobody-first.vercel.app/#/room/1 served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "direct #/room/1@390",
+        "url": "https://nobody-first.vercel.app/#/room/1",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/#/room/1",
+        "redirects": 0,
+        "title": "Room 01 · You First — NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "direct #/room/1@390: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "Room 01 · You First — NOBODY FIRST"
+    },
+    {
+      "name": "direct #/room/1@390: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "direct #/room/1@390: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/room/1@390: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "direct #/room/1@390: all 5 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "direct #/local/room/1@390: https://nobody-first.vercel.app/#/local/room/1 served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "direct #/local/room/1@390",
+        "url": "https://nobody-first.vercel.app/#/local/room/1",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/#/local/room/1",
+        "redirects": 0,
+        "title": "Local chain mode not available — NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "direct #/local/room/1@390: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "Local chain mode not available — NOBODY FIRST"
+    },
+    {
+      "name": "direct #/local/room/1@390: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "direct #/local/room/1@390: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/local/room/1@390: explanation text",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/local/room/1@390: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "direct #/local/room/1@390: all 0 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "direct #/local@390: https://nobody-first.vercel.app/#/local served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "direct #/local@390",
+        "url": "https://nobody-first.vercel.app/#/local",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/#/local",
+        "redirects": 0,
+        "title": "Local chain mode not available — NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "direct #/local@390: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "Local chain mode not available — NOBODY FIRST"
+    },
+    {
+      "name": "direct #/local@390: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "direct #/local@390: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "direct #/local@390: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "direct #/local@390: all 0 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "plain path /room/1@390: https://nobody-first.vercel.app/room/1 served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "plain path /room/1@390",
+        "url": "https://nobody-first.vercel.app/room/1",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/room/1",
+        "redirects": 0,
+        "title": "NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "plain path /room/1@390: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "NOBODY FIRST"
+    },
+    {
+      "name": "plain path /room/1@390: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "plain path /room/1@390: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "plain path /room/1@390: not an error page",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "plain path /room/1@390: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "plain path /room/1@390: all 8 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "unknown path@390: https://nobody-first.vercel.app/does-not-exist served 200, no redirect, same host",
+      "ok": true,
+      "detail": {
+        "scope": "unknown path@390",
+        "url": "https://nobody-first.vercel.app/does-not-exist",
+        "status": 200,
+        "finalUrl": "https://nobody-first.vercel.app/does-not-exist",
+        "redirects": 0,
+        "title": "NOBODY FIRST",
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+      }
+    },
+    {
+      "name": "unknown path@390: title is NOBODY FIRST",
+      "ok": true,
+      "detail": "NOBODY FIRST"
+    },
+    {
+      "name": "unknown path@390: CSP header on document",
+      "ok": true,
+      "detail": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "name": "unknown path@390: app rendered",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "unknown path@390: not an error page",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "unknown path@390: no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "unknown path@390: all 8 images loaded",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "requests: 10 unique, all same-origin",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "requests: none to localhost / 127.0.0.1 / :8545 other than the served origin",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "console: no errors or warnings (incl. CSP reports)",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "page errors: none",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "responses: none >= 400",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "requests: none failed",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "requests": [
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "document",
+      "url": "https://nobody-first.vercel.app/"
+    },
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "script",
+      "url": "https://nobody-first.vercel.app/assets/index-B6mvRO_M.js"
+    },
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "stylesheet",
+      "url": "https://nobody-first.vercel.app/assets/index-sIu2oiqh.css"
+    },
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "image",
+      "url": "https://nobody-first.vercel.app/assets/a-BHiDs0OK.png"
+    },
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "image",
+      "url": "https://nobody-first.vercel.app/assets/key-BH-IC6ae.png"
+    },
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "image",
+      "url": "https://nobody-first.vercel.app/assets/b-CvVmL0-u.png"
+    },
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "image",
+      "url": "https://nobody-first.vercel.app/assets/coin-DOF7qmzK.png"
+    },
+    {
+      "scope": "journey@1440",
+      "method": "GET",
+      "type": "image",
+      "url": "https://nobody-first.vercel.app/assets/c-CGopZbks.png"
+    },
+    {
+      "scope": "plain path /room/1@1440",
+      "method": "GET",
+      "type": "document",
+      "url": "https://nobody-first.vercel.app/room/1"
+    },
+    {
+      "scope": "unknown path@1440",
+      "method": "GET",
+      "type": "document",
+      "url": "https://nobody-first.vercel.app/does-not-exist"
+    }
+  ],
+  "documents": [
+    {
+      "scope": "journey@1440",
+      "url": "https://nobody-first.vercel.app/",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/",
+      "redirects": 0,
+      "title": "NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "direct #/room/1@1440",
+      "url": "https://nobody-first.vercel.app/#/room/1",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/#/room/1",
+      "redirects": 0,
+      "title": "Room 01 · You First — NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "direct #/local/room/1@1440",
+      "url": "https://nobody-first.vercel.app/#/local/room/1",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/#/local/room/1",
+      "redirects": 0,
+      "title": "Local chain mode not available — NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "direct #/local@1440",
+      "url": "https://nobody-first.vercel.app/#/local",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/#/local",
+      "redirects": 0,
+      "title": "Local chain mode not available — NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "plain path /room/1@1440",
+      "url": "https://nobody-first.vercel.app/room/1",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/room/1",
+      "redirects": 0,
+      "title": "NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "unknown path@1440",
+      "url": "https://nobody-first.vercel.app/does-not-exist",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/does-not-exist",
+      "redirects": 0,
+      "title": "NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "journey@390",
+      "url": "https://nobody-first.vercel.app/",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/",
+      "redirects": 0,
+      "title": "NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "direct #/room/1@390",
+      "url": "https://nobody-first.vercel.app/#/room/1",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/#/room/1",
+      "redirects": 0,
+      "title": "Room 01 · You First — NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "direct #/local/room/1@390",
+      "url": "https://nobody-first.vercel.app/#/local/room/1",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/#/local/room/1",
+      "redirects": 0,
+      "title": "Local chain mode not available — NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "direct #/local@390",
+      "url": "https://nobody-first.vercel.app/#/local",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/#/local",
+      "redirects": 0,
+      "title": "Local chain mode not available — NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "plain path /room/1@390",
+      "url": "https://nobody-first.vercel.app/room/1",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/room/1",
+      "redirects": 0,
+      "title": "NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    },
+    {
+      "scope": "unknown path@390",
+      "url": "https://nobody-first.vercel.app/does-not-exist",
+      "status": 200,
+      "finalUrl": "https://nobody-first.vercel.app/does-not-exist",
+      "redirects": 0,
+      "title": "NOBODY FIRST",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+    }
+  ],
+  "consoleMessages": [],
+  "pageErrors": [],
+  "badResponses": [],
+  "failedRequests": [],
+  "screenshots": [
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/1440-rooms.png",
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/1440-level.png",
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/1440-review.png",
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/1440-result.png",
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/390-rooms.png",
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/390-level.png",
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/390-review.png",
+    "/Users/mango/NOBODYFIRST/evidence/stage4/screenshots-production/390-result.png"
+  ],
+  "finishedAt": "2026-10-12T17:56:11.609Z",
+  "failures": 0,
+  "exit": 0
+}

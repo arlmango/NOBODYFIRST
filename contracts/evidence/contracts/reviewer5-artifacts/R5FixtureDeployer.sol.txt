@@ -1,0 +1,36 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.37;
+
+// REVIEWER SCRATCH: same wiring procedure as Level1Deployer, but NPC B = LateFailNpcB (fault 1).
+import {GameItems} from "../../src/GameItems.sol";
+import {NPC_A} from "../../src/NPC_A.sol";
+import {NPC_C} from "../../src/NPC_C.sol";
+import {AtomicCoordinator} from "../../src/AtomicCoordinator.sol";
+import {LateFailNpcB} from "./LateFailNpcB.sol";
+
+contract R5FixtureDeployer {
+    GameItems public immutable items;
+    NPC_A public immutable npcA;
+    LateFailNpcB public immutable npcB;
+    NPC_C public immutable npcC;
+    AtomicCoordinator public immutable coordinator;
+
+    constructor() {
+        address pI = _p(1);
+        address pA = _p(2);
+        address pB = _p(3);
+        address pC = _p(4);
+        address pK = _p(5);
+        items = new GameItems(pK, pA, pB, pC);
+        npcA = new NPC_A(pI, pK);
+        npcB = new LateFailNpcB(pI, pK);
+        npcC = new NPC_C(pI, pK);
+        coordinator = new AtomicCoordinator(pI, pA, pB, pC);
+        require(address(items) == pI && address(npcA) == pA && address(npcB) == pB && address(npcC) == pC
+            && address(coordinator) == pK, "predict");
+    }
+
+    function _p(uint8 n) internal view returns (address) {
+        return address(uint160(uint256(keccak256(abi.encodePacked(bytes1(0xd6), bytes1(0x94), address(this), bytes1(n))))));
+    }
+}

@@ -1,0 +1,5 @@
+start: 03:42:43Z
+  ➜  Local:   http://127.0.0.1:4173/
+up after 2 s
+stopped: 03:43:21Z (SIGTERM via kill)
+EXIT=0

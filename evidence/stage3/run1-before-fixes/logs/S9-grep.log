@@ -1,0 +1,57 @@
+$ grep -rIlF -- "__nfTestProvider" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "__NF_TEST" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "test-provider" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "ac0974bec39a17e3" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "mnemonic" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0xa16e02e87b7454126e5e10d957a927a7f5b5d2be" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0xeebe00ac0756308ac4aabfd76c05c4f3088b8883" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0x10c6e9530f1c1af873a391030a1d9e8ed0630d26" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0x5FbDB2315678afecb367f032d93F642f64180aa3" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0xa16e02e87b7454126e5e10d957a927a7f5b5d2be" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0xeebe00ac0756308ac4aabfd76c05c4f3088b8883" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0x10c6e9530f1c1af873a391030a1d9e8ed0630d26" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0x982842ff6f2c0004a7498495c841ee10dd61e4f69fa4aeba7a083c7e9d43fe2b" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "0xb0156bd4c202f2c2d72eee8786a02663051ed436cb84ad6354f3d148759f88ea" /Users/mango/NOBODYFIRST/dist
+EXIT=1
+
+$ grep -rIlF -- "local-anvil.json" /Users/mango/NOBODYFIRST/dist
+EXIT=0
+/Users/mango/NOBODYFIRST/dist/assets/LevelOneChain-Dx7K7_g2.js

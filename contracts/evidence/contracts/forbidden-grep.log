@@ -1,0 +1,16 @@
+## grep -rnE "selfdestruct|delegatecall|callcode|tx\.origin|assembly|payable|receive\(|fallback\(" src
+EXIT=1 (0 = matches printed above, 1 = no matches)
+
+## grep -rniE "\bowner\b|admin|initialize|setter|\bset[A-Z][A-Za-z]*\(" src
+src/AtomicCoordinator.sol:23:/// @notice Holds no items and has no owner, setters or special cases. It derives transfers only
+src/AtomicCoordinator.sol:28:        address owner;
+src/AtomicCoordinator.sol:64:    error SettlementMismatch();
+src/AtomicCoordinator.sol:108:        if (_runs[runId].owner != address(0)) revert RunExists(runId);
+src/AtomicCoordinator.sol:109:        _runs[runId] = Run({owner: msg.sender, active: true, solved: false, nonce: 0});
+src/AtomicCoordinator.sol:115:    /// @dev Callable only by the run owner. Steps 1–10 of SPEC.md in exact order; reverts bubble up.
+src/AtomicCoordinator.sol:124:        if (run.owner == address(0)) revert RunMissing(runId);
+src/AtomicCoordinator.sol:125:        if (run.owner != msg.sender) revert NotRunOwner(runId, msg.sender);
+src/AtomicCoordinator.sol:193:                run.owner,
+src/AtomicCoordinator.sol:322:            if (actual[i] != expected[i]) revert SettlementMismatch();
+src/GameItems.sol:9:///         owner, no mint, no setBalance, no approvals and no transfer path for users or the
+EXIT=0 (0 = matches printed above, 1 = no matches)

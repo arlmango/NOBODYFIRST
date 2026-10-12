@@ -1,0 +1,259 @@
+== S1
+  [PASS] #/local rooms: new note present: expected true | actual true
+  [PASS] #/local rooms: no "Blockchain execution is not implemented yet": expected false | actual false
+  [PASS] mode notice exact text: expected Local blockchain · Anvil | actual Local blockchain · Anvil
+  [PASS] no run before start (cast owner): expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+  [PASS] sentTransactions after Start run = 1 (startRun): expected 1 | actual 1
+  [PASS] startRun receipt status: expected 0x1 | actual 0x1
+  [PASS] runOf after startRun (owner,active,solved): expected {"owner":"0x70997970c51812dc3a010c7d01b50e0d17dc79c8","active":true,"solved":false} | actual {"owner":"0x70997970c51812dc3a010c7d01b50e0d17dc79c8","active":true,"solved":false}
+  [PASS] BEFORE balances (cast) [A.KEY,A.COIN,B.KEY,B.COIN,C.KEY,C.COIN]: expected ["1","0","0","1","0","0"] | actual ["1","0","0","1","0","0"]
+  [PASS] before Preview: body lacks success text: expected false | actual false
+  [PASS] Preview ready shows Execute deal: expected 1 | actual 1
+  [PASS] review note text (one transaction, all reverted): expected true | actual true
+  [PASS] preview transfers (UI): expected ["A → B: 1 key","B → A: 1 coin"] | actual ["A → B: 1 key","B → A: 1 coin"]
+  screenshot chain-game-390.png
+  screenshot chain-game-1440.png
+  [PASS] sentTransactions after double click = 2 (startRun + execute): expected 2 | actual 2
+  [PASS] execute receipt status: expected 0x1 | actual 0x1
+  [PASS] AFTER balances (cast): expected ["0","1","1","0","0","0"] | actual ["0","1","1","0","0","0"]
+  [PASS] runOf after execute (owner,active,solved,nonce): expected {"owner":"0x70997970c51812dc3a010c7d01b50e0d17dc79c8","active":false,"solved":true,"nonce":"1"} | actual {"owner":"0x70997970c51812dc3a010c7d01b50e0d17dc79c8","active":false,"solved":true,"nonce":"1"}
+  [PASS] proof Mode: expected Local chain | actual Local chain
+  [PASS] proof Chain ID: expected 31337 | actual 31337
+  [PASS] proof Coordinator == manifest (0x603E1BD79259EbcbAaeD0c83eeC09cA0B89a5bcC)
+  [PASS] proof Item ledger == manifest (0xa16E02E87b7454126E5E10d957A927A7F5B5d2be)
+  [PASS] proof NPC A == manifest
+  [PASS] proof NPC B == manifest
+  [PASS] proof NPC C == manifest
+  [PASS] proof Player == account (0x70997970C51812dc3A010C7d01b50e0d17dc79C8)
+  [PASS] proof Run ID == uint160(account): expected 642829559307850963015472508762062935916233390536 | actual 642829559307850963015472508762062935916233390536
+  [PASS] proof startRun hash == sent[0] (0x2eddaee3e11a0b860840f5b65d978b1728294e2fd07a3f8a34c4bc8bb32d934b)
+  [PASS] proof execute hash == sent[1] (0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701)
+  [PASS] proof startRun block: expected 2 | actual 2
+  [PASS] proof execute block: expected 3 | actual 3
+  [PASS] proof execute receipt status: expected success | actual success
+  [PASS] proof startRun events: expected ["RunStarted","InitialGranted"] | actual ["RunStarted","InitialGranted"]
+  [PASS] proof execute events: expected ["PermitIssued","PermitIssued","PermitConsumed","ItemMoved","PermitConsumed","ItemMoved","LevelSolved"] | actual ["PermitIssued","PermitIssued","PermitConsumed","ItemMoved","PermitConsumed","ItemMoved","LevelSolved"]
+  [PASS] proof final balances == cast: expected {"A":"1 coin","B":"1 key","C":"empty"} | actual {"A":"1 coin","B":"1 key","C":"empty"}
+  [PASS] success text present after confirmation: expected true | actual true
+  [PASS] no "Reset demo" in local mode: expected false | actual false
+  [PASS] no "Preview Room 02" in local mode: expected false | actual false
+  [PASS] repeat-attempt sentence shown: expected true | actual true
+  screenshot chain-result-1440.png
+  screenshot chain-result-390.png
+  [PASS] total sentTransactions after success: expected 2 | actual 2
+== S1 PASS
+== S1b
+  [PASS] sentTransactions after reload = 0 (no auto re-execution): expected 0 | actual 0
+  [PASS] no "Start run" button after reload: expected 0 | actual 0
+  [PASS] restored layout text: expected true | actual true
+  [PASS] localStorage has no solved flag: expected 0 | actual 0
+  [PASS] localStorage holds no run result (no "Everyone" text): expected 0 | actual 0
+  [PASS] restored proof: execute hash == S1 execute receipt (from ledger logs) (0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701)
+  [PASS] restored chain reads still solved: expected true | actual true
+  screenshot chain-reload-restored-1440.png
+  screenshot chain-reload-restored-390.png
+== S1b PASS
+== S2
+  [PASS] startRun only after Start run: expected 1 | actual 1
+  [PASS] only A: explanation names a promise (This exchange would not work |  | A rejected the package: A's promise (1 key to B for 1 coin from B) needs B's promise of 1 coin, but B's promise is not selected. A will not give first. |  | Contract error: PlanRejected(0, 4) |  | Nothing w)
+  [PASS] only A: no Execute deal: expected 0 | actual 0
+  [PASS] only A: sentTransactions only startRun: expected 1 | actual 1
+  [PASS] only A: no execute tx in provider: expected 1 | actual 1
+  screenshot chain-incomplete-A-1440.png
+  [PASS] only B: explanation names a promise (This exchange would not work |  | A rejected the package: A would receive from B, but A's promise (1 key to B for 1 coin from B) is not selected, so A does not accept it. |  | Contract error: PlanRejected(0, 6) |  | Nothing was sent. Change)
+  [PASS] only B: no Execute deal: expected 0 | actual 0
+  [PASS] only B: sentTransactions only startRun: expected 1 | actual 1
+  [PASS] chain: run still unsolved (runOf solved=false)
+== S2 PASS
+== S3
+  [PASS] account 1 solved shown: expected 1 | actual 1
+  [PASS] after switch to account 3: no success text: expected 0 | actual 0
+  [PASS] after switch to account 3: Start run offered: expected 1 | actual 1
+  [PASS] account 3 has no run (cast owner): expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+  screenshot chain-switch-account3-1440.png
+  [PASS] switch back to account 1: solved result again: expected 1 | actual 1
+  [PASS] switch back: still no send: expected 0 | actual 0
+  [PASS] preview-ready for account 4: sentTransactions = startRun only: expected 1 | actual 1
+  [PASS] account 5 switch: no execute sent for account 4 preview: expected 1 | actual 1
+  [PASS] account 5: Execute deal not available: expected 0 | actual 0
+  [PASS] account 5: no run (cast owner): expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+  [PASS] account 4 still unsolved on chain: expected false | actual false
+  screenshot chain-switch-preview-1440.png
+  [PASS] mid-op: execute sent for account 4 while automine is off (sent 0 -> 1)
+  [PASS] mid-op: invalidated-operation notice shown (shown)
+  [PASS] mid-op: account 5 shows no success: expected false | actual false
+  [PASS] mid-op: account 5 has no run on chain: expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+  screenshot chain-switch-midop-1440.png
+== S3 PASS
+== S4
+  [PASS] wrong network heading shown: expected 1 | actual 1
+  [PASS] wrong network text shows chain 1
+  [PASS] wrong network: no Start run / Execute deal / Preview: expected 0 | actual 0
+  [PASS] wrong network: Switch network offered: expected 1 | actual 1
+  [PASS] wrong network: provider sent nothing: expected 0 | actual 0
+  screenshot chain-wrong-network-1440.png
+  [PASS] after Switch network: chain override cleared: expected null | actual null
+  [PASS] after Switch network: Wrong network gone: expected 0 | actual 0
+  [PASS] after Switch network: Start run offered again: expected 1 | actual 1
+  [PASS] chain still 31337 (cast eth_chainId): expected 31337 | actual 31337
+  [PASS] no run created on wrong network: expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+== S4 PASS
+== S5
+  [PASS] preview-ready before rejection: sent = startRun only: expected 1 | actual 1
+  [PASS] declined text shown exactly
+  [PASS] declined heading is "Wallet request": expected 1 | actual 1
+  [PASS] declined status does not use the word revert
+  [PASS] sentTransactions unchanged after decline: expected 1 | actual 1
+  [PASS] eth_sendTransaction was attempted and declined (requests=2)
+  [PASS] chain: run still unsolved after decline: expected false | actual false
+  [PASS] chain: balances unchanged after decline: expected ["1","0","0","1","0","0"] | actual ["1","0","0","1","0","0"]
+  screenshot chain-declined-1440.png
+  [PASS] optional repeat Execute after decline: confirmed: expected 2 | actual 2
+  [PASS] chain after repeat: solved: expected true | actual true
+== S5 PASS
+== S6
+  [PASS] abort+preview: no success text: expected false | actual false
+  [PASS] abort+preview: no demo result: expected false | actual false
+  [PASS] abort+preview: no Execute deal available: expected 0 | actual 0
+  screenshot chain-rpc-failure-preview-1440.png
+  [PASS] reload with RPC down: rpc-unavailable heading: expected 1 | actual 1
+  [PASS] reload with RPC down: Retry offered: expected 1 | actual 1
+  [PASS] reload with RPC down: no board / balances / success: expected 0 | actual 0
+  screenshot chain-rpc-failure-1440.png
+  [PASS] after unroute + Retry: board back (run active): expected 1 | actual 1
+  [PASS] after Retry: run still active on chain: expected true | actual true
+  [PASS] after Retry: balances from chain: expected ["1","0","0","1","0","0"] | actual ["1","0","0","1","0","0"]
+  [PASS] after Retry: no send in this page session (sentTransactions = 0): expected 0 | actual 0
+== S6 PASS
+== S7
+  [PASS] external cast send exit: expected 0 | actual 0
+  [PASS] external execute receipt status: expected 0x1 | actual 0x1
+  [PASS] chain: run solved by the external tx: expected true | actual true
+  [PASS] UI not yet updated before click (still preview-ready): expected 1 | actual 1
+  [FAIL] stale-preview heading shown (contract): expected 1 | actual 0
+  [PASS] shown state is stale-preview or restored solved result (no send either way)
+  [PASS] no execute sent from the UI (sentTransactions unchanged): expected 1 | actual 1
+  screenshot chain-stale-preview-1440.png
+== S7 FAIL
+== S8
+  [PASS] stop exit: expected 0 | actual 0
+  [PASS] stop removed manifest: expected true | actual true
+  [PASS] anvil stopped: deployment-error heading: expected 1 | actual 1
+  [PASS] anvil stopped: message names missing deployment file
+  [PASS] anvil stopped: command to run shown
+  [PASS] anvil stopped: no old run data: expected false | actual false
+  screenshot chain-deployment-missing-1440.png
+  [PASS] start (no deploy) exit: expected 0 | actual 0
+  [PASS] stale: message says deployment does not match running chain
+  [PASS] stale: no old run data (no success, no board): expected 0 | actual 0
+  [PASS] deploy exit: expected 0 | actual 0
+  [PASS] new deployment has a different deployBlockHash (0xca7286a2077e857e65a6b08bc86ab8d5efa8470fb2d175e6d0e9202b7ddb2e75 -> 0xc7b39d803d31f4a7d3232546520d7293ec042c3a7895ae7cb0518b6c0723b3f7)
+  [PASS] fresh chain: runOf(account 1) owner is zero (old solved run gone): expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+  [PASS] after deploy: Start a run offered (no old solved result): expected 1 | actual 1
+  [PASS] after deploy: no success text: expected false | actual false
+== S8 PASS
+== S9
+  [PASS] dist does not contain __nfTestProvider: expected 0 | actual 0
+  [PASS] dist does not contain __NF_TEST: expected 0 | actual 0
+  [PASS] dist does not contain test-provider: expected 0 | actual 0
+  [PASS] dist does not contain ac0974bec39a…(64 chars): expected 0 | actual 0
+  [PASS] dist does not contain mnemonic: expected 0 | actual 0
+  [PASS] dist does not contain 0x603e1bd792…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0xa16e02e87b…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0xb7a5bd0345…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0xeebe00ac07…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0x10c6e9530f…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0x5FbDB23156…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0x603e1bd792…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0xa16e02e87b…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0xb7a5bd0345…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0xeebe00ac07…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0x10c6e9530f…(42 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0x982842ff6f…(66 chars): expected 0 | actual 0
+  [PASS] dist does not contain 0xc7b39d803d…(66 chars): expected 0 | actual 0
+  info: "local-anvil.json" mentioned in 1 dist file(s) (error message text, see report)
+  [PASS] src/ does not reference the test provider: expected  | actual 
+  [PASS] src/ contains no manifest coordinator address: expected  | actual 
+== S9 PASS
+== S10
+  [PASS] demo rooms #/: "Blockchain execution is not implemented yet" present: expected true | actual true
+  [PASS] demo notice exact text: expected Design preview · No blockchain connected | actual Design preview · No blockchain connected
+  [PASS] demo: no Local chain provider present: expected undefined | actual undefined
+  [PASS] demo result text: expected true | actual true
+  [PASS] demo result: Everyone kept their promise.: expected true | actual true
+  [PASS] mode switch offers Local chain link: expected 1 | actual 1
+  [PASS] Local chain link target: expected #/local/room/1 | actual #/local/room/1
+  screenshot demo-result-1440.png
+  [PASS] Reset demo returns to the selection (no simulated result): expected false | actual false
+  [PASS] no requests to 127.0.0.1:8545 during demo flow: expected 0 | actual 0
+== S10 PASS
+== S11
+  [PASS] A: preview-ready, sentTransactions = startRun only: expected 1 | actual 1
+  [PASS] A: stop exit: expected 0 | actual 0
+  [PASS] A: start exit: expected 0 | actual 0
+  [PASS] A: deploy exit: expected 0 | actual 0
+  [PASS] A: deployBlockHash differs after redeploy (0xc7b39d803d31f4a7d3232546520d7293ec042c3a7895ae7cb0518b6c0723b3f7 -> 0xb46ddc0fb94cb39f0c68b767fe6efceb1e859d6a7bb6715b842f68e3c757d161)
+  [PASS] A: coordinator address unchanged (same deployer nonce) (0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc)
+  [PASS] A: Execute sends NOTHING (sentTransactions unchanged): expected 1 | actual 1
+  [PASS] A: no execute in provider sends: expected 0 | actual 0
+  [PASS] A: page shows a deployment/stale/read error (not the old preview as current) (Local deployment not usable | does not match the running chain)
+  [PASS] A: no success text: expected false | actual false
+  [PASS] A: chain: no run for account 8 on new chain: expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+  screenshot chain-restart-execute-1440.png
+  [PASS] A reload: UI works against new chain (Start run offered): expected 1 | actual 1
+  [PASS] A reload: no old balances / success: expected false | actual false
+  [PASS] B: stop exit: expected 0 | actual 0
+  [PASS] B: start exit: expected 0 | actual 0
+  [PASS] B: deploy exit: expected 0 | actual 0
+  [PASS] B: deployBlockHash differs after redeploy (0xb46ddc0fb94cb39f0c68b767fe6efceb1e859d6a7bb6715b842f68e3c757d161 -> 0x0641d542a5dc2d89fae05cc7c59c9b81b104963b6c6a256157df54ce0bc5fbff)
+  [PASS] B: Start run sends NOTHING: expected 0 | actual 0
+  [PASS] B: deployment/stale/read error shown after Start run click (Local deployment not usable | does not match the running chain)
+  [PASS] B: chain: no run created for account 3: expected 0x0000000000000000000000000000000000000000 | actual 0x0000000000000000000000000000000000000000
+  screenshot chain-restart-startrun-1440.png
+  [PASS] B reload: UI works against new chain (Start run offered): expected 1 | actual 1
+== S11 PASS
+== S12
+  [PASS] preview-ready: expected 1 | actual 1
+  [PASS] original tx visible to Anvil while pending (cast tx exit): expected 0 | actual 0
+  [PASS] original tx not mined yet (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] cancellation send (cast send --async) exit: expected 0 | actual 0
+  [PASS] cancel: "Transaction cancelled" notice shown
+  [PASS] no new send from the UI during replacement (only the original execute): expected 2 | actual 2
+  [PASS] notice contains the original hash
+  [PASS] notice contains the replacement hash
+  [PASS] proof: original shown as "Original hash": expected 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 | actual 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009
+  [PASS] proof: original has no receipt status row: expected undefined | actual undefined
+  [PASS] proof: original has no block row: expected undefined | actual undefined
+  [PASS] proof: replacement group present
+  [PASS] replacement receipt exit: expected 0 | actual 0
+  [PASS] proof: replacement shows its real hash
+  [PASS] replacement receipt status (cast): expected 0x1 | actual 0x1
+  [PASS] proof: replacement block equals cast receipt block: expected 3 | actual 3
+  [PASS] original tx has no receipt after mining (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] chain: run NOT solved after cancellation: expected false | actual false
+  [PASS] chain: run still active (cast): expected true | actual true
+  [PASS] chain: balances unchanged: expected ["1","0","0","1","0","0"] | actual ["1","0","0","1","0","0"]
+  [PASS] no success text: expected false | actual false
+  screenshot chain-cancelled-1440.png
+== S12 PASS
+== S12b
+  [PASS] preview-ready: expected 1 | actual 1
+  [PASS] original tx visible to Anvil while pending (cast tx exit): expected 0 | actual 0
+  [PASS] original tx not mined yet (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] identical-execute replacement send exit: expected 0 | actual 0
+  [PASS] no new send from the UI during replacement (only the original execute): expected 1 | actual 1
+  [PASS] notice contains the replacement hash
+  [PASS] proof: Hash row shows the replacement hash: expected 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f | actual 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f
+  [PASS] proof: Receipt status row (replacement): expected success | actual success
+  [PASS] proof: replacement group present
+  [PASS] replacement receipt exit: expected 0 | actual 0
+  [PASS] proof: replacement shows its real hash
+  [PASS] replacement receipt status (cast): expected 0x1 | actual 0x1
+  [PASS] proof: replacement block equals cast receipt block: expected 4 | actual 4
+  [PASS] original tx has no receipt after mining (eth_getTransactionReceipt is null): expected true | actual true
+  [PASS] chain: run solved by the replacement: expected true | actual true
+  [PASS] chain: balances after = expected: expected ["0","1","1","0","0","0"] | actual ["0","1","1","0","0","0"]
+  [PASS] UI: success or restored result after replacement
+  screenshot chain-replaced-identical-1440.png
+== S12b PASS
+EXIT=0

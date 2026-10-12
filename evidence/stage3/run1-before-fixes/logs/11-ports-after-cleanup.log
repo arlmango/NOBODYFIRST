@@ -1,0 +1,3 @@
+$ lsof ports 8545 4173 (expect none listening)
+lsof exit (1 = nothing listening): 1
+ps grep done

@@ -1,0 +1,18 @@
+# versions (collected by haiku-e2e)
+date: 2026-10-12T12:15:52Z
+os: macOS 27.0 arm64
+node: v22.22.3
+npm: 10.9.8
+playwright-core: 1.64.0
+vite: 8.3.4
+viem: 2.57.4
+typescript: 7.0.2
+chrome: Google Chrome 154.0.8037.99 
+anvil: anvil Version: 1.8.5
+cast: cast Version: 1.8.5
+forge: forge Version: 1.8.5
+project git HEAD: none
+model: claude-haiku-5-5 (Haiku 5.5, haiku-e2e)
+manifest sourceId: 731a3b65b7d637b12c0f415f03ea83ff4f6ce0e4ee5e1c2215700885da37cf82
+manifest deployTxHash: 0x982842ff6f2c0004a7498495c841ee10dd61e4f69fa4aeba7a083c7e9d43fe2b
+manifest deployBlockHash: 0xb0156bd4c202f2c2d72eee8786a02663051ed436cb84ad6354f3d148759f88ea

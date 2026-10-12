@@ -1,0 +1,4 @@
+$ node scripts/chain/local-chain.mjs stop
+EXIT=0
+{"ok":true,"command":"stop","stopped":true,"pid":17208,"port":8545,"portFree":true,"manifestRemoved":true}
+[local-chain] stopping anvil pid 17208

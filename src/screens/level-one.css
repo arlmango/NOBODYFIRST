@@ -1,0 +1,431 @@
+/* Level 01 — You First. Mobile first; columns from 760px. */
+
+.level {
+  padding-block: var(--space-5) var(--space-8);
+}
+
+/* ---------- Heading ---------- */
+.level__head {
+  text-align: center;
+}
+
+.level__eyebrow {
+  color: var(--ink);
+  margin-bottom: var(--space-2);
+}
+
+.level__sub {
+  margin-top: var(--space-2);
+  font-size: var(--text-body);
+}
+
+/* ---------- People ---------- */
+.board {
+  margin-top: var(--space-6);
+  border-top: var(--rule);
+}
+
+.level {
+  /* Fixed portrait column so every text column starts at the same x. */
+  --portrait-col: 120px;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: var(--portrait-col) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+  padding-block: var(--space-5);
+  border-bottom: var(--rule);
+}
+
+.person .portrait,
+.result__person .portrait {
+  --scale: 0.19; /* A about 93 x 120 px in the 120px column */
+  justify-self: center;
+  max-width: 100%;
+}
+
+/* Observer C (no exchange this round) is drawn noticeably smaller than active A and B, on the
+   board and in the result. Text size and the Observer label are unchanged. */
+.person--C,
+.result__person--C {
+  --portrait-k: 0.82; /* C shows about 21% smaller than A, 26% smaller than B */
+}
+
+.person__text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--space-3);
+  min-width: 0;
+}
+
+.person__text > * {
+  flex-basis: 100%;
+}
+
+.person__name,
+.person__has {
+  flex-basis: auto;
+}
+
+.person__name {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.person__has {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans); /* quantities: sans figures, not Georgia's old-style "1" */
+  font-size: var(--text-body);
+}
+
+/* Fixed-height item row: key and coin differ in shape, rows below must not drift. */
+.person__has {
+  min-height: 40px;
+}
+
+/* One box for key and coin (contain), so A's and B's rows line up exactly. */
+.person__has .item-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+/* Terms and promise share one measure; on tablet the text column is wide, so cap it. */
+.terms,
+.promise,
+.promise__note {
+  max-width: 400px;
+}
+
+.terms {
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+}
+
+.terms > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-2);
+  border-top: var(--rule);
+}
+
+.terms dt {
+  color: var(--ink);
+}
+
+.terms dd {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.promise {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--target);
+  margin-top: var(--space-1);
+  font-size: var(--text-small);
+  cursor: pointer;
+}
+
+.promise input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.promise:has(input:disabled) {
+  cursor: default;
+}
+
+.promise__note {
+  font-size: var(--text-meta);
+  color: var(--accent);
+}
+
+.promise__note {
+  text-align: left;
+}
+
+.person__idle {
+  font-size: var(--text-body);
+}
+
+.person__idle::before {
+  content: '';
+  display: block;
+  width: 40px;
+  margin-block: var(--space-3);
+  border-top: var(--rule);
+}
+
+/* ---------- Your exchange ---------- */
+.exchange {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: var(--rule-strong);
+  text-align: center;
+}
+
+.exchange h2 {
+  font-size: var(--text-h3);
+}
+
+.exchange__lines {
+  margin-top: var(--space-2);
+  font-family: var(--font-sans); /* transfer lines carry quantities */
+  font-size: var(--text-lead);
+}
+
+.exchange__lines .is-off {
+  color: var(--ink-2);
+}
+
+.exchange__pending {
+  font-family: var(--font-sans);
+  font-size: var(--text-meta);
+}
+
+.exchange__rule {
+  width: 56px;
+  margin: var(--space-3) auto;
+  border: 0;
+  border-top: var(--rule-strong);
+}
+
+.exchange__status {
+  font-size: var(--text-small);
+  color: var(--ink);
+}
+
+.exchange__reason {
+  margin-top: var(--space-1);
+  font-size: var(--text-meta);
+  color: var(--ink-2);
+}
+
+.exchange__reason p + p {
+  margin-top: var(--space-1);
+}
+
+.exchange__actions {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* ---------- Review ---------- */
+/* Centred like the heading and summary above it. */
+.review {
+  max-width: 840px;
+  margin: var(--space-6) auto 0;
+  padding-top: var(--space-5);
+  border-top: var(--rule);
+  text-align: center;
+}
+
+.review h2 {
+  font-size: var(--text-h3);
+}
+
+.review h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-meta);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+  margin-bottom: var(--space-2);
+}
+
+.review__note,
+.review__sim {
+  margin-top: var(--space-1);
+  font-size: var(--text-meta);
+  color: var(--ink-2);
+}
+
+.review__grid {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.review__transfers li {
+  padding-block: var(--space-2);
+  border-bottom: var(--rule);
+  font-family: var(--font-sans); /* transfer lines carry quantities */
+  font-size: var(--text-body);
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.holdings-table {
+  width: 100%;
+  font-size: var(--text-small);
+}
+
+.holdings-table th,
+.holdings-table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--rule);
+  text-align: center;
+  font-weight: 400;
+}
+
+.holdings-table thead th {
+  color: var(--ink-2);
+  font-size: var(--text-meta);
+}
+
+.holdings-table tbody th {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+
+.review__actions {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.review__sim {
+  margin-top: var(--space-2);
+}
+
+/* Solid paper behind sections that fade in. */
+.review,
+.result {
+  background: var(--paper);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .review,
+  .result {
+    animation: level-reveal 180ms var(--ease-out) both;
+  }
+}
+
+@keyframes level-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+/* ---------- Tablet: same vertical rows, wider portrait column ---------- */
+@media (min-width: 760px) {
+  .level {
+    --portrait-col: 168px;
+    padding-top: var(--space-6);
+  }
+
+  .person .portrait,
+  .result__person .portrait {
+    --scale: 0.25; /* A about 122 x 158 px in the 168px column */
+  }
+
+  .exchange {
+    margin-top: var(--space-7);
+  }
+
+  .exchange__actions {
+    justify-self: center;
+    width: min(100%, 320px);
+  }
+
+  .review__grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--space-7);
+  }
+
+  .review__actions {
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+}
+
+/* ---------- Desktop: open columns with thin dividers ---------- */
+@media (min-width: 1024px) {
+  .board,
+  .result__people {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1040px;
+    margin-inline: auto;
+    border-top: 0;
+  }
+
+  .person,
+  .result__person {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 212px auto;
+    justify-items: center;
+    gap: var(--space-3);
+    padding: 0 var(--space-5);
+    border-bottom: 0;
+  }
+
+  .person + .person,
+  .result__person + .result__person {
+    border-left: var(--rule);
+  }
+
+  .person .portrait,
+  .result__person .portrait {
+    --scale: 0.32; /* A about 157 x 202 px */
+    align-self: end;
+  }
+
+  .person__text {
+    width: min(100%, 256px);
+    justify-content: center;
+    text-align: center;
+  }
+
+  .person__name {
+    flex-basis: 100%;
+    font-size: 2.5rem;
+  }
+
+  .person__has {
+    justify-content: center;
+    margin-top: var(--space-1);
+  }
+
+  .terms {
+    margin-top: var(--space-4);
+    text-align: left;
+  }
+
+  .person__idle::before {
+    margin-inline: auto;
+  }
+
+  /* Wide: summary centred, actions to the right, as in the mockup. */
+  .exchange {
+    grid-template-columns: minmax(0, 1fr) minmax(auto, 520px) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .exchange__body {
+    grid-column: 2;
+  }
+
+  .exchange__actions {
+    grid-column: 3;
+    justify-self: end;
+    width: min(100%, 300px);
+  }
+}

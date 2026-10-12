@@ -1,0 +1,202 @@
+Compiling 39 files with Solc 0.8.37
+Solc 0.8.37 finished in 1.40s
+Compiler run successful with warnings:
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/harness/FaultFixtures.sol:126:5:
+    |
+126 |     function validatePlan(uint256, bytes32, Transfer[] calldata, uint256[6] calldata) external view override {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/AtomicCoordinator.sol:111:9
+    │
+111 │         items.grantInitial(runId);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/NpcBase.sol:150:39
+    │
+150 │             if (live[i] != before[i]) revert BeforeMismatch(runId);
+    │                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/NpcBase.sol:170:9
+    │
+170 │         items.transferFromNpc(runId, r.giveTo, r.giveItem, r.giveQty);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/AtomicCoordinator.sol:154:30
+    │
+154 │             if (p.sends[id]) _npc(id).release(runId, p.offerIds[id], p.snapshotHash, p.planHash);
+    │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/AtomicCoordinator.sol:310:17
+    │
+310 │                 _npc(id).authorize(runId, p.offerIds[id], p.transfers, p.before, p.snapshotHash, p.planHash);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:145:13
+    │
+145 │             _npc(id).validatePlan(runId, p.offerIds[id], p.transfers, p.before);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:154:30
+    │
+154 │             if (p.sends[id]) _npc(id).release(runId, p.offerIds[id], p.snapshotHash, p.planHash);
+    │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/AtomicCoordinator.sol:165:9
+    │
+165 │         emit LevelSolved(runId, msg.sender, newNonce, p.snapshotHash, p.planHash);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:228:9
+    │
+228 │         revert InvalidNpc(id);
+    │         ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:245:18
+    │
+245 │             if (!_npc(id).hasOffer(offerId)) revert UnknownOffer(id, offerId);
+    │                  ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:237:34
+    │
+237 │             if (id >= NPC_COUNT) revert InvalidNpc(id);
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:238:27
+    │
+238 │             if (seen[id]) revert DuplicateNpc(id);
+    │                           ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:244:58
+    │
+244 │             if (id == NPC_C_ID && offerId != OFFER_NONE) revert ObserverMustSelectNone(offerId);
+    │                                                          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:245:46
+    │
+245 │             if (!_npc(id).hasOffer(offerId)) revert UnknownOffer(id, offerId);
+    │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:259:45
+    │
+259 │             (bool has, Transfer memory t) = _npc(id).outgoing(offerIds[id]);
+    │                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:264:15
+    │
+264 │             ) revert InvalidTransfer(id);
+    │               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:285:45
+    │
+285 │             if (spent[from] > before[from]) revert InsufficientStock(t.fromNpc, t.item, before[from], spent[from]);
+    │                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:302:40
+    │
+302 │             if (sumBefore != sumAfter) revert ConservationViolated();
+    │                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:310:17
+    │
+310 │                 _npc(id).authorize(runId, p.offerIds[id], p.transfers, p.before, p.snapshotHash, p.planHash);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:325:17
+    │
+325 │             if (_npc(id).permitOf(runId).active) revert PermitsRemaining(id);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:328:18
+    │
+328 │             if (!_npc(id).isGoalSatisfied(actual)) revert GoalNotSatisfied(id);
+    │                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:322:43
+    │
+322 │             if (actual[i] != expected[i]) revert SettlementMismatch();
+    │                                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:325:50
+    │
+325 │             if (_npc(id).permitOf(runId).active) revert PermitsRemaining(id);
+    │                                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:328:52
+    │
+328 │             if (!_npc(id).isGoalSatisfied(actual)) revert GoalNotSatisfied(id);
+    │                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+EXIT=0

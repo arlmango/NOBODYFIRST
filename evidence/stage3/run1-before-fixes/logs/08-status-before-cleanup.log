@@ -1,0 +1,3 @@
+$ node scripts/chain/local-chain.mjs status (before cleanup)
+{"ok":true,"command":"status","anvilRunning":true,"pid":96914,"pidFilePresent":true,"pidAlive":true,"isOurAnvil":true,"port":8545,"portOverridden":false,"rpcUrl":"http://127.0.0.1:8545","chainId":31337,"manifestPresent":true,"manifestValid":true,"manifestFailures":[]}
+EXIT=0

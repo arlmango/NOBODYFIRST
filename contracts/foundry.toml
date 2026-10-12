@@ -1,0 +1,12 @@
+# NOBODY FIRST — Foundry config (stage 2 toolchain only).
+# Pinned, offline, project-local compiler. No auto-download of solc.
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+cache_path = "cache"
+solc = "./.tools/solc/solc-0.8.37"
+auto_detect_solc = false
+offline = true
+remappings = ["forge-std/=lib/forge-std/src/"]

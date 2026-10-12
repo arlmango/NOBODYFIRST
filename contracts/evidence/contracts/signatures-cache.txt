@@ -1,0 +1,8 @@
+# ~/.foundry/cache/signatures: size and sha256 recorded around this run.
+# Forge may append decoded signatures while compiling/tracing; the file is never deleted here.
+## BEFORE this run: /Users/mango/.foundry/cache/signatures
+size_bytes: 39450
+afbb8b2ad6e9f5e4c501e32dd73c002b440fedd630a5b0505e72cbc0f9cbd277  /Users/mango/.foundry/cache/signatures
+## AFTER this run: /Users/mango/.foundry/cache/signatures
+size_bytes: 39450
+afbb8b2ad6e9f5e4c501e32dd73c002b440fedd630a5b0505e72cbc0f9cbd277  /Users/mango/.foundry/cache/signatures

@@ -1,0 +1,307 @@
+## shasum -a 256 -c evidence/contracts/SOURCES.sha256 (from contracts/)
+README.md: OK
+SPEC.md: OK
+foundry.toml: OK
+scripts/run-stage2.sh: OK
+src/AtomicCoordinator.sol: OK
+src/GameItems.sol: OK
+src/Level1Deployer.sol: OK
+src/NPC_A.sol: OK
+src/NPC_B.sol: OK
+src/NPC_C.sol: OK
+src/NpcBase.sol: OK
+src/Types.sol: OK
+src/interfaces/IGameItems.sol: OK
+src/interfaces/INpc.sol: OK
+test/Level1Exchange.t.sol: OK
+test/Level1FaultInjection.t.sol: OK
+test/Level1LateFailure.t.sol: OK
+test/Level1NpcValidation.t.sol: OK
+test/Level1Permissions.t.sol: OK
+test/Level1Wiring.t.sol: OK
+test/ToolchainSmoke.t.sol: OK
+test/harness/FaultFixtures.sol: OK
+test/harness/LateFailNpcB.sol: OK
+test/harness/Level1TestBase.sol: OK
+EXIT=0
+## shasum -a 256 -c evidence/contracts/EVIDENCE.sha256 (from contracts/)
+evidence/contracts/ENTRYPOINTS.md: OK
+evidence/contracts/SOURCES.sha256: OK
+evidence/contracts/abi-selectors.log: OK
+evidence/contracts/addresses-from-tests.md: OK
+evidence/contracts/anvil-deploy2/addresses-and-results.json: OK
+evidence/contracts/anvil-deploy2/session.log: OK
+evidence/contracts/build.log: OK
+evidence/contracts/exit-codes.txt: OK
+evidence/contracts/fault-injection-README.md: OK
+evidence/contracts/fault-injection.log: OK
+evidence/contracts/forbidden-grep.log: OK
+evidence/contracts/frontend-unchanged.log: OK
+evidence/contracts/happy-path-state.log: OK
+evidence/contracts/happy-path-state.md: OK
+evidence/contracts/latefail-README.md: OK
+evidence/contracts/latefail-state-tables.log: OK
+evidence/contracts/latefail-trace.log: OK
+evidence/contracts/mutation-results-author.txt: OK
+evidence/contracts/setup-trace-happy.log: OK
+evidence/contracts/setup-trace-wiring.log: OK
+evidence/contracts/signatures-cache-history.md: OK
+evidence/contracts/signatures-cache.txt: OK
+evidence/contracts/sizes.log: OK
+evidence/contracts/tests-by-suite-Level1Exchange.log: OK
+evidence/contracts/tests-by-suite-Level1FaultInjection.log: OK
+evidence/contracts/tests-by-suite-Level1LateFailure.log: OK
+evidence/contracts/tests-by-suite-Level1NpcValidation.log: OK
+evidence/contracts/tests-by-suite-Level1Permissions.log: OK
+evidence/contracts/tests-by-suite-Level1Wiring.log: OK
+evidence/contracts/tests-by-suite-ToolchainSmoke.log: OK
+evidence/contracts/tests-json.log: OK
+evidence/contracts/tests.json: OK
+evidence/contracts/tests.log: OK
+evidence/contracts/versions.txt: OK
+EXIT=0
+## exclusions: EVIDENCE.sha256 itself and hash-verify.log are not listed in EVIDENCE.sha256
+
+## documentation pass (haiku-docs-s2), date -u: Mon Oct 12 10:38:50 UTC 2026
+## NO forge/cast/anvil/solc/npm/build/test was run in this pass.
+## commands (from contracts/ unless noted):
+## 1) grep -E " (src|test)/| foundry.toml| SPEC.md| scripts/" evidence/contracts/SOURCES.sha256 | shasum -a 256 -c -   (baseline, run at start and at end)
+## 2) (from NOBODYFIRST/) shasum -a 256 -c contracts/evidence/env/frontend-baseline.sha256
+## 3) shasum -a 256 $(source list) > evidence/contracts/SOURCES.sha256 ; shasum -a 256 $(evidence list) > evidence/contracts/EVIDENCE.sha256 (regenerated LAST; only change in SOURCES: README.md)
+## 4) shasum -a 256 -c evidence/contracts/SOURCES.sha256 ; shasum -a 256 -c evidence/contracts/EVIDENCE.sha256
+## 5) stat + shasum of ~/.foundry/cache/signatures before and after (see end)
+## --- (1) baseline src/test/foundry.toml/SPEC.md/scripts at end of pass:
+SPEC.md: OK
+foundry.toml: OK
+scripts/run-stage2.sh: OK
+src/AtomicCoordinator.sol: OK
+src/GameItems.sol: OK
+src/Level1Deployer.sol: OK
+src/NPC_A.sol: OK
+src/NPC_B.sol: OK
+src/NPC_C.sol: OK
+src/NpcBase.sol: OK
+src/Types.sol: OK
+src/interfaces/IGameItems.sol: OK
+src/interfaces/INpc.sol: OK
+test/Level1Exchange.t.sol: OK
+test/Level1FaultInjection.t.sol: OK
+test/Level1LateFailure.t.sol: OK
+test/Level1NpcValidation.t.sol: OK
+test/Level1Permissions.t.sol: OK
+test/Level1Wiring.t.sol: OK
+test/ToolchainSmoke.t.sol: OK
+test/harness/FaultFixtures.sol: OK
+test/harness/LateFailNpcB.sol: OK
+test/harness/Level1TestBase.sol: OK
+EXIT_BASELINE_SRC=0
+## --- (2) frontend baseline at end of pass:
+package.json: OK
+package-lock.json: OK
+index.html: OK
+vite.config.ts: OK
+tsconfig.json: OK
+EXIT_FRONTEND=0
+## --- (4a) SOURCES.sha256 verify:
+README.md: OK
+SPEC.md: OK
+foundry.toml: OK
+scripts/run-stage2.sh: OK
+src/AtomicCoordinator.sol: OK
+src/GameItems.sol: OK
+src/Level1Deployer.sol: OK
+src/NPC_A.sol: OK
+src/NPC_B.sol: OK
+src/NPC_C.sol: OK
+src/NpcBase.sol: OK
+src/Types.sol: OK
+src/interfaces/IGameItems.sol: OK
+src/interfaces/INpc.sol: OK
+test/Level1Exchange.t.sol: OK
+test/Level1FaultInjection.t.sol: OK
+test/Level1LateFailure.t.sol: OK
+test/Level1NpcValidation.t.sol: OK
+test/Level1Permissions.t.sol: OK
+test/Level1Wiring.t.sol: OK
+test/ToolchainSmoke.t.sol: OK
+test/harness/FaultFixtures.sol: OK
+test/harness/LateFailNpcB.sol: OK
+test/harness/Level1TestBase.sol: OK
+EXIT=0
+## --- (4b) EVIDENCE.sha256 verify:
+evidence/contracts/ENTRYPOINTS.md: OK
+evidence/contracts/GUARANTEES.md: OK
+evidence/contracts/SOURCES.sha256: OK
+evidence/contracts/abi-selectors.log: OK
+evidence/contracts/addresses-from-tests.md: OK
+evidence/contracts/anvil-deploy2/addresses-and-results.json: OK
+evidence/contracts/anvil-deploy2/session.log: OK
+evidence/contracts/build.log: OK
+evidence/contracts/exit-codes.txt: OK
+evidence/contracts/fault-injection-README.md: OK
+evidence/contracts/fault-injection.log: OK
+evidence/contracts/forbidden-grep.log: OK
+evidence/contracts/frontend-unchanged.log: OK
+evidence/contracts/happy-path-state.log: OK
+evidence/contracts/happy-path-state.md: OK
+evidence/contracts/latefail-README.md: OK
+evidence/contracts/latefail-state-tables.log: OK
+evidence/contracts/latefail-trace.log: OK
+evidence/contracts/mutation-results-author.txt: OK
+evidence/contracts/reviewer5-artifacts/R5FixtureDeployer.sol.txt: OK
+evidence/contracts/reviewer5-artifacts/README.md: OK
+evidence/contracts/reviewer5-artifacts/latefail-anvil-castrun.log: OK
+evidence/contracts/reviewer5-artifacts/latefail-anvil-receipt.json: OK
+evidence/contracts/reviewer5-artifacts/latefail-tx.txt: OK
+evidence/contracts/reviewer5-artifacts/mut.py: OK
+evidence/contracts/reviewer5-artifacts/mut2.py: OK
+evidence/contracts/reviewer5-artifacts/mutR2.py: OK
+evidence/contracts/reviewer5-artifacts/mutation-results-author.txt: OK
+evidence/contracts/reviewer5-artifacts/mutation-results-round1.txt: OK
+evidence/contracts/reviewer5-artifacts/mutation-results-round2.txt: OK
+evidence/contracts/setup-trace-happy.log: OK
+evidence/contracts/setup-trace-wiring.log: OK
+evidence/contracts/signatures-cache-history.md: OK
+evidence/contracts/signatures-cache.txt: OK
+evidence/contracts/sizes.log: OK
+evidence/contracts/tests-by-suite-Level1Exchange.log: OK
+evidence/contracts/tests-by-suite-Level1FaultInjection.log: OK
+evidence/contracts/tests-by-suite-Level1LateFailure.log: OK
+evidence/contracts/tests-by-suite-Level1NpcValidation.log: OK
+evidence/contracts/tests-by-suite-Level1Permissions.log: OK
+evidence/contracts/tests-by-suite-Level1Wiring.log: OK
+evidence/contracts/tests-by-suite-ToolchainSmoke.log: OK
+evidence/contracts/tests-json.log: OK
+evidence/contracts/tests.json: OK
+evidence/contracts/tests.log: OK
+evidence/contracts/versions.txt: OK
+EXIT=0
+## --- (5) ~/.foundry/cache/signatures stat+sha BEFORE this pass:
+/Users/mango/.foundry/cache/signatures 39450 1791800047 Oct 12 15:14:07 2026 29383210
+/Users/mango/.foundry/cache 96 1791782824 Oct 12 10:27:04 2026 29383209
+afbb8b2ad6e9f5e4c501e32dd73c002b440fedd630a5b0505e72cbc0f9cbd277  /Users/mango/.foundry/cache/signatures
+## --- (5) AFTER (end of pass):
+/Users/mango/.foundry/cache/signatures size=39450 mtime=2026-10-12 15:14:07 +0500
+/Users/mango/.foundry/cache size=96 mtime=2026-10-12 10:27:04 +0500 birth=2026-10-12 10:27:04 +0500
+afbb8b2ad6e9f5e4c501e32dd73c002b440fedd630a5b0505e72cbc0f9cbd277  /Users/mango/.foundry/cache/signatures
+## result: cache unchanged (size 39450, mtime 15:14:07 +0500, sha afbb8b2a...); dir mtime unchanged
+## exclusions: EVIDENCE.sha256 itself and hash-verify.log are not listed in EVIDENCE.sha256
+
+## documentation pass 2 (haiku-docs-s2, reviewer-6 defects), date -u: Mon Oct 12 11:09:56 UTC 2026
+## NO forge/cast/anvil/solc/npm/build/test was run in this pass (python3 -I used only for text replacement in docs).
+## 1) grep -E " (src|test)/| foundry.toml| SPEC.md| scripts/" SOURCES.round2-before (previous SOURCES) | shasum -a 256 -c -
+SPEC.md: OK
+foundry.toml: OK
+scripts/run-stage2.sh: OK
+src/AtomicCoordinator.sol: OK
+src/GameItems.sol: OK
+src/Level1Deployer.sol: OK
+src/NPC_A.sol: OK
+src/NPC_B.sol: OK
+src/NPC_C.sol: OK
+src/NpcBase.sol: OK
+src/Types.sol: OK
+src/interfaces/IGameItems.sol: OK
+src/interfaces/INpc.sol: OK
+test/Level1Exchange.t.sol: OK
+test/Level1FaultInjection.t.sol: OK
+test/Level1LateFailure.t.sol: OK
+test/Level1NpcValidation.t.sol: OK
+test/Level1Permissions.t.sol: OK
+test/Level1Wiring.t.sol: OK
+test/ToolchainSmoke.t.sol: OK
+test/harness/FaultFixtures.sol: OK
+test/harness/LateFailNpcB.sol: OK
+test/harness/Level1TestBase.sol: OK
+BASE_EXIT=0 (23 entries)
+## 2) (from NOBODYFIRST/) shasum -a 256 -c contracts/evidence/env/frontend-baseline.sha256
+package.json: OK
+package-lock.json: OK
+index.html: OK
+vite.config.ts: OK
+tsconfig.json: OK
+FE_EXIT=0
+## 3) SOURCES.sha256 regenerated (only change: README.md b92d9d22... -> d24e301f...), EVIDENCE.sha256 regenerated last (46 entries)
+## 4) shasum -a 256 -c evidence/contracts/SOURCES.sha256
+README.md: OK
+SPEC.md: OK
+foundry.toml: OK
+scripts/run-stage2.sh: OK
+src/AtomicCoordinator.sol: OK
+src/GameItems.sol: OK
+src/Level1Deployer.sol: OK
+src/NPC_A.sol: OK
+src/NPC_B.sol: OK
+src/NPC_C.sol: OK
+src/NpcBase.sol: OK
+src/Types.sol: OK
+src/interfaces/IGameItems.sol: OK
+src/interfaces/INpc.sol: OK
+test/Level1Exchange.t.sol: OK
+test/Level1FaultInjection.t.sol: OK
+test/Level1LateFailure.t.sol: OK
+test/Level1NpcValidation.t.sol: OK
+test/Level1Permissions.t.sol: OK
+test/Level1Wiring.t.sol: OK
+test/ToolchainSmoke.t.sol: OK
+test/harness/FaultFixtures.sol: OK
+test/harness/LateFailNpcB.sol: OK
+test/harness/Level1TestBase.sol: OK
+EXIT=0
+## 5) shasum -a 256 -c evidence/contracts/EVIDENCE.sha256
+evidence/contracts/ENTRYPOINTS.md: OK
+evidence/contracts/GUARANTEES.md: OK
+evidence/contracts/SOURCES.sha256: OK
+evidence/contracts/abi-selectors.log: OK
+evidence/contracts/addresses-from-tests.md: OK
+evidence/contracts/anvil-deploy2/addresses-and-results.json: OK
+evidence/contracts/anvil-deploy2/session.log: OK
+evidence/contracts/build.log: OK
+evidence/contracts/exit-codes.txt: OK
+evidence/contracts/fault-injection-README.md: OK
+evidence/contracts/fault-injection.log: OK
+evidence/contracts/forbidden-grep.log: OK
+evidence/contracts/frontend-unchanged.log: OK
+evidence/contracts/happy-path-state.log: OK
+evidence/contracts/happy-path-state.md: OK
+evidence/contracts/latefail-README.md: OK
+evidence/contracts/latefail-state-tables.log: OK
+evidence/contracts/latefail-trace.log: OK
+evidence/contracts/mutation-results-author.txt: OK
+evidence/contracts/reviewer5-artifacts/R5FixtureDeployer.sol.txt: OK
+evidence/contracts/reviewer5-artifacts/README.md: OK
+evidence/contracts/reviewer5-artifacts/latefail-anvil-castrun.log: OK
+evidence/contracts/reviewer5-artifacts/latefail-anvil-receipt.json: OK
+evidence/contracts/reviewer5-artifacts/latefail-tx.txt: OK
+evidence/contracts/reviewer5-artifacts/mut.py: OK
+evidence/contracts/reviewer5-artifacts/mut2.py: OK
+evidence/contracts/reviewer5-artifacts/mutR2.py: OK
+evidence/contracts/reviewer5-artifacts/mutation-results-author.txt: OK
+evidence/contracts/reviewer5-artifacts/mutation-results-round1.txt: OK
+evidence/contracts/reviewer5-artifacts/mutation-results-round2.txt: OK
+evidence/contracts/setup-trace-happy.log: OK
+evidence/contracts/setup-trace-wiring.log: OK
+evidence/contracts/signatures-cache-history.md: OK
+evidence/contracts/signatures-cache.txt: OK
+evidence/contracts/sizes.log: OK
+evidence/contracts/tests-by-suite-Level1Exchange.log: OK
+evidence/contracts/tests-by-suite-Level1FaultInjection.log: OK
+evidence/contracts/tests-by-suite-Level1LateFailure.log: OK
+evidence/contracts/tests-by-suite-Level1NpcValidation.log: OK
+evidence/contracts/tests-by-suite-Level1Permissions.log: OK
+evidence/contracts/tests-by-suite-Level1Wiring.log: OK
+evidence/contracts/tests-by-suite-ToolchainSmoke.log: OK
+evidence/contracts/tests-json.log: OK
+evidence/contracts/tests.json: OK
+evidence/contracts/tests.log: OK
+evidence/contracts/versions.txt: OK
+EXIT=0
+## 6) ~/.foundry/cache/signatures stat+sha BEFORE this pass:
+/Users/mango/.foundry/cache size=96 mtime=2026-10-12 10:27:04 +0500 birth=2026-10-12 10:27:04 +0500
+/Users/mango/.foundry/cache/signatures size=39450 mtime=2026-10-12 15:14:07 +0500 birth=2026-10-12 10:27:04 +0500
+afbb8b2ad6e9f5e4c501e32dd73c002b440fedd630a5b0505e72cbc0f9cbd277  /Users/mango/.foundry/cache/signatures
+## 6) AFTER:
+/Users/mango/.foundry/cache size=96 mtime=2026-10-12 10:27:04 +0500 birth=2026-10-12 10:27:04 +0500
+/Users/mango/.foundry/cache/signatures size=39450 mtime=2026-10-12 15:14:07 +0500 birth=2026-10-12 10:27:04 +0500
+afbb8b2ad6e9f5e4c501e32dd73c002b440fedd630a5b0505e72cbc0f9cbd277  /Users/mango/.foundry/cache/signatures
+## result: cache unchanged

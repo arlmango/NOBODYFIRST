@@ -1,0 +1,56 @@
+# forge-version.log — opus-env toolchain smoke, 2026-10-12T05:26:11Z
+# cwd: /Users/mango/NOBODYFIRST/contracts
+
+$ uname -a
+Darwin MacBook-Air-Arlan.local 27.0.0 Darwin Kernel Version 27.0.0: Tue Aug 11 21:02:59 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T8142 arm64
+EXIT=0
+
+$ sw_vers
+ProductName:		macOS
+ProductVersion:		27.0
+BuildVersion:		26A428
+EXIT=0
+
+$ ./.tools/bin/forge --version
+forge Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+EXIT=0
+
+$ ./.tools/bin/cast --version
+cast Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+EXIT=0
+
+$ ./.tools/bin/anvil --version
+anvil Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+EXIT=0
+
+$ ./.tools/bin/chisel --version
+chisel Version: 1.8.5
+Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f
+Build Timestamp: 2026-10-05T17:07:33.315474000Z (1791220053)
+Build Profile: dist
+EXIT=0
+
+$ ./.tools/solc/solc-0.8.37 --version
+solc, the solidity compiler commandline interface
+Version: 0.8.37+commit.f401782d.Darwin.appleclang
+EXIT=0
+
+$ file ./.tools/bin/forge ./.tools/solc/solc-0.8.37
+./.tools/bin/forge:        Mach-O 64-bit executable arm64
+./.tools/solc/solc-0.8.37: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64]
+./.tools/solc/solc-0.8.37 (for architecture x86_64):	Mach-O 64-bit executable x86_64
+./.tools/solc/solc-0.8.37 (for architecture arm64):	Mach-O 64-bit executable arm64
+EXIT=0
+
+$ sysctl -n sysctl.proc_translated
+0
+EXIT=0

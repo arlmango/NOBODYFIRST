@@ -1,0 +1,10 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/ToolchainSmoke.t.sol:ToolchainSmokeTest
+[PASS] test_StorageWriteAndRead() (gas: 95611)
+[PASS] test_WriteThenRevert_ExpectRevertRollsBackStorage() (gas: 98951)
+[PASS] test_WriteThenRevert_TryCatchRollsBackStorage() (gas: 99103)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 564.38µs (475.42µs CPU time)
+
+Ran 1 test suite in 2.67ms (564.38µs CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+EXIT=0

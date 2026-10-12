@@ -1,0 +1,221 @@
+No files changed, compilation skipped
+
+Ran 6 tests for test/Level1LateFailure.t.sol:Level1LateFailureTest
+[PASS] test_LateFailure_Control_ProductionNpcBSolves() (gas: 2046578)
+Logs:
+  ==== state: control: before
+  field                         | value
+  items.balanceOf A.KEY         | 1
+  items.balanceOf A.COIN        | 0
+  items.balanceOf B.KEY         | 0
+  items.balanceOf B.COIN        | 1
+  items.balanceOf C.KEY         | 0
+  items.balanceOf C.COIN        | 0
+  items.isGranted               | true
+  npc permitOf: npcId           | 0
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 1
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 2
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  coord.runOf.owner             | 0x44E97aF4418b7a17AABD8090bEA0A471a366305C
+  coord.runOf.active            | true
+  coord.runOf.solved            | false
+  coord.runOf.nonce             | 0
+  coord.currentSnapshotHash     | 0x1b05323b111e7001ff173d17661a0fd44d9439feb4688a3b7cf756a50d7cb712
+  ==== state: control: after
+  field                         | value
+  items.balanceOf A.KEY         | 0
+  items.balanceOf A.COIN        | 1
+  items.balanceOf B.KEY         | 1
+  items.balanceOf B.COIN        | 0
+  items.balanceOf C.KEY         | 0
+  items.balanceOf C.COIN        | 0
+  items.isGranted               | true
+  npc permitOf: npcId           | 0
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 1
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 2
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  coord.runOf.owner             | 0x44E97aF4418b7a17AABD8090bEA0A471a366305C
+  coord.runOf.active            | false
+  coord.runOf.solved            | true
+  coord.runOf.nonce             | 1
+  coord.currentSnapshotHash     | 0xc7f7d85ec0dfcbb3e3bee32bcab8f5eeb753f74250692b9bec523e2cb1808b8e
+
+[PASS] test_LateFailure_FinalGoal_ExpectRevert_AllStateRestored() (gas: 3325182)
+Logs:
+  ==== state: fault2 (B.isGoalSatisfied=false): before
+  field                         | value
+  items.balanceOf A.KEY         | 1
+  items.balanceOf A.COIN        | 0
+  items.balanceOf B.KEY         | 0
+  items.balanceOf B.COIN        | 1
+  items.balanceOf C.KEY         | 0
+  items.balanceOf C.COIN        | 0
+  items.isGranted               | true
+  npc permitOf: npcId           | 0
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 1
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 2
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  coord.runOf.owner             | 0x44E97aF4418b7a17AABD8090bEA0A471a366305C
+  coord.runOf.active            | true
+  coord.runOf.solved            | false
+  coord.runOf.nonce             | 0
+  coord.currentSnapshotHash     | 0x1b05323b111e7001ff173d17661a0fd44d9439feb4688a3b7cf756a50d7cb712
+  logs emitted inside reverted frame (NOT persisted): issued/consumed/moved
+  2 2 2
+  ==== state: fault2 (B.isGoalSatisfied=false): after
+  field                         | value
+  items.balanceOf A.KEY         | 1
+  items.balanceOf A.COIN        | 0
+  items.balanceOf B.KEY         | 0
+  items.balanceOf B.COIN        | 1
+  items.balanceOf C.KEY         | 0
+  items.balanceOf C.COIN        | 0
+  items.isGranted               | true
+  npc permitOf: npcId           | 0
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 1
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 2
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  coord.runOf.owner             | 0x44E97aF4418b7a17AABD8090bEA0A471a366305C
+  coord.runOf.active            | true
+  coord.runOf.solved            | false
+  coord.runOf.nonce             | 0
+  coord.currentSnapshotHash     | 0x1b05323b111e7001ff173d17661a0fd44d9439feb4688a3b7cf756a50d7cb712
+
+[PASS] test_LateFailure_FinalGoal_StateDiff_BothTransfersWrittenThenReverted() (gas: 3574377)
+Logs:
+  ledger SSTORE (reverted=true) npcId/item: 0 1
+    slot 0xd2d676967fff829722f0ae261bdcb6ca4ad19c7307c3bdb1e2c57d7fac4eb444
+    prev -> new 1 0
+  ledger SSTORE (reverted=true) npcId/item: 1 1
+    slot 0xd2d676967fff829722f0ae261bdcb6ca4ad19c7307c3bdb1e2c57d7fac4eb446
+    prev -> new 0 1
+  ledger SSTORE (reverted=true) npcId/item: 1 2
+    slot 0xd2d676967fff829722f0ae261bdcb6ca4ad19c7307c3bdb1e2c57d7fac4eb447
+    prev -> new 1 0
+  ledger SSTORE (reverted=true) npcId/item: 0 2
+    slot 0xd2d676967fff829722f0ae261bdcb6ca4ad19c7307c3bdb1e2c57d7fac4eb445
+    prev -> new 0 1
+
+[PASS] test_LateFailure_FixturesKeepProductionRules() (gas: 4238631)
+[PASS] test_LateFailure_ReleaseB_ExpectRevert_AllStateRestored() (gas: 3299489)
+Logs:
+  ==== state: fault1 (B.release reverts): before
+  field                         | value
+  items.balanceOf A.KEY         | 1
+  items.balanceOf A.COIN        | 0
+  items.balanceOf B.KEY         | 0
+  items.balanceOf B.COIN        | 1
+  items.balanceOf C.KEY         | 0
+  items.balanceOf C.COIN        | 0
+  items.isGranted               | true
+  npc permitOf: npcId           | 0
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 1
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 2
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  coord.runOf.owner             | 0x44E97aF4418b7a17AABD8090bEA0A471a366305C
+  coord.runOf.active            | true
+  coord.runOf.solved            | false
+  coord.runOf.nonce             | 0
+  coord.currentSnapshotHash     | 0x1b05323b111e7001ff173d17661a0fd44d9439feb4688a3b7cf756a50d7cb712
+  logs emitted inside reverted frame (NOT persisted): issued/consumed/moved
+  2 1 1
+  ==== state: fault1 (B.release reverts): after
+  field                         | value
+  items.balanceOf A.KEY         | 1
+  items.balanceOf A.COIN        | 0
+  items.balanceOf B.KEY         | 0
+  items.balanceOf B.COIN        | 1
+  items.balanceOf C.KEY         | 0
+  items.balanceOf C.COIN        | 0
+  items.isGranted               | true
+  npc permitOf: npcId           | 0
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 1
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  npc permitOf: npcId           | 2
+    .offerId                    | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .snapshotHash               | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .planHash                   | 0x0000000000000000000000000000000000000000000000000000000000000000
+    .active                     | false
+  coord.runOf.owner             | 0x44E97aF4418b7a17AABD8090bEA0A471a366305C
+  coord.runOf.active            | true
+  coord.runOf.solved            | false
+  coord.runOf.nonce             | 0
+  coord.currentSnapshotHash     | 0x1b05323b111e7001ff173d17661a0fd44d9439feb4688a3b7cf756a50d7cb712
+
+[PASS] test_LateFailure_ReleaseB_StateDiff_FirstTransferWrittenThenReverted() (gas: 3408798)
+Logs:
+  logs emitted inside reverted frame (NOT persisted): issued/consumed/moved
+  2 1 1
+  ledger SSTORE (reverted=true) npcId/item: 0 1
+    slot 0xd2d676967fff829722f0ae261bdcb6ca4ad19c7307c3bdb1e2c57d7fac4eb444
+    prev -> new 1 0
+  ledger SSTORE (reverted=true) npcId/item: 1 1
+    slot 0xd2d676967fff829722f0ae261bdcb6ca4ad19c7307c3bdb1e2c57d7fac4eb446
+    prev -> new 0 1
+
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 10.09ms (32.79ms CPU time)
+
+Ran 1 test suite in 11.21ms (10.09ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)
+EXIT=0

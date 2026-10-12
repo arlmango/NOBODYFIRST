@@ -1,0 +1,39 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/Level1Wiring.t.sol:Level1WiringTest
+[PASS] test_Wiring_DistinctNonZeroAddressesWithCode() (gas: 54663)
+Traces:
+  [135257] Level1WiringTest::setUp()
+    ├─ [0] VM::deployCode("src/Level1Deployer.sol:Level1Deployer")
+    │   ├─ [9230838] → new Level1Deployer@0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f
+    │   │   ├─ [827913] → new GameItems@0x104fBc016F4bb334D775a19E8A6510109AC63E00
+    │   │   │   └─ ← [Return] 4127 bytes of code
+    │   │   ├─ [1554215] → new NPC_A@0x037eDa3aDB1198021A9b2e88C22B464fD38db3f3
+    │   │   │   └─ ← [Return] 7644 bytes of code
+    │   │   ├─ [1554214] → new NPC_B@0xDDc10602782af652bB913f7bdE1fD82981Db7dd9
+    │   │   │   └─ ← [Return] 7644 bytes of code
+    │   │   ├─ [1554213] → new NPC_C@0x7FdB3132Ff7D02d8B9e221c61cC895ce9a4bb773
+    │   │   │   └─ ← [Return] 7644 bytes of code
+    │   │   ├─ [2496605] → new AtomicCoordinator@0xfD07C974e33dd1626640bA3a5acF0418FaacCA7a
+    │   │   │   └─ ← [Return] 12351 bytes of code
+    │   │   └─ ← [Return] 1540 bytes of code
+    │   └─ ← [Return] Level1Deployer: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f]
+    ├─ [613] Level1Deployer::items() [staticcall]
+    │   └─ ← [Return] GameItems: [0x104fBc016F4bb334D775a19E8A6510109AC63E00]
+    ├─ [591] Level1Deployer::npcA() [staticcall]
+    │   └─ ← [Return] NPC_A: [0x037eDa3aDB1198021A9b2e88C22B464fD38db3f3]
+    ├─ [635] Level1Deployer::npcB() [staticcall]
+    │   └─ ← [Return] NPC_B: [0xDDc10602782af652bB913f7bdE1fD82981Db7dd9]
+    ├─ [547] Level1Deployer::npcC() [staticcall]
+    │   └─ ← [Return] NPC_C: [0x7FdB3132Ff7D02d8B9e221c61cC895ce9a4bb773]
+    ├─ [525] Level1Deployer::coordinator() [staticcall]
+    │   └─ ← [Return] AtomicCoordinator: [0xfD07C974e33dd1626640bA3a5acF0418FaacCA7a]
+    └─ ← [Stop]
+
+  [54663] Level1WiringTest::test_Wiring_DistinctNonZeroAddressesWithCode()
+    └─ ← [Stop]
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.73ms (324.96µs CPU time)
+
+Ran 1 test suite in 3.15ms (1.73ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+EXIT=0

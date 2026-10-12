@@ -1,0 +1,30 @@
+node_modules
+dist
+.env
+.env.*
+*.log
+.DS_Store
+.vitest
+.claude-flow/
+!docs/evidence/*.log
+
+# contracts toolchain (downloaded tools, dependencies, build output) — sources/config/evidence stay tracked
+contracts/.tools/
+contracts/lib/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+!contracts/evidence/**/*.log
+
+# stage 3: local chain run artefacts (generated per run; never committed)
+contracts/deployments/
+scripts/chain/.run/
+
+# stage 4: public demo build output and staging (generated; never committed)
+dist-public/
+build/public-staging/
+.vercel/
+build/
+
+# submission: evidence logs are reviewed (no keys/banners) and must be part of a clone
+!evidence/**/*.log

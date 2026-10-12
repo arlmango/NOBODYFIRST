@@ -1,0 +1,235 @@
+No files changed, compilation skipped
+
+╭------------------------+------------------+-------------------+--------------------+---------------------╮
+| Contract               | Runtime Size (B) | Initcode Size (B) | Runtime Margin (B) | Initcode Margin (B) |
++==========================================================================================================+
+| AtomicCoordinator      | 12,351           | 13,524            | 12,225             | 35,628              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| GameItems              | 4,127            | 5,303             | 20,449             | 43,849              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| KeepPermitNpcB         | 7,392            | 8,454             | 17,184             | 40,698              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| LateFailNpcB           | 7,666            | 8,735             | 16,910             | 40,417              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| LateFailNpcB_Final     | 7,450            | 8,484             | 17,126             | 40,668              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| Level1Deployer         | 1,540            | 48,084            | 23,036             | 1,068               |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| MalformedOfferNpcB     | 2,696            | 3,186             | 21,880             | 45,966              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| NPC_A                  | 7,644            | 8,696             | 16,932             | 40,456              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| NPC_B                  | 7,644            | 8,695             | 16,932             | 40,457              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| NPC_C                  | 7,644            | 8,660             | 16,932             | 40,492              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| NoopReleaseNpcB        | 7,146            | 8,201             | 17,430             | 40,951              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| PermitOrderLedgerProbe | 2,882            | 3,317             | 21,694             | 45,835              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| PrepareMutatingNpcB    | 2,937            | 3,434             | 21,639             | 45,718              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| ReenterExecuteNpcB     | 7,607            | 8,662             | 16,969             | 40,490              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| ReenterStartRunNpcB    | 7,199            | 8,254             | 17,377             | 40,898              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| ReentrantLedgerProbe   | 1,693            | 2,119             | 22,883             | 47,033              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| RejectingObserverC     | 2,738            | 3,160             | 21,838             | 45,992              |
+|------------------------+------------------+-------------------+--------------------+---------------------|
+| ToolchainSmokeHarness  | 699              | 727               | 23,877             | 48,425              |
+╰------------------------+------------------+-------------------+--------------------+---------------------╯
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/AtomicCoordinator.sol:111:9
+    │
+111 │         items.grantInitial(runId);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/NpcBase.sol:150:39
+    │
+150 │             if (live[i] != before[i]) revert BeforeMismatch(runId);
+    │                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/NpcBase.sol:170:9
+    │
+170 │         items.transferFromNpc(runId, r.giveTo, r.giveItem, r.giveQty);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/AtomicCoordinator.sol:154:30
+    │
+154 │             if (p.sends[id]) _npc(id).release(runId, p.offerIds[id], p.snapshotHash, p.planHash);
+    │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[reentrancy-no-eth]: external call can be reentered before `_lock` is updated
+    ╭▸ src/AtomicCoordinator.sol:310:17
+    │
+310 │                 _npc(id).authorize(runId, p.offerIds[id], p.transfers, p.before, p.snapshotHash, p.planHash);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:145:13
+    │
+145 │             _npc(id).validatePlan(runId, p.offerIds[id], p.transfers, p.before);
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:154:30
+    │
+154 │             if (p.sends[id]) _npc(id).release(runId, p.offerIds[id], p.snapshotHash, p.planHash);
+    │                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/AtomicCoordinator.sol:165:9
+    │
+165 │         emit LevelSolved(runId, msg.sender, newNonce, p.snapshotHash, p.planHash);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:228:9
+    │
+228 │         revert InvalidNpc(id);
+    │         ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:245:18
+    │
+245 │             if (!_npc(id).hasOffer(offerId)) revert UnknownOffer(id, offerId);
+    │                  ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:237:34
+    │
+237 │             if (id >= NPC_COUNT) revert InvalidNpc(id);
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:238:27
+    │
+238 │             if (seen[id]) revert DuplicateNpc(id);
+    │                           ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:244:58
+    │
+244 │             if (id == NPC_C_ID && offerId != OFFER_NONE) revert ObserverMustSelectNone(offerId);
+    │                                                          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:245:46
+    │
+245 │             if (!_npc(id).hasOffer(offerId)) revert UnknownOffer(id, offerId);
+    │                                              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:259:45
+    │
+259 │             (bool has, Transfer memory t) = _npc(id).outgoing(offerIds[id]);
+    │                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:264:15
+    │
+264 │             ) revert InvalidTransfer(id);
+    │               ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:285:45
+    │
+285 │             if (spent[from] > before[from]) revert InsufficientStock(t.fromNpc, t.item, before[from], spent[from]);
+    │                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:302:40
+    │
+302 │             if (sumBefore != sumAfter) revert ConservationViolated();
+    │                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:310:17
+    │
+310 │                 _npc(id).authorize(runId, p.offerIds[id], p.transfers, p.before, p.snapshotHash, p.planHash);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:325:17
+    │
+325 │             if (_npc(id).permitOf(runId).active) revert PermitsRemaining(id);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/AtomicCoordinator.sol:328:18
+    │
+328 │             if (!_npc(id).isGoalSatisfied(actual)) revert GoalNotSatisfied(id);
+    │                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:322:43
+    │
+322 │             if (actual[i] != expected[i]) revert SettlementMismatch();
+    │                                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:325:50
+    │
+325 │             if (_npc(id).permitOf(runId).active) revert PermitsRemaining(id);
+    │                                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/AtomicCoordinator.sol:328:52
+    │
+328 │             if (!_npc(id).isGoalSatisfied(actual)) revert GoalNotSatisfied(id);
+    │                                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+EXIT=0

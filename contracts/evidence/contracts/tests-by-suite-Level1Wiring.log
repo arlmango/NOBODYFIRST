@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+
+Ran 12 tests for test/Level1Wiring.t.sol:Level1WiringTest
+[PASS] test_Wiring_AddressesMatchDeployerCreateNonces() (gas: 22684)
+[PASS] test_Wiring_CoordinatorPointsToItemsAndNpcs() (gas: 33182)
+[PASS] test_Wiring_DistinctNonZeroAddressesWithCode() (gas: 54663)
+[PASS] test_Wiring_GameItemsConstructorGuards() (gas: 5221)
+[PASS] test_Wiring_InitialStateBeforeAnyRun() (gas: 155954)
+[PASS] test_Wiring_ItemsPointsToCoordinatorAndNpcs() (gas: 85332)
+[PASS] test_Wiring_NoAdminSelectors() (gas: 2020358)
+[PASS] test_Wiring_NoEthIntake() (gas: 204524)
+[PASS] test_Wiring_NpcsPointBackAndHaveFixedTerms() (gas: 184076)
+[PASS] test_Wiring_OutgoingRejectsForeignOffer() (gas: 25243)
+[PASS] test_Wiring_PermitOfEmptyForUnknownRun() (gas: 16342)
+[PASS] test_Wiring_SecondDeployerIsIndependent() (gas: 167835)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 2.46ms (4.79ms CPU time)
+
+Ran 1 test suite in 3.11ms (2.46ms CPU time): 12 tests passed, 0 failed, 0 skipped (12 total tests)
+EXIT=0

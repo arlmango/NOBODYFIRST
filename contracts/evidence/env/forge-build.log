@@ -1,0 +1,6 @@
+# forge-build.log — 2026-10-12T05:27:03Z, cwd /Users/mango/NOBODYFIRST/contracts
+$ ./.tools/bin/forge build
+Compiling 20 files with Solc 0.8.37
+Solc 0.8.37 finished in 628.55ms
+Compiler run successful!
+EXIT=0

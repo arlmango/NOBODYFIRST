@@ -1,0 +1,223 @@
+/* Level result (simulated). Shared column layout lives in level-one.css. */
+
+/* ---------- Result ---------- */
+.result__head {
+  margin-top: var(--space-5);
+  text-align: center;
+}
+
+.result__eyebrow {
+  color: var(--accent);
+}
+
+.result__disclaimer {
+  margin-top: var(--space-1);
+  font-size: var(--text-meta);
+  color: var(--ink-2);
+}
+
+.result__room {
+  margin-top: var(--space-5);
+  font-family: var(--font-sans);
+  color: var(--ink);
+}
+
+.result__title {
+  margin-top: var(--space-1);
+  font-size: var(--text-h2);
+}
+
+.result__ok {
+  color: var(--ok);
+  font-size: 0.8em;
+  vertical-align: -0.05em;
+  margin-left: 0.15em;
+}
+
+.result__lead {
+  margin-top: var(--space-2);
+  font-size: var(--text-lead);
+}
+
+.result__people {
+  margin-top: var(--space-6);
+  border-top: var(--rule);
+}
+
+.result__person {
+  display: grid;
+  grid-template-columns: var(--portrait-col) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+  padding-block: var(--space-4);
+  border-bottom: var(--rule);
+}
+
+.result__role {
+  font-weight: 400;
+  font-size: 0.6em;
+}
+
+.before-after {
+  /* One size for item icons and the "empty" marker box, so every row lines up. */
+  --holding-icon: 44px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  max-width: 280px;
+}
+
+.before-after__cell {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.before-after__label {
+  font-size: var(--text-small);
+}
+
+.before-after__arrow {
+  align-self: center;
+  color: var(--ink-2);
+}
+
+.holding {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-sans); /* quantities: sans figures */
+  font-size: var(--text-small);
+}
+
+.holding .item-icon {
+  width: var(--holding-icon);
+  height: var(--holding-icon);
+  object-fit: contain;
+}
+
+/* Same box as an item icon, so "empty" rows line up with A and B. */
+.holding__empty {
+  display: grid;
+  place-items: center;
+  width: var(--holding-icon);
+  height: var(--holding-icon);
+}
+
+.holding__empty::before {
+  content: '';
+  width: 20px;
+  border-top: var(--rule);
+}
+
+.result__unchanged {
+  margin-top: var(--space-2);
+  font-size: var(--text-meta);
+  color: var(--ink-2);
+}
+
+.changed {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: var(--rule-strong);
+  text-align: center;
+}
+
+.changed h2 {
+  font-size: var(--text-h3);
+}
+
+.changed__table {
+  width: min(100%, 320px);
+  margin: var(--space-3) auto 0;
+  font-size: var(--text-small);
+}
+
+.changed__table th,
+.changed__table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--rule);
+  font-weight: 400;
+}
+
+.changed__table th {
+  text-align: left;
+}
+
+.changed__table td {
+  text-align: right;
+}
+
+.changed__note {
+  margin-top: var(--space-3);
+  font-size: var(--text-meta);
+  color: var(--ink-2);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+  margin-top: var(--space-6);
+  padding-block: var(--space-4);
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+  font-size: var(--text-small);
+}
+
+.details dd {
+  color: var(--ink-2);
+}
+
+.result__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--target);
+  font-size: var(--text-body);
+}
+
+@media (min-width: 760px) {
+  .result__title {
+    font-size: 2.5rem;
+  }
+
+  .details {
+    padding-inline: var(--space-4);
+  }
+
+  .before-after {
+    --holding-icon: 48px;
+  }
+}
+
+/* Columns (layout in level-one.css): centre each person's text under the portrait. */
+@media (min-width: 1024px) {
+  .result__person {
+    align-items: start;
+  }
+
+  .result__person-text {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .before-after {
+    --holding-icon: 56px;
+    width: 240px;
+  }
+}

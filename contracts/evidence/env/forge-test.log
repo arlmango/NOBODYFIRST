@@ -1,0 +1,43 @@
+# forge-test.log — 2026-10-12T05:27:57Z, cwd /Users/mango/NOBODYFIRST/contracts
+
+$ ./.tools/bin/forge test -vvv
+No files changed, compilation skipped
+
+Ran 3 tests for test/ToolchainSmoke.t.sol:ToolchainSmokeTest
+[PASS] test_StorageWriteAndRead() (gas: 95611)
+[PASS] test_WriteThenRevert_ExpectRevertRollsBackStorage() (gas: 98951)
+[PASS] test_WriteThenRevert_TryCatchRollsBackStorage() (gas: 99103)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 6.51ms (3.52ms CPU time)
+
+Ran 1 test suite in 11.89ms (6.51ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+EXIT=0
+
+$ ./.tools/bin/forge test -vvvv --match-test test_WriteThenRevert_ExpectRevertRollsBackStorage
+No files changed, compilation skipped
+
+Ran 1 test for test/ToolchainSmoke.t.sol:ToolchainSmokeTest
+[PASS] test_WriteThenRevert_ExpectRevertRollsBackStorage() (gas: 98951)
+Traces:
+  [98951] ToolchainSmokeTest::test_WriteThenRevert_ExpectRevertRollsBackStorage()
+    ├─ [43740] ToolchainSmokeHarness::setValue(7)
+    │   └─ ← [Stop]
+    ├─ [2431] ToolchainSmokeHarness::getValue() [staticcall]
+    │   └─ ← [Return] 7
+    ├─ [0] VM::expectRevert(ToolchainSmoke: write-then-revert)
+    │   └─ ← [Return]
+    ├─ [27111] ToolchainSmokeHarness::writeThenRevert(999)
+    │   └─ ← [Revert] ToolchainSmoke: write-then-revert
+    ├─ [2431] ToolchainSmokeHarness::getValue() [staticcall]
+    │   └─ ← [Return] 7
+    ├─ [2431] ToolchainSmokeHarness::getValue() [staticcall]
+    │   └─ ← [Return] 7
+    └─ ← [Stop]
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 522.42µs (131.08µs CPU time)
+
+Ran 1 test suite in 4.11ms (522.42µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+EXIT=0
+
+$ grep compiler version from artifact metadata (out/ToolchainSmoke.t.sol/ToolchainSmokeHarness.json)
+"compiler":{"version":"0.8.37+commit.f401782d"
+EXIT=0

@@ -1,0 +1,26 @@
+No files changed, compilation skipped
+
+Ran 19 tests for test/Level1Permissions.t.sol:Level1PermissionsTest
+[PASS] test_Authorize_BeforeMismatchPrecedesPlanRejected() (gas: 586289)
+[PASS] test_Authorize_ByNonCoordinator_NotCoordinator() (gas: 485815)
+[PASS] test_Authorize_ForgedBefore_BeforeMismatch() (gas: 668860)
+[PASS] test_Authorize_LiveBefore_IssuesPermit() (gas: 630135)
+[PASS] test_Authorize_NoneOrObserver_NothingToAuthorize() (gas: 573934)
+[PASS] test_Authorize_OrderPermitExistsAndNothingToAuthorizeBeforeMismatch() (gas: 332214)
+[PASS] test_DirectGrantInitial_NotCoordinator() (gas: 469970)
+[PASS] test_DirectRelease_ByUser_NotCoordinator() (gas: 520566)
+[PASS] test_Execute_ByCoordinatorOrNpcAddress_NotRunOwner() (gas: 458079)
+[PASS] test_LedgerTransfer_ArgumentGuards() (gas: 533976)
+[PASS] test_LedgerTransfer_ByCoordinator_NotRegisteredNpc() (gas: 359774)
+[PASS] test_LedgerTransfer_ByUser_NotRegisteredNpc() (gas: 388083)
+[PASS] test_LedgerTransfer_WrongNpc_InsufficientBalance() (gas: 432876)
+[PASS] test_NoResidualPermitsAfterSolve() (gas: 606936)
+[PASS] test_Permit_BindingMismatchAndOneTimeUse() (gas: 1891182)
+[PASS] test_Permit_IsRunScoped() (gas: 726181)
+[PASS] test_Release_WithoutPermit_NoPermit() (gas: 382834)
+[PASS] test_RepeatedGrantByCoordinator_AlreadyGranted() (gas: 360290)
+[PASS] test_SecondStartRun_RunExists() (gas: 370177)
+Suite result: ok. 19 passed; 0 failed; 0 skipped; finished in 3.87ms (16.00ms CPU time)
+
+Ran 1 test suite in 4.38ms (3.87ms CPU time): 19 tests passed, 0 failed, 0 skipped (19 total tests)
+EXIT=0

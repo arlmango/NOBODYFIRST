@@ -1,0 +1,36 @@
+
+ RUN  v5.0.3 /Users/mango/NOBODYFIRST
+
+ ✓ src/demo/engine.test.ts > selection check > reports an empty selection 1ms
+ ✓ src/demo/engine.test.ts > selection check > only A: names the promise B has not made 1ms
+ ✓ src/demo/engine.test.ts > selection check > only B: names the promise A has not made 0ms
+ ✓ src/demo/engine.test.ts > selection check > both promises form a complete package in either order 0ms
+ ✓ src/demo/engine.test.ts > selection check > rejects offer IDs that are not in the fixed table 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > refuses to preview or apply an empty selection 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > refuses to apply only A or only B, and nothing moves 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > preview lists both transfers and expected holdings without changing state 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > full package ends with exact holdings: A only 1 coin, B only 1 key, C empty 4ms
+ ✓ src/demo/engine.test.ts > preview and apply > keeps item totals and leaves C unchanged 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > does not mutate the input state or the selection 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > cannot apply the same exchange twice 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > refuses a package when a giver no longer holds the item 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > reset restores the initial state after an exchange, and the exchange can run again 0ms
+ ✓ src/demo/engine.test.ts > preview and apply > reports an applied state as already applied, whatever is selected 0ms
+ ✓ src/demo/engine.test.ts > repeated offer IDs > refuses [A, A] as a duplicate 0ms
+ ✓ src/demo/engine.test.ts > repeated offer IDs > refuses [A, B, A] even though both promises are present 0ms
+ ✓ src/demo/engine.test.ts > repeated offer IDs > refuses [B, A, B] even though both promises are present 0ms
+ ✓ src/demo/engine.test.ts > repeated offer IDs > lists repeated IDs once each, in table order, whatever the input order 0ms
+ ✓ src/demo/engine.test.ts > repeated offer IDs > reports a repeated ID before an unknown one 0ms
+ ✓ src/demo/engine.test.ts > repeated offer IDs > accepts unique [B, A] and ends with exact holdings 0ms
+ ✓ src/demo/engine.test.ts > repeated offer IDs > preview and apply refuse duplicates without touching state or selection; a valid apply still works 0ms
+ ✓ src/demo/engine.test.ts > engine generality (synthetic fixture, not a game level) > synthetic cycle: needs every promise and names the one that is missing 0ms
+ ✓ src/demo/engine.test.ts > engine generality (synthetic fixture, not a game level) > synthetic cycle: applies with conservation 0ms
+ ✓ src/demo/engine.test.ts > engine generality (synthetic fixture, not a game level) > refuses two different promises from the same giver 0ms
+ ✓ src/demo/engine.test.ts > engine generality (synthetic fixture, not a game level) > a conflicting-offers refusal leaves state and selection untouched; a valid apply still works 0ms
+
+ Test Files  1 passed (1)
+      Tests  26 passed (26)
+   Start at  08:42:42
+   Duration  91ms (transform 59%, tests 22%, import 15%, worker 4%)
+
+EXIT=0

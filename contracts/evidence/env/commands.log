@@ -1,0 +1,35 @@
+[2026-10-12T05:17:22Z] mkdir -p contracts/.tools/{bin,solc,_dl}; arch -x86_64 /usr/bin/true -> exit 0
+[2026-10-12T05:17:23Z] curl releases/tags/v1.8.5 exit=0
+[2026-10-12T05:18:33Z] curl foundry_v1.8.5_darwin_arm64.tar.gz exit=0
+[2026-10-12T05:18:34Z] curl foundry_v1.8.5_darwin_arm64.sha256 exit=0
+[2026-10-12T05:18:35Z] curl foundry_v1.8.5_darwin_arm64.attestation.txt exit=0
+[2026-10-12T05:18:36Z] curl foundry_v1.8.5_darwin_arm64.sigstore.json exit=0
+[2026-10-12T05:18:36Z] shasum -a 256 tarball
+[2026-10-12T05:18:45Z] gh attestation verify tarball --repo foundry-rs/foundry (GH_PROMPT_DISABLED=1) see gh_att.out
+tar -tzvf exit=0
+[2026-10-12T05:19:02Z] gh attestation verify tarball --repo foundry-rs/foundry (no tty) see gh_att.out
+[2026-10-12T05:19:02Z] tar -tzvf exit=0 (listing: forge cast anvil chisel solar)
+[2026-10-12T05:19:42Z] gh attestation verify --format json; subject listing parsed
+[2026-10-12T05:19:51Z] tar -xzf tarball -C x forge cast anvil chisel exit=0
+[2026-10-12T05:20:04Z] gh attestation verify --format json > att.json exit=0
+[2026-10-12T05:20:14Z] contracts/.tools/bin/forge --version exit=0
+[2026-10-12T05:20:15Z] contracts/.tools/bin/cast --version exit=0
+[2026-10-12T05:20:15Z] contracts/.tools/bin/anvil --version exit=0
+[2026-10-12T05:20:16Z] bin/chisel --version exit=0
+[2026-10-12T05:20:23Z] curl list.json exit=0
+[2026-10-12T05:20:40Z] curl solc binary exit=0
+[2026-10-12T05:20:49Z] curl github api ethereum/solidity releases/tags/v0.8.37 exit=0
+[2026-10-12T05:21:33Z] curl GitHub solc-macos asset exit=0
+[2026-10-12T05:21:34Z] cmp solc-gh-macos vs soliditylang build exit=0
+[2026-10-12T05:21:42Z] contracts/.tools/solc/solc-0.8.37 --version exit=0
+[2026-10-12T05:21:43Z] arch -x86_64 solc --version exit=0
+[2026-10-12T05:22:44Z] python3 -I keccak.py (self-test + solc file) exit=0
+[2026-10-12T05:22:53Z] git ls-remote forge-std refs/tags/v1.17.0* exit=0
+[2026-10-12T05:22:54Z] curl api git/refs/tags/v1.17.0 exit=0
+[2026-10-12T05:23:04Z] git clone --depth 1 --branch v1.17.0 forge-std exit=0
+[2026-10-12T05:23:04Z] rev-parse HEAD; submodule check
+[2026-10-12T05:23:23Z] wrote release-info.json and checksums.txt (python3 -I)
+[2026-10-12T05:23:37Z] version capture -> versions.txt
+[2026-10-12T05:23:50Z] rm -rf contracts/.tools/_dl (scratch removed; tarball hash kept in install-manifest.sha256 and release-info.json)
+[2026-10-12T05:24:10Z] wrote README-ENV.md; removed _rel.json
+NOTE (corrections to entries above): the first attestation attempt wrapped gh in `timeout`, which is not installed on this host (exit 127, no verification). The retry without `timeout` exited 0. A later Python parse of the attestation failed (exit 1) because the environment passed to gh was stripped; the rerun with the full environment exited 0. The "tar -tzvf exit=0" and "gh ... exit=0" entries above were logged after the fact and reflect the exit code of the command they name.

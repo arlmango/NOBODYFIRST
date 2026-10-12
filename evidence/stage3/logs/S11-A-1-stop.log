@@ -1,0 +1,16 @@
+$ node scripts/chain/local-chain.mjs stop
+EXIT=0
+{"ok":true,"command":"stop","stopped":true,"pid":2604,"port":8545,"portFree":true,"manifestRemoved":true}
+[local-chain] stopping anvil pid 2604
+$ node scripts/chain/local-chain.mjs stop
+EXIT=0
+{"ok":true,"command":"stop","stopped":true,"pid":7442,"port":8545,"portFree":true,"manifestRemoved":true}
+[local-chain] stopping anvil pid 7442
+$ node scripts/chain/local-chain.mjs stop
+EXIT=0
+{"ok":true,"command":"stop","stopped":true,"pid":8747,"port":8545,"portFree":true,"manifestRemoved":true}
+[local-chain] stopping anvil pid 8747
+$ node scripts/chain/local-chain.mjs stop
+EXIT=0
+{"ok":true,"command":"stop","stopped":true,"pid":17787,"port":8545,"portFree":true,"manifestRemoved":true}
+[local-chain] stopping anvil pid 17787

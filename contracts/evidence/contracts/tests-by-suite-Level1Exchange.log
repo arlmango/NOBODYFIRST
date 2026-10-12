@@ -1,0 +1,30 @@
+No files changed, compilation skipped
+
+Ran 23 tests for test/Level1Exchange.t.sol:Level1ExchangeTest
+[PASS] test_EventSignaturesMatchSource() (gas: 461)
+[PASS] test_HappyPath_ExactBalancesRunStateEventsNoPermits() (gas: 883254)
+[PASS] test_PlayersIsolated() (gas: 2131869)
+[PASS] test_Reject_AllNone_PlanRejectedA_GoalNotMet() (gas: 450013)
+[PASS] test_Reject_DuplicateNpcId() (gas: 806060)
+[PASS] test_Reject_DuplicateOfferIds() (gas: 820357)
+[PASS] test_Reject_EmptyArray_BadPackageLength() (gas: 398743)
+[PASS] test_Reject_ForeignUserExecutesRun_NotRunOwner() (gas: 409141)
+[PASS] test_Reject_FourEntries_BadPackageLength() (gas: 403888)
+[PASS] test_Reject_InvalidNpcId() (gas: 404342)
+[PASS] test_Reject_MissingRun_RunMissing() (gas: 749671)
+[PASS] test_Reject_OfferAtObserverC() (gas: 826312)
+[PASS] test_Reject_OnlyA1_PlanRejectedA_IncomingMissing() (gas: 455953)
+[PASS] test_Reject_OnlyB1_PlanRejectedA_UnexpectedIncoming() (gas: 455868)
+[PASS] test_Reject_TwoEntries_BadPackageLength() (gas: 401730)
+[PASS] test_Reject_UnknownOffer() (gas: 409187)
+[PASS] test_Reject_WrongNonce_StaleNonce() (gas: 377386)
+[PASS] test_Reject_WrongSnapshot_StaleSnapshot() (gas: 402706)
+[PASS] test_ReorderedPackage_IsValidAndSamePlanHash() (gas: 587499)
+[PASS] test_RepeatAfterSolved_RevertsAlreadySolved() (gas: 1051761)
+[PASS] test_SecondStartRunAfterSolved_RevertsRunExists() (gas: 505726)
+[PASS] test_StartRun_Events() (gas: 142582)
+[PASS] test_StartRun_InitialState() (gas: 255119)
+Suite result: ok. 23 passed; 0 failed; 0 skipped; finished in 4.97ms (22.44ms CPU time)
+
+Ran 1 test suite in 5.54ms (4.97ms CPU time): 23 tests passed, 0 failed, 0 skipped (23 total tests)
+EXIT=0

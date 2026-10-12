@@ -1,0 +1,381 @@
+$ cast rpc eth_accounts --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: ["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266","0x70997970c51812dc3a010c7d01b50e0d17dc79c8","0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc","0x90f79bf6eb2c4f870365e785982e1f101e93b906","0x15d34aaf54267db7d7c367839aaf71a00a2c6a65","0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc","0x976ea74026e726554db657fa54...(451 chars)
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 642829559307850963015472508762062935916233390536 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast nonce 0x70997970c51812dc3a010c7d01b50e0d17dc79c8 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0
+$ cast receipt 0x2eddaee3e11a0b860840f5b65d978b1728294e2fd07a3f8a34c4bc8bb32d934b --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"status":"0x1","cumulativeGasUsed":"0x1db7c","logs":[{"address":"0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc","topics":["0x038e0a04689190e0b74ec863b4083ea2dd1ec116951ab06ce96bea99436f4cce","0x00000000000000000000000070997970c51812dc3a010c7d01b50e0d17dc79c8","0x00000000000000000000000070997970c51812d...(2073 chars)
+$ cast nonce 0x70997970c51812dc3a010c7d01b50e0d17dc79c8 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 1
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 642829559307850963015472508762062935916233390536 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+true
+false
+0
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 642829559307850963015472508762062935916233390536 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [1, 0, 0, 1, 0, 0]
+$ cast receipt 0xa861add05db6c085f4764c0d1082451b430fe30e6997a5255bcf293778b6c701 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"status":"0x1","cumulativeGasUsed":"0x6476c","logs":[{"address":"0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968","topics":["0xde69ed9f87a2b43dc25d478d09414c239108d45d3e4a51730a9bbea2fb2eab2a","0x00000000000000000000000070997970c51812dc3a010c7d01b50e0d17dc79c8","0x000000000000000000000000000000000000000...(6075 chars)
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 642829559307850963015472508762062935916233390536 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [0, 1, 1, 0, 0, 0]
+$ cast nonce 0x70997970c51812dc3a010c7d01b50e0d17dc79c8 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 2
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 642829559307850963015472508762062935916233390536 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+false
+true
+1
+$ cast sig-event RunStarted(uint256,address)
+  EXIT=0
+  stdout: 0x038e0a04689190e0b74ec863b4083ea2dd1ec116951ab06ce96bea99436f4cce
+$ cast sig-event InitialGranted(uint256)
+  EXIT=0
+  stdout: 0x0ed3b83ff967bb7746b5590c2dd1a3603a6a7bda2f937901378cdbba5834ef0a
+$ cast sig-event PermitIssued(uint256,uint8,bytes32,bytes32,bytes32)
+  EXIT=0
+  stdout: 0xde69ed9f87a2b43dc25d478d09414c239108d45d3e4a51730a9bbea2fb2eab2a
+$ cast sig-event PermitConsumed(uint256,uint8,bytes32)
+  EXIT=0
+  stdout: 0xc9e4ac35c37d33dfa911db68c08b08f190579152ea3550bd07718983fbd7003e
+$ cast sig-event ItemMoved(uint256,uint8,uint8,uint8,uint32)
+  EXIT=0
+  stdout: 0x4f1a6f983bca7eaad824ec4c6e13496007ded7ef3daa7d9879a9fd04b3c107f3
+$ cast sig-event LevelSolved(uint256,address,uint64,bytes32,bytes32)
+  EXIT=0
+  stdout: 0x8cf387ec779919c4c2933e365bee30bfb02e768ea625082e2211d35f4191a47b
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 642829559307850963015472508762062935916233390536 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+false
+true
+1
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 344073830386746567427978432078835137280280269756 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+true
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 344073830386746567427978432078835137280280269756 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+true
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 827616541489050293873067319834814086332722428166 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 124600769394618761707529974069218112888608942693 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+true
+false
+0
+$ cast rpc evm_setAutomine false --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast rpc evm_mine --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: "0x0"
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 124600769394618761707529974069218112888608942693 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+false
+true
+1
+$ cast rpc evm_setAutomine true --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast rpc eth_chainId --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: "0x7a69"
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 201990263407130541861732429012178345511141645967 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 864525257947771085510183188952227776536258415273 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+true
+false
+0
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 864525257947771085510183188952227776536258415273 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [1, 0, 0, 1, 0, 0]
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 864525257947771085510183188952227776536258415273 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x976EA74026E726554dB657fA54763abd0C3a0aa9
+false
+true
+1
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 918756735253610709936507276127632253845124912928 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0xa0Ee7A142d267C1f36714E4a8F75612F20a79720
+true
+false
+0
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 918756735253610709936507276127632253845124912928 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [1, 0, 0, 1, 0, 0]
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 119096571092301921719253721560231391405901977941 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+true
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc currentSnapshotHash(uint256)(bytes32) 119096571092301921719253721560231391405901977941 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0xab75c99c58e7e381e8b54fa2ec28bd80d30b95f5f17bdf1e84cd50b9713b5e13
+$ cast call 0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968 ownOffer()(bytes32) --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e
+$ cast call 0xeebe00ac0756308ac4aabfd76c05c4f3088b8883 ownOffer()(bytes32) --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206
+$ cast send --unlocked --from 0x14dc79964da2c08b23698b3d3cc7ca32193d9955 --rpc-url http://127.0.0.1:8545 --json 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc execute(uint256,(uint8,bytes32)[],uint256,bytes32) 119096571092301921719253721560231391405901977941 [(0,0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e),(1,0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206),(2,0x0000000000000000000000000000000000000000000000000000000000000000)] 0 0xab75c99c58e7e381e8b54fa2ec28bd80d30b95f5f17bdf1e84cd50b9713b5e13
+  EXIT=0
+  stdout: {"type":"0x2","status":"0x1","cumulativeGasUsed":"0x6476c","logs":[{"address":"0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968","topics":["0xde69ed9f87a2b43dc25d478d09414c239108d45d3e4a51730a9bbea2fb2eab2a","0x00000000000000000000000014dc79964da2c08b23698b3d3cc7ca32193d9955","0x00000000000000000000000000...(6047 chars)
+$ cast receipt 0xf9894d4c72059754f74f902d0b8e498fdc0ea83728ccda91023479fbbca1a163 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"status":"0x1","cumulativeGasUsed":"0x6476c","logs":[{"address":"0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968","topics":["0xde69ed9f87a2b43dc25d478d09414c239108d45d3e4a51730a9bbea2fb2eab2a","0x00000000000000000000000014dc79964da2c08b23698b3d3cc7ca32193d9955","0x000000000000000000000000000000000000000...(6075 chars)
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 119096571092301921719253721560231391405901977941 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+false
+true
+1
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 119096571092301921719253721560231391405901977941 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+false
+true
+1
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 642829559307850963015472508762062935916233390536 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 201990263407130541861732429012178345511141645967 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [1, 0, 0, 1, 0, 0]
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 201990263407130541861732429012178345511141645967 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 827616541489050293873067319834814086332722428166 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0000000000000000000000000000000000000000
+false
+false
+0
+$ cast rpc evm_setAutomine false --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast tx 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"schema_version":1,"success":true,"data":{"type":"0x2","chainId":"0x7a69","nonce":"0x1","gas":"0x7e1cb","maxFeePerGas":"0x6d4f132a","maxPriorityFeePerGas":"0x3b9aca00","to":"0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc","value":"0x0","accessList":[],"input":"0xb00141cc0000000000000000000000009965507d...(1384 chars)
+$ cast rpc eth_getTransactionReceipt 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast send --unlocked --async --from 0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc --rpc-url http://127.0.0.1:8545 --nonce 1 --gas-price 3667797588 --priority-gas-price 2000000000 --gas-limit 21000 --value 0 0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc
+  EXIT=0
+  stdout: 0x1e371701adeba80203c584227899a16f84afbdb0d89d0ad513eedc664f84c9c7
+$ cast rpc evm_mine --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: "0x0"
+$ cast rpc evm_setAutomine true --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast receipt 0x1e371701adeba80203c584227899a16f84afbdb0d89d0ad513eedc664f84c9c7 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"status":"0x1","cumulativeGasUsed":"0x5208","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...(1015 chars)
+$ cast tx 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --json --rpc-url http://127.0.0.1:8545
+  EXIT=1
+  stdout: {"schema_version":1,"success":false,"data":null,"errors":[{"level":"error","code":"cast.error","message":"tx not found: 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009"}],"warnings":[]}
+$ cast rpc eth_getTransactionReceipt 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+true
+false
+0
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [1, 0, 0, 1, 0, 0]
+$ cast rpc evm_setAutomine false --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast tx 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"schema_version":1,"success":true,"data":{"type":"0x2","chainId":"0x7a69","nonce":"0x2","gas":"0x7e1cb","maxFeePerGas":"0xa2b58e12","maxPriorityFeePerGas":"0x3b9aca00","to":"0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc","value":"0x0","accessList":[],"input":"0xb00141cc0000000000000000000000009965507d...(1385 chars)
+$ cast rpc eth_getTransactionReceipt 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+true
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc currentSnapshotHash(uint256)(bytes32) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0612e0a78c79d6e379ef34c791715d18d7a66121e831a28b873d72f9191f7b23
+$ cast call 0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968 ownOffer()(bytes32) --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e
+$ cast call 0xeebe00ac0756308ac4aabfd76c05c4f3088b8883 ownOffer()(bytes32) --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206
+$ cast send --unlocked --async --from 0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc --rpc-url http://127.0.0.1:8545 --nonce 2 --gas-price 5459614756 --priority-gas-price 2000000000 --gas-limit 516555 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc execute(uint256,(uint8,bytes32)[],uint256,bytes32) 875734974754274547701265637215306557576585454812 [(0,0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e),(1,0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206),(2,0x0000000000000000000000000000000000000000000000000000000000000000)] 0 0x0612e0a78c79d6e379ef34c791715d18d7a66121e831a28b873d72f9191f7b23
+  EXIT=0
+  stdout: 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f
+$ cast rpc evm_mine --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: "0x0"
+$ cast rpc evm_setAutomine true --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast receipt 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"status":"0x1","cumulativeGasUsed":"0x6476c","logs":[{"address":"0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968","topics":["0xde69ed9f87a2b43dc25d478d09414c239108d45d3e4a51730a9bbea2fb2eab2a","0x0000000000000000000000009965507d1a55bcc2695c58ba16fb37d819b0a4dc","0x000000000000000000000000000000000000000...(6075 chars)
+$ cast tx 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --json --rpc-url http://127.0.0.1:8545
+  EXIT=1
+  stdout: {"schema_version":1,"success":false,"data":null,"errors":[{"level":"error","code":"cast.error","message":"tx not found: 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9"}],"warnings":[]}
+$ cast rpc eth_getTransactionReceipt 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+false
+true
+1
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [0, 1, 1, 0, 0, 0]
+$ cast rpc eth_accounts --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: ["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266","0x70997970c51812dc3a010c7d01b50e0d17dc79c8","0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc","0x90f79bf6eb2c4f870365e785982e1f101e93b906","0x15d34aaf54267db7d7c367839aaf71a00a2c6a65","0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc","0x976ea74026e726554db657fa54...(451 chars)
+$ cast rpc evm_setAutomine false --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast tx 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"schema_version":1,"success":true,"data":{"type":"0x2","chainId":"0x7a69","nonce":"0x1","gas":"0x7e1cb","maxFeePerGas":"0x6d4f132a","maxPriorityFeePerGas":"0x3b9aca00","to":"0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc","value":"0x0","accessList":[],"input":"0xb00141cc0000000000000000000000009965507d...(1384 chars)
+$ cast rpc eth_getTransactionReceipt 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast send --unlocked --async --from 0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc --rpc-url http://127.0.0.1:8545 --nonce 1 --gas-price 3667797588 --priority-gas-price 2000000000 --gas-limit 21000 --value 0 0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc
+  EXIT=0
+  stdout: 0x1e371701adeba80203c584227899a16f84afbdb0d89d0ad513eedc664f84c9c7
+$ cast rpc evm_mine --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: "0x0"
+$ cast rpc evm_setAutomine true --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast receipt 0x1e371701adeba80203c584227899a16f84afbdb0d89d0ad513eedc664f84c9c7 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"status":"0x1","cumulativeGasUsed":"0x5208","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...(1015 chars)
+$ cast tx 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --json --rpc-url http://127.0.0.1:8545
+  EXIT=1
+  stdout: {"schema_version":1,"success":false,"data":null,"errors":[{"level":"error","code":"cast.error","message":"tx not found: 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009"}],"warnings":[]}
+$ cast rpc eth_getTransactionReceipt 0x94eba63df1eb4d071f70df1b0c7c9c01017c66998f3379e35b805a910858b009 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+true
+false
+0
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [1, 0, 0, 1, 0, 0]
+$ cast rpc evm_setAutomine false --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast tx 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"schema_version":1,"success":true,"data":{"type":"0x2","chainId":"0x7a69","nonce":"0x2","gas":"0x7e1cb","maxFeePerGas":"0xa2b58e12","maxPriorityFeePerGas":"0x3b9aca00","to":"0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc","value":"0x0","accessList":[],"input":"0xb00141cc0000000000000000000000009965507d...(1385 chars)
+$ cast rpc eth_getTransactionReceipt 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+true
+false
+0
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc currentSnapshotHash(uint256)(bytes32) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x0612e0a78c79d6e379ef34c791715d18d7a66121e831a28b873d72f9191f7b23
+$ cast call 0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968 ownOffer()(bytes32) --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e
+$ cast call 0xeebe00ac0756308ac4aabfd76c05c4f3088b8883 ownOffer()(bytes32) --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206
+$ cast send --unlocked --async --from 0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc --rpc-url http://127.0.0.1:8545 --nonce 2 --gas-price 5459614756 --priority-gas-price 2000000000 --gas-limit 516555 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc execute(uint256,(uint8,bytes32)[],uint256,bytes32) 875734974754274547701265637215306557576585454812 [(0,0x8b85dac59f312b32f284a898a10fa754673dee20d7e18025a0823624f530ce6e),(1,0x6f67fbb29919bc396061f7895235da339268f054230a3eb92be84c3b40637206),(2,0x0000000000000000000000000000000000000000000000000000000000000000)] 0 0x0612e0a78c79d6e379ef34c791715d18d7a66121e831a28b873d72f9191f7b23
+  EXIT=0
+  stdout: 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f
+$ cast rpc evm_mine --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: "0x0"
+$ cast rpc evm_setAutomine true --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast receipt 0x2811bb451711a95ceec4daeb58cd35ab11f501e94151a1ef49c80dbb7505a02f --json --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: {"status":"0x1","cumulativeGasUsed":"0x6476c","logs":[{"address":"0xb7a5bd0345ef1cc5e66bf61bdec17d2461fbd968","topics":["0xde69ed9f87a2b43dc25d478d09414c239108d45d3e4a51730a9bbea2fb2eab2a","0x0000000000000000000000009965507d1a55bcc2695c58ba16fb37d819b0a4dc","0x000000000000000000000000000000000000000...(6075 chars)
+$ cast tx 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --json --rpc-url http://127.0.0.1:8545
+  EXIT=1
+  stdout: {"schema_version":1,"success":false,"data":null,"errors":[{"level":"error","code":"cast.error","message":"tx not found: 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9"}],"warnings":[]}
+$ cast rpc eth_getTransactionReceipt 0x3dc97a86315073a5b2b9001c5d9d9ee7515e46afa75abe6ab8e58d8f7d4980b9 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: null
+$ cast call 0x603e1bd79259ebcbaaed0c83eec09ca0b89a5bcc runOf(uint256)(address,bool,bool,uint64) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+false
+true
+1
+$ cast call 0xa16e02e87b7454126e5e10d957a927a7f5b5d2be snapshotBalances(uint256)(uint256[6]) 875734974754274547701265637215306557576585454812 --rpc-url http://127.0.0.1:8545
+  EXIT=0
+  stdout: [0, 1, 1, 0, 0, 0]

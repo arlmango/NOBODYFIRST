@@ -1,0 +1,2 @@
+{"ok":true,"command":"stop","stopped":false,"reason":"no pid file; port free","portFree":true,"manifestRemoved":false}
+EXIT=0

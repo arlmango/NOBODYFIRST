@@ -1,0 +1,223 @@
+{
+  "foundry": {
+    "api": "https://api.github.com/repos/foundry-rs/foundry/releases/tags/v1.8.5",
+    "tag_name": "v1.8.5",
+    "published_at": "2026-10-05T18:46:58Z",
+    "draft": false,
+    "prerelease": false,
+    "darwin_arm64_assets": [
+      {
+        "url": "https://api.github.com/repos/foundry-rs/foundry/releases/assets/613250175",
+        "id": 613250175,
+        "node_id": "RA_kwDOGBlvNc4kjXR_",
+        "name": "foundry_v1.8.5_darwin_arm64.attestation.txt",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "text/plain; charset=utf-8",
+        "state": "uploaded",
+        "size": 60,
+        "digest": "sha256:c9ef5e78a86d475c587a2e42974e6dc3ea83c729a1773e1760bdcbf696255b22",
+        "download_count": 1761,
+        "created_at": "2026-10-05T17:41:31Z",
+        "updated_at": "2026-10-05T17:41:31Z",
+        "browser_download_url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_darwin_arm64.attestation.txt"
+      },
+      {
+        "url": "https://api.github.com/repos/foundry-rs/foundry/releases/assets/613250191",
+        "id": 613250191,
+        "node_id": "RA_kwDOGBlvNc4kjXSP",
+        "name": "foundry_v1.8.5_darwin_arm64.sha256",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/octet-stream",
+        "state": "uploaded",
+        "size": 101,
+        "digest": "sha256:c45653eb358bf7effd7efbb1c6786a23b15876369d18a49fea365b1333f2f5be",
+        "download_count": 207,
+        "created_at": "2026-10-05T17:41:31Z",
+        "updated_at": "2026-10-05T17:41:32Z",
+        "browser_download_url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_darwin_arm64.sha256"
+      },
+      {
+        "url": "https://api.github.com/repos/foundry-rs/foundry/releases/assets/613250211",
+        "id": 613250211,
+        "node_id": "RA_kwDOGBlvNc4kjXSj",
+        "name": "foundry_v1.8.5_darwin_arm64.sigstore.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 10118,
+        "digest": "sha256:9fa17e88cf8f0d8917bb2854f5a260cb83032c5e9f3f128ec07862f72f31578f",
+        "download_count": 23,
+        "created_at": "2026-10-05T17:41:31Z",
+        "updated_at": "2026-10-05T17:41:32Z",
+        "browser_download_url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_darwin_arm64.sigstore.json"
+      },
+      {
+        "url": "https://api.github.com/repos/foundry-rs/foundry/releases/assets/613250209",
+        "id": 613250209,
+        "node_id": "RA_kwDOGBlvNc4kjXSh",
+        "name": "foundry_v1.8.5_darwin_arm64.tar.gz",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/x-gtar",
+        "state": "uploaded",
+        "size": 121257495,
+        "digest": "sha256:56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83",
+        "download_count": 2197,
+        "created_at": "2026-10-05T17:41:31Z",
+        "updated_at": "2026-10-05T17:41:37Z",
+        "browser_download_url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_darwin_arm64.tar.gz"
+      }
+    ],
+    "attestation_verified_subjects": [
+      {
+        "name": "anvil",
+        "sha256": "a082205c1b76cccc39516aeb784ea0478f66772451b9412dfaa271c23abf118a"
+      },
+      {
+        "name": "cast",
+        "sha256": "d2e3050c71d7e0a5f359c81f17c13a8e5a96f481e4b59c78309ecd114a668064"
+      },
+      {
+        "name": "chisel",
+        "sha256": "bf6990f62bc083a3dfee363530262d11e421fe19de78987018c7f7c439fcf66d"
+      },
+      {
+        "name": "forge",
+        "sha256": "1bd4b44465bedc89c546d3b7010e0a0ee2bc03c3f1e232f82587ecb24c512873"
+      },
+      {
+        "name": "solar",
+        "sha256": "93cf91179b7dbf0ce167f35ef7d26985228ce6efbf264c894a5d4f78eddfffbe"
+      },
+      {
+        "name": "foundry_v1.8.5_darwin_arm64.tar.gz",
+        "sha256": "56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83"
+      }
+    ],
+    "attestation_cert": {
+      "githubWorkflowName": "release",
+      "sourceRepositoryURI": "https://github.com/foundry-rs/foundry",
+      "sourceRepositoryRef": "refs/tags/v1.8.5",
+      "sourceRepositoryDigest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+      "runnerEnvironment": "github-hosted"
+    },
+    "attestation_predicate": "https://slsa.dev/provenance/v1"
+  },
+  "solc": {
+    "list_json": "https://binaries.soliditylang.org/macosx-amd64/list.json",
+    "list_entry_0_8_37": {
+      "path": "solc-macosx-amd64-v0.8.37+commit.f401782d",
+      "version": "0.8.37",
+      "build": "commit.f401782d",
+      "longVersion": "0.8.37+commit.f401782d",
+      "keccak256": "0x3581bfdf7211ad70fe593bd43db6e355918886e22361f006f8a39f44627c7ae7",
+      "sha256": "0xa27396e7732aa52e80ff89ad7bd8a2e46fec2a6dcc4ef20cd16e5e0c502d6821",
+      "urls": [
+        "dweb:/ipfs/QmTY4aapQgDkHihzDWAZAEjS3zzDDHMafC9FUj3kJ8yQkj"
+      ]
+    },
+    "github_release_api": "https://api.github.com/repos/argotorg/solidity/releases/tags/v0.8.37 (ethereum/solidity redirects to argotorg/solidity)",
+    "github_release": {
+      "tag_name": "v0.8.37",
+      "published_at": "2026-09-10T06:38:29Z",
+      "html_url": "https://github.com/argotorg/solidity/releases/tag/v0.8.37"
+    },
+    "github_macos_assets": [
+      {
+        "name": "solc-macos",
+        "size": 32260112,
+        "digest": "sha256:a27396e7732aa52e80ff89ad7bd8a2e46fec2a6dcc4ef20cd16e5e0c502d6821",
+        "url": "https://github.com/argotorg/solidity/releases/download/v0.8.37/solc-macos"
+      }
+    ]
+  },
+  "forge_std": {
+    "tag": "v1.17.0",
+    "tag_object_type": "commit (lightweight tag)",
+    "commit_sha": "f3dae6e6ee381f25eb6a246f7da9b85c91a68219",
+    "git_api_ref": "https://api.github.com/repos/foundry-rs/forge-std/git/refs/tags/v1.17.0"
+  }
+}

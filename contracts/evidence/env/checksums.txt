@@ -1,0 +1,12 @@
+tarball foundry_v1.8.5_darwin_arm64.tar.gz computed=56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83
+  expected(.sha256 file)=56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83 match=yes
+  expected(API digest)=56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83 match=yes
+  expected(attestation subject)=56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83 match=yes
+solc solc-macosx-amd64-v0.8.37+commit.f401782d computed=a27396e7732aa52e80ff89ad7bd8a2e46fec2a6dcc4ef20cd16e5e0c502d6821
+  expected(list.json sha256)=a27396e7732aa52e80ff89ad7bd8a2e46fec2a6dcc4ef20cd16e5e0c502d6821 match=yes
+  github solc-macos API digest=a27396e7732aa52e80ff89ad7bd8a2e46fec2a6dcc4ef20cd16e5e0c502d6821 match=yes
+  github asset bytes identical to soliditylang build: yes
+solc keccak256 computed(pure-python, test-vectors checked)=3581bfdf7211ad70fe593bd43db6e355918886e22361f006f8a39f44627c7ae7
+  expected(list.json keccak256)=3581bfdf7211ad70fe593bd43db6e355918886e22361f006f8a39f44627c7ae7 match=yes
+forge-std commit computed=f3dae6e6ee381f25eb6a246f7da9b85c91a68219 (git rev-parse HEAD in contracts/lib/forge-std)
+  expected(git ls-remote refs/tags/v1.17.0 + API ref)=f3dae6e6ee381f25eb6a246f7da9b85c91a68219 match=yes

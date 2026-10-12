@@ -1,0 +1,4 @@
+$ lsof -nP -iTCP:8545|4173 -sTCP:LISTEN  (expect none)
+lsof exit (1 = nothing listening): 1
+$ ps anvil|vite preview
+(none above = none left)

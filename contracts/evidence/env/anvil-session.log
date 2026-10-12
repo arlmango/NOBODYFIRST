@@ -1,0 +1,71 @@
+# anvil-session.log — 2026-10-12T05:28:51Z, cwd /Users/mango/NOBODYFIRST/contracts
+# Anvil stdout (which prints the well-known default dev accounts/keys) is NOT copied here;
+# only its version/listen lines are extracted below. No keys were used; no transactions sent.
+
+$ lsof -nP -iTCP:8599
+EXIT=1
+# (lsof EXIT=1 with no output => port 8599 free before start)
+
+$ ./.tools/bin/anvil --host 127.0.0.1 --port 8599 > <scratchpad>/anvil-stdout.txt 2>&1 &
+ANVIL_PID=49670
+# anvil answered after ~500ms (poll 2)
+
+# anvil stdout (filtered, no keys):
+Chain ID
+31337
+1000000000
+30000000
+1791782931
+0
+Listening on 127.0.0.1:8599
+
+$ ./.tools/bin/cast chain-id --rpc-url http://127.0.0.1:8599
+31337
+EXIT=0
+
+$ ./.tools/bin/cast block-number --rpc-url http://127.0.0.1:8599
+0
+EXIT=0
+
+$ ./.tools/bin/cast client --rpc-url http://127.0.0.1:8599
+anvil/v1.8.5
+EXIT=0
+
+$ ps -o pid,ppid,command -p 49670
+  PID  PPID COMMAND
+49670 49664 ./.tools/bin/anvil --host 127.0.0.1 --port 8599
+EXIT=0
+
+$ lsof -nP -a -p 49670 -iTCP -sTCP:LISTEN
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+anvil   49670 mango    9u  IPv4 0xb0ef7824d435802b      0t0  TCP 127.0.0.1:8599 (LISTEN)
+EXIT=0
+
+$ netstat -anv -p tcp | grep LISTEN | grep '\.8599 '
+tcp4       0      0  127.0.0.1.8599         *.*                    LISTEN                 0            0  131072  131072            anvil:49670  00100 00000006 000000000047977b 00000001 00000800      1      0 000000
+EXIT=0
+
+# check for wildcard bind (expect no match):
+$ lsof -nP -iTCP:8599 -sTCP:LISTEN | grep -E '\*:8599|0\.0\.0\.0:8599|\[::\]:8599'
+EXIT=1 (1 = no wildcard listener)
+
+$ kill 49670
+EXIT=0
+# wait 49670 status=0
+
+$ kill -0 49670
+/private/tmp/claude-501/-Users-mango-NOBODYFIRST/98af9731-d60f-4f75-9ccd-d2bf0a46ecf5/scratchpad/anvil-session.sh: line 62: kill: (49670) - No such process
+EXIT=1 (non-zero = process gone)
+
+$ ps -p 49670
+  PID TTY           TIME CMD
+EXIT=1
+
+$ lsof -nP -iTCP:8599
+EXIT=1
+# (lsof EXIT=1 with no output => port 8599 free after stop)
+
+$ ./.tools/bin/cast chain-id --rpc-url http://127.0.0.1:8599
+Error: MPP HTTP request to http://127.0.0.1:8599/ failed: HTTP request failed: error sending request: error sending request: client error (Connect): tcp connect error: Connection refused (os error 61)
+EXIT=1
+# (non-zero EXIT above => nothing answering on 8599 after stop)

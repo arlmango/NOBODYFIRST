@@ -1,0 +1,7 @@
+## shasum -a 256 -c contracts/evidence/env/frontend-baseline.sha256 (from /Users/mango/NOBODYFIRST)
+package.json: OK
+package-lock.json: OK
+index.html: OK
+vite.config.ts: OK
+tsconfig.json: OK
+EXIT=0

@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+
+Ran 12 tests for test/Level1FaultInjection.t.sol:Level1FaultInjectionTest
+[PASS] test_Fault_Control_ProductionWiringSolves() (gas: 818585)
+[PASS] test_Fault_CoordinatorAndNpcConstructorGuards() (gas: 5349)
+[PASS] test_Fault_KeepPermitB_PermitsRemaining() (gas: 2917784)
+[PASS] test_Fault_MalformedOfferB_InvalidTransfer() (gas: 1461291)
+[PASS] test_Fault_NoopReleaseB_SettlementMismatch() (gas: 2826228)
+[PASS] test_Fault_NpcReentrancyViaLedger_Reentrancy() (gas: 1603047)
+[PASS] test_Fault_PermitConsumedBeforeLedgerCall() (gas: 1663534)
+[PASS] test_Fault_PermitOrderProbe_DetectsActivePermit() (gas: 1271852)
+[PASS] test_Fault_PrepareMutatingB_PrepareChangedState() (gas: 1733252)
+[PASS] test_Fault_ReenterExecute_CoordinatorReentrancy() (gas: 2922254)
+[PASS] test_Fault_ReenterStartRun_CoordinatorReentrancy() (gas: 2844789)
+[PASS] test_Fault_RejectingObserverC_PlanRejectedFromC() (gas: 1521592)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 4.58ms (24.05ms CPU time)
+
+Ran 1 test suite in 5.06ms (4.58ms CPU time): 12 tests passed, 0 failed, 0 skipped (12 total tests)
+EXIT=0

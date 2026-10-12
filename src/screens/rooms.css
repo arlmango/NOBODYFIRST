@@ -1,0 +1,508 @@
+/* Rooms screen. Mobile first: stacked rooms with a thin rule between them.
+   760-1023: each room is a row, art left, text right.
+   1024+: three open columns with thin vertical dividers. */
+
+.rooms {
+  padding-block: var(--space-5) var(--space-8);
+}
+
+/* ---------- Heading ---------- */
+.rooms__head {
+  text-align: center;
+}
+
+.rooms__sub {
+  margin-top: var(--space-2);
+  font-size: var(--text-body);
+}
+
+/* Public build only: short description under the subtitle, and the Local chain notice links. */
+.rooms__desc {
+  max-width: 36rem;
+  margin: var(--space-3) auto 0;
+  font-size: var(--text-small);
+  color: var(--ink-2);
+}
+
+.rooms__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.rooms__actions .btn {
+  text-decoration: none;
+}
+
+/* ---------- Room list ---------- */
+.rooms__grid {
+  margin-top: var(--space-6);
+}
+
+/* Mobile: each room is a block. Head and art share the first row when they fit. */
+.room {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  justify-items: start;
+  column-gap: var(--space-4);
+  row-gap: var(--space-4);
+  padding-block: var(--space-5);
+  border-top: var(--rule);
+  text-align: left;
+}
+
+.room__head {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.room__eyebrow {
+  font-family: var(--font-sans);
+  font-variant-numeric: lining-nums;
+  color: var(--ink-2);
+}
+
+.room__title {
+  margin-top: var(--space-1);
+  font-size: var(--text-h2);
+}
+
+.room__art {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.room__copy {
+  grid-column: 1 / -1;
+}
+
+.room__lead {
+  font-size: var(--text-body);
+}
+
+.room__detail {
+  margin-top: var(--space-1);
+  font-size: var(--text-small);
+  color: var(--ink-2);
+}
+
+.room__action {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.room__action .btn {
+  width: 100%;
+}
+
+.room__locked {
+  grid-column: 1 / -1;
+  /* Sans: Georgia's old-style figures make "01" read as "o1". */
+  font-family: var(--font-sans);
+  font-variant-numeric: lining-nums;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-small);
+  color: var(--ink-2);
+}
+
+.room__locked .icon {
+  font-size: 1.1em;
+}
+
+/* ---------- Art: room 01 (two people, key and coin) ---------- */
+.room__art--pair {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--space-4) var(--space-6);
+  justify-self: center;
+  width: 100%;
+}
+
+.pair__person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.room .portrait {
+  --scale: 0.19; /* A about 93 x 120 px */
+}
+
+.room .item-icon {
+  --item-scale: 0.19; /* key about 55 px wide, coin 44 px */
+}
+
+/* ---------- Art: room 02 (three people in a circle) ---------- */
+/* Positions and lines come from one geometry in Rooms.tsx: the frame keeps the viewBox aspect
+   ratio (set inline from the same numbers), people are placed in percentages of it, the SVG
+   lines sit behind them. */
+.room__art--circle {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: center;
+  width: min(100%, 320px);
+}
+
+.circle__lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--ink-2);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.circle__lines path,
+.door__arrows path {
+  vector-effect: non-scaling-stroke;
+}
+
+.circle__person {
+  position: absolute;
+}
+
+.room__art--circle .portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Art: room 03 (one key, two doors) ---------- */
+/* Same approach: one 220 x 180 coordinate system for the key, arrows and circles. */
+.room__art--door {
+  position: relative;
+  /* 140px at 320, about 156px at 390: wide enough for readable arrowheads beside the title. */
+  width: clamp(140px, 40vw, 160px);
+  container-type: inline-size;
+}
+
+.door__key {
+  position: absolute;
+}
+
+.room__art--door .item-icon {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.door__arrows {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--ink-2);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.door__arrows-wide {
+  display: none;
+}
+
+.door__circle {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper);
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 11cqi, 2rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ---------- Tablet: 760-1023. Vertical rows with art on the left. ---------- */
+@media (min-width: 760px) {
+  /* Rows stay compact: art and text read as one unit instead of drifting apart. */
+  /* Art column wide enough that Room 02's portraits are at least their 390px size. */
+  .rooms__grid,
+  .steps {
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .room {
+    grid-template-columns: 320px minmax(0, 1fr);
+    column-gap: var(--space-6);
+    row-gap: var(--space-3);
+    align-items: center;
+    padding-block: var(--space-6);
+  }
+
+  .room__head {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .room__copy {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .room__action,
+  .room__locked {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .room__action {
+    width: auto;
+    justify-self: start;
+  }
+
+  .room__action .btn {
+    width: auto;
+    min-width: 220px;
+  }
+
+  .room__art,
+  .room__art--pair,
+  .room__art--circle,
+  .room__art--door {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    justify-self: center;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .room__art--pair {
+    max-width: none;
+    flex-wrap: nowrap;
+    gap: var(--space-3);
+  }
+
+  .room__art--pair .pair__person {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .room__art--pair .portrait {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .room__art--circle {
+    width: 100%;
+  }
+
+  .room__art--door {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .door__arrows-compact {
+    display: none;
+  }
+
+  .door__arrows-wide {
+    display: inline;
+  }
+
+  .room__title {
+    font-size: var(--text-h2);
+  }
+
+  .rooms__sub {
+    font-size: var(--text-lead);
+  }
+
+  .how__title {
+    font-size: var(--text-h2);
+  }
+}
+
+/* ---------- Desktop: 1024+. Three open columns. ---------- */
+@media (min-width: 1024px) {
+  .rooms__grid,
+  .steps {
+    max-width: none;
+  }
+
+  .rooms__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: var(--rule);
+  }
+
+  .room {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    justify-items: center;
+    row-gap: var(--space-4);
+    padding: var(--space-6) var(--space-5);
+    border-top: 0;
+    text-align: center;
+  }
+
+  .room + .room {
+    border-left: var(--rule);
+  }
+
+  .room__head,
+  .room__art,
+  .room__art--pair,
+  .room__art--circle,
+  .room__art--door,
+  .room__copy,
+  .room__action,
+  .room__locked {
+    grid-column: 1;
+    grid-row: auto;
+    max-width: none;
+  }
+
+  .room__art,
+  .room__art--pair,
+  .room__art--circle,
+  .room__art--door {
+    justify-self: center;
+  }
+
+  .room__art--pair {
+    flex-wrap: nowrap;
+    width: auto;
+    gap: var(--space-4);
+  }
+
+  .room__art--pair .pair__person {
+    flex: none;
+  }
+
+  .room__art--circle {
+    width: min(100%, 360px);
+  }
+
+  .room__art--door {
+    width: min(100%, 260px);
+  }
+
+  /* Larger art on wide desktop; 1024-1279 keeps the smaller scale so the pair fits its column. */
+  .room__art--pair .item-icon {
+    --item-scale: 0.21;
+  }
+
+  .room__copy {
+    text-align: center;
+  }
+
+  .room__action {
+    width: auto;
+    justify-self: center;
+  }
+
+  .room__action .btn {
+    width: auto;
+    min-width: 220px;
+  }
+
+  .room__locked {
+    justify-self: center;
+  }
+
+  .how {
+    margin-top: var(--space-7);
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .step + .step {
+    border-left: var(--rule);
+    padding-left: var(--space-5);
+  }
+}
+
+@media (min-width: 1280px) {
+  .room__art--pair .portrait {
+    --scale: 0.24; /* A about 118 x 151 px */
+  }
+
+  .room__art--pair .item-icon {
+    --item-scale: 0.24;
+  }
+}
+
+/* ---------- How to play ---------- */
+.how {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: var(--rule-strong);
+  text-align: center;
+}
+
+.how__title {
+  font-size: var(--text-h2);
+}
+
+.steps {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+  text-align: left;
+}
+
+.step {
+  display: grid;
+  /* Fixed number column so every step's text starts at the same x. */
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  column-gap: var(--space-4);
+  align-items: start;
+}
+
+/* Sans with tabular lining figures: Georgia's old-style "01" reads as "o1". */
+.step__num {
+  font-family: var(--font-sans);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: var(--text-h3);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.step__title {
+  font-size: var(--text-lead);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.step__detail {
+  margin-top: var(--space-1);
+  font-size: var(--text-small);
+  color: var(--ink-2);
+}
+
+.how__note {
+  margin-top: var(--space-5);
+  font-size: var(--text-small);
+  color: var(--ink-2);
+}
+
+.how__close {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: var(--rule);
+  font-size: var(--text-body);
+}

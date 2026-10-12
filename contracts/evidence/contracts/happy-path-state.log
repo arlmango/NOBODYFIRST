@@ -1,0 +1,8 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/Level1Exchange.t.sol:Level1ExchangeTest
+[PASS] test_HappyPath_ExactBalancesRunStateEventsNoPermits() (gas: 883254)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 3.73ms (2.19ms CPU time)
+
+Ran 1 test suite in 4.17ms (3.73ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+EXIT=0
