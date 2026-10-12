@@ -40,9 +40,9 @@ Evidence: `docs/submission/INVENTORY.md` ("Logo and graphic").
 
 [USER TO FILL: repository URL.]
 
-Note for the team: the URL configured in the local git remote, https://github.com/arlmango/NOBODYFIRST, returned HTTP 404 without login when checked on 2026-10-12. The GitHub user arlmango exists (HTTP 200 when checked 2026-10-13), so the repository is either private or not yet created. If it is private, the FAQ allows it if access is granted to hackathon@colosseum.com. The local repository has no commits yet.
+Note for the team: the repository https://github.com/arlmango/NOBODYFIRST exists and is private (an unauthenticated request returns 404, as GitHub does for private repositories). Its first published commit is `0daf26d` on `main`. The FAQ allows a private repository if access is granted to hackathon@colosseum.com; that access has not been confirmed. No license file exists yet.
 
-Evidence: `OFFICIAL-REQUIREMENTS.md` (field 6, FAQ on private repositories); `git remote -v` and the HTTP check described in `docs/submission/INVENTORY.md` ("Repository state").
+Evidence: `OFFICIAL-REQUIREMENTS.md` (field 6, FAQ on private repositories); `git remote -v`, `git log` and `docs/submission/INVENTORY.md` ("Repository state").
 
 ## 7. Pitch video (2 to 3 minutes)
 
@@ -92,4 +92,4 @@ Evidence: `docs/submission/INVENTORY.md` ("License").
 
 NOBODY FIRST was designed and built during this hackathon window, starting from an empty folder. Earlier code is not reused. Development was done with heavy use of AI coding assistants (including Claude Code), which wrote and reviewed much of the code and tests under the team's direction. The visual mock-ups were generated with an image tool. A separate earlier project (Signor Scam) is not part of this submission. [USER TO CONFIRM: any earlier code, assets, or designs that were reused; the exact tools; and the start date of the work.]
 
-Evidence: `docs/submission/OFFICIAL-REQUIREMENTS.md` (pre-existing work allowed if disclosed; AI tooling policy not found); `/Users/mango/Downloads/nobody-first-design/DESIGN-HANDOFF.md` (mock-ups made with the built-in image generator); `git log` in `/Users/mango/NOBODYFIRST` (no commits yet); the scope of the Signor Scam project is from the user's instruction, not from a file.
+Evidence: `docs/submission/OFFICIAL-REQUIREMENTS.md` (pre-existing work allowed if disclosed; AI tooling policy not found); `/Users/mango/Downloads/nobody-first-design/DESIGN-HANDOFF.md` (mock-ups made with the built-in image generator); `git log` in `/Users/mango/NOBODYFIRST` (first commit `0daf26d`); the scope of the Signor Scam project is from the user's instruction, not from a file.

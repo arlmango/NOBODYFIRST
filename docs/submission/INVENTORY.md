@@ -44,7 +44,7 @@ Checked 2026-10-12 by haiku-sub (model claude-haiku-5-5). Status values: **ready
 | E2E run log | `evidence/stage3/logs/r4-e2e-run.log` | Round-4 full run. Ends with `== S12b FAIL` and `EXIT=1`: 13 of 14 scenarios passed; S12b failed two display checks. | ready: keep as the record of that run |
 | Unit test logs | `evidence/stage3/logs/r4-04-vitest.log` | "Test Files 8 passed (8)", "Tests 126 passed (126)". | ready |
 | Typecheck and build logs | `evidence/stage3/logs/r4-03-tsc.log`, `r4-05-build.log` | Round-4 typecheck and build output. | ready |
-| Stage-3 logs | `evidence/stage3/logs/` | Anvil, deploy, scenario logs. Not ignored: `.gitignore` line 30 (`!evidence/**/*.log`) un-ignores them. Also includes the re-run `r4-s12-run.log` (EXIT=0). | ready in the working tree; in a clone only after the owner commits them |
+| Stage-3 logs | `evidence/stage3/logs/` | Anvil, deploy, scenario logs. Not ignored: `.gitignore` line 30 (`!evidence/**/*.log`) un-ignores them. Also includes the re-run `r4-s12-run.log` (EXIT=0). | ready (tracked in commit `0daf26d`) |
 | Deployment manifests | `evidence/stage3/deployment-manifest.json` | Local-chain addresses from the test run. Local only; no public deployment exists. | ready |
 
 ## Screenshots and design
@@ -83,11 +83,11 @@ Search scope: the project directory (excluding `node_modules`) and `/Users/mango
 
 | Item | Value | Status |
 |---|---|---|
-| Git | `main`, **zero commits**, all project files untracked (`git status` at session start) | needs user: nothing is committed |
+| Git | `main`, first published commit `0daf26d` (394 files); working tree clean at that commit | ready |
 | Remote | `origin` = `https://github.com/arlmango/NOBODYFIRST.git` | configured |
-| Reachability | unauthenticated GET of that URL returns **HTTP 404** (checked 2026-10-12). The GitHub user arlmango exists (HTTP 200, checked 2026-10-13), so the repository is private or not yet created. | needs user |
-| Ignored files that matter for a clone | `.gitignore` ignores `*.log` except `contracts/evidence/**`, `docs/evidence/*.log` and `evidence/**/*.log` (line 30). `scripts/chain/.run/anvil.log` stays ignored: it contains Anvil's banner with public dev keys; it is not evidence and must not be shown, `contracts/.tools/`, `contracts/lib/`, `contracts/out/`, `contracts/cache/`, `contracts/deployments/`, `dist-public/`, `.vercel/`. A clone would lack the toolchain and forge-std until they are installed as in `05`. Evidence logs appear in a clone only after the owner commits them. | needs user: decide what to commit before any judge uses the repo |
-| Access for judges | FAQ: private repositories are allowed if access is granted to hackathon@colosseum.com. | needs user |
+| Reachability | The repository exists and is **private**: an unauthenticated GET returns 404, which GitHub also returns for private repositories. It was pushed from this machine, so it exists. | ready (private) |
+| Ignored files that matter for a clone | `.gitignore` ignores `*.log` except `contracts/evidence/**`, `docs/evidence/*.log` and `evidence/**/*.log` (line 30). `scripts/chain/.run/anvil.log` stays ignored: it contains Anvil's banner with public dev keys; it is not evidence and must not be shown, `contracts/.tools/`, `contracts/lib/`, `contracts/out/`, `contracts/cache/`, `contracts/deployments/`, `dist-public/`, `.vercel/`. A clone lacks the toolchain and forge-std until they are installed as in `05`. The evidence logs are tracked in commit `0daf26d`. | ready with caveats |
+| Access for judges | FAQ: private repositories are allowed if access is granted to hackathon@colosseum.com. **Not confirmed**: whether that access has been granted is not recorded here. | needs user |
 
 ## Team and admin items (not in the repo)
 

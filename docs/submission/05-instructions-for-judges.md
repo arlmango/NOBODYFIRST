@@ -90,7 +90,7 @@ Evidence: `scripts/public/verify-site.mjs`; `evidence/stage4/screenshots-product
 
 ## 3. Where the evidence lives
 
-Evidence files are in the working tree and are not ignored by `.gitignore` (line 30 `!evidence/**/*.log`). A clone contains them only after the owner commits them. Do not look for them in `scripts/chain/.run/`: that folder holds Anvil's runtime files, which stay ignored and are not evidence.
+Evidence files are tracked in the repository (not ignored by `.gitignore`, line 30 `!evidence/**/*.log`; first published commit `0daf26d`), so a clone contains them. Do not look for them in `scripts/chain/.run/`: that folder holds Anvil's runtime files, which stay ignored and are not evidence.
 
 - **Contracts:** `contracts/src/` (code), `contracts/test/` (tests), `contracts/SPEC.md` (interface spec).
 - **Contract evidence:** `contracts/evidence/contracts/`. Start with `GUARANTEES.md` (trust boundary and limits), then `tests.log`, `sizes.log`, `latefail-README.md`.

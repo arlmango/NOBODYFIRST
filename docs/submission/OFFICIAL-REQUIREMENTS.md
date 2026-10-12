@@ -19,7 +19,7 @@ These are the only sources this submission package relies on for contest require
 - Contest: "Crypto World's Fair Hackathon", administered by Colosseum Org LLC (rules §2).
 - Rules §5: the Contest Period "starts at 6:00am PT on September 14, 2026 and ends at 11:59pm PT on October 12, 2026".
 - Rules §6(a): each Member must register on colosseum.com "before 11:59pm PT on October 12, 2026"; §6(b): the team leader uploads the Project Submission before the end of the Entry Period.
-- **Deadline in other zones:** 11:59 pm PDT on 12 Oct 2026 = 06:59 UTC on 13 Oct 2026 = 11:59 on 13 Oct 2026 at UTC+05:00. At the time of verification (18:26 UTC) about 12 h 33 min remained.
+- **Deadline in other zones:** 11:59 pm PDT on 12 Oct 2026 = 06:59 UTC on 13 Oct 2026 = 11:59 on 13 Oct 2026 at UTC+05:00.
 - Winners announced by December 5, 2026 (rules §5, §13).
 - The hackathon page itself states no time of day; the rules PDF is the authority.
 

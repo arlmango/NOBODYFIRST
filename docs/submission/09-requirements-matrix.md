@@ -1,6 +1,6 @@
 # 09. Requirements → evidence matrix
 
-Checked 2026-10-12, 18:39 UTC (`date -u`); repository rows (D) and the time left re-checked at 19:00 UTC after the review. Contest facts come only from `docs/submission/OFFICIAL-REQUIREMENTS.md`
+Checked 2026-10-12, 18:39 UTC (`date -u`); repository rows (D) updated after the first push (commit `0daf26d`). Contest facts come only from `docs/submission/OFFICIAL-REQUIREMENTS.md`
 (official pages and rules PDF, verified by the orchestrator the same day). Project facts cite files in this repository.
 
 ## Deadline
@@ -10,7 +10,6 @@ Checked 2026-10-12, 18:39 UTC (`date -u`); repository rows (D) and the time left
 | Rules §5 / §6 | 11:59 pm PT, Monday 12 October 2026 (PDT, UTC−7) |
 | UTC | 06:59, Tuesday 13 October 2026 |
 | UTC+05:00 | 11:59, Tuesday 13 October 2026 |
-| Remaining at 19:00 UTC | **about 12 h 00 min** |
 
 Registration of every member (§6(a)) and the leader's upload (§6(b)) must both happen before this time.
 
@@ -38,7 +37,7 @@ official text), **USER ACTION** (only the user can do or confirm it).
 | B4 | Team location | FAQ field 4 | None | USER ACTION | User states it. Not inferred here. |
 | B5 | Logo or graphic | FAQ field 5 | No dedicated logo. Candidate graphics: `characters-and-items.png` (source sheet, 2.4 MB), `src/assets/portraits/*.png`, `evidence/stage4/screenshots-production-final/1440-rooms.png` | USER ACTION | Choose one (a crop of the rooms page or a portrait). The art was generated with an image model (`src/assets/PROVENANCE.md`); the user confirms the right to use it (§3(c)). |
 | B5a | Permission of every person who appears in submitted Content (videos) | Rules §12(b)(iv) | Videos not recorded. Characters A, B, C are fictional; their art was generated with an image model in the designer's chat (`src/assets/PROVENANCE.md`; source sheet `characters-and-items.png`) | USER ACTION | Presenter and any other person in either video gives permission. User confirms provenance of and right to use the image-model art (§3(c)). |
-| B6 | GitHub repository link; private allowed if access is given to hackathon@colosseum.com | FAQ field 6 | `git rev-list --all --count` = **0** (no commits). `origin` = https://github.com/arlmango/NOBODYFIRST.git; unauthenticated `curl` of the page and of the GitHub API both return **404** (private, or not created) | **NOT MET** (repo state on GitHub: UNKNOWN) | See section D. Create or confirm the repository, commit, push, then either make it public or grant access to hackathon@colosseum.com, and test the link while logged out (public) or ask the grantee to confirm (private). |
+| B6 | GitHub repository link; private allowed if access is given to hackathon@colosseum.com | FAQ field 6 | Repository `origin` = https://github.com/arlmango/NOBODYFIRST.git exists and is **private**; first published commit `0daf26d` on `main`. Access for hackathon@colosseum.com is **not confirmed** | **PARTIAL** (exists, private, access unconfirmed) | See section D. Grant access to hackathon@colosseum.com (or make it public) and ask the grantee to confirm. |
 | B7 | Pitch video, 2–3 minutes | FAQ field 7 | Script only: `docs/submission/08-pitch-video-script.md` | **NOT MET** | Record (script: 2:45 picture, ≤ 2:50), upload, test the link. |
 | B8 | Product demo video, no more than 3 minutes | FAQ field 8 | Script only: `docs/submission/07-demo-video-script.md` | **NOT MET** | Record (script: 2:48 picture, ≤ 3:00), upload, test the link. |
 | B9 | Go-to-market strategy, demand validation and plans for developing distribution | FAQ field 9 (wording per `OFFICIAL-REQUIREMENTS.md`) | Honest draft in `docs/submission/06-form-answers.md` §9: states that demand is not validated (no users, interviews, partners, waiting list, traffic or sales) and leaves the first audience and the measurable test to the team. The brief also says demand is unproven (handoff section 3). | PARTIAL (text drafted; no validation exists; nothing on distribution yet) | User confirms or edits the draft and adds a short distribution plan (where the first players would come from). Do not invent numbers or claim validation. |
@@ -62,9 +61,9 @@ official text), **USER ACTION** (only the user can do or confirm it).
 
 | # | Check | Evidence | Status | What to do |
 |---|---|---|---|---|
-| D1 | Any commit exists | `git rev-list --all --count` → 0 | NOT MET | First commit after D2–D11. Until that commit is pushed, nothing (including the now un-ignored evidence logs) reaches a clone. |
-| D2 | Remote exists and judges can reach it | 404 unauthenticated (page and API) | UNKNOWN | User logs in to GitHub, creates `arlmango/NOBODYFIRST` if missing. |
-| D3 | Secret scan of the **394** files that `git add .` would include (`git ls-files -o --exclude-standard \| wc -l` at 19:00 UTC, about 26 MB; includes the 113 now un-ignored `.log` files) | Grep for the full Anvil dev keys 0–2, `BEGIN … KEY`, the Anvil banner heading `Private Keys`, the dev mnemonic, `ghp_`, `sk-`, `AKIA`, `VERCEL_TOKEN=`: the only hit is `scripts/public/verify-staging.mjs:28`, a list of forbidden strings that contains the words `Private Keys` (a scan needle, not a key). Earlier scan (305 files): only the 16-hex needle `ac0974bec39a17e3` (prefix of the public Anvil test key) in three `e2e-results.json` files, `scripts/chain/e2e/scenarios-static.mjs`, `scripts/public/verify-staging.mjs`, `evidence/stage3/README-REDACTION.md`. No `.env` file in the list | MET (pattern scan only, not a guarantee) | Re-run the scan on `git diff --cached --name-only` right before the first commit. |
+| D1 | Any commit exists | commit `0daf26d` on `main`, pushed to `origin/main` | MET | Keep. Later documentation commits do not change this. |
+| D2 | Remote exists and judges can reach it | remote exists and is private; 404 unauthenticated is expected for a private repository | PARTIAL | Judge access (hackathon@colosseum.com) is not confirmed. |
+| D3 | Secret scan of the **394** files that became commit `0daf26d` (about 26 MB; includes the 113 un-ignored `.log` files) | Grep for the full Anvil dev keys 0–2, `BEGIN … KEY`, the Anvil banner heading `Private Keys`, the dev mnemonic, `ghp_`, `sk-`, `AKIA`, `VERCEL_TOKEN=`: the only hit is `scripts/public/verify-staging.mjs:28`, a list of forbidden strings that contains the words `Private Keys` (a scan needle, not a key). Earlier scan (305 files): only the 16-hex needle `ac0974bec39a17e3` (prefix of the public Anvil test key) in three `e2e-results.json` files, `scripts/chain/e2e/scenarios-static.mjs`, `scripts/public/verify-staging.mjs`, `evidence/stage3/README-REDACTION.md`. No `.env` file in the list | MET (pattern scan only, not a guarantee) | The files were committed as `0daf26d`; re-run the scan on any later commit. |
 | D4 | `scripts/chain/.run/anvil.log` (contains dev keys) excluded | `.gitignore:21` `scripts/chain/.run/` (confirmed with `git check-ignore`) | MET | Keep. |
 | D5 | `contracts/.tools/` (286 MB of binaries) excluded | `.gitignore` `contracts/.tools/` | MET | Keep. Judges must install Foundry 1.8.5 and solc 0.8.37 themselves; `contracts/foundry.toml` points `solc` at `./.tools/solc/solc-0.8.37` with `offline = true`, so a fresh clone **will not build** the contracts without those tools. Documented in `docs/submission/05-instructions-for-judges.md`. |
 | D6 | `contracts/lib/forge-std` v1.17.0 (own `.git`, license `(Apache-2.0 OR MIT)` per its `package.json`) | Ignored by `.gitignore` `contracts/lib/`; not a submodule | PARTIAL | A fresh clone has no forge-std, so `forge test` fails there. Either add it as a git submodule pinned to v1.17.0, or follow `docs/submission/05-instructions-for-judges.md` step 3: `git clone --depth 1 --branch v1.17.0 https://github.com/foundry-rs/forge-std contracts/lib/forge-std` (expected commit `f3dae6e6ee381f25eb6a246f7da9b85c91a68219`). Do not commit its nested `.git` as a plain folder. |
@@ -93,7 +92,7 @@ how a track is selected in the form (`OFFICIAL-REQUIREMENTS.md`). **No track is 
 (0.8.37) that compiles and passes 77 tests locally, and it ran on a local Anvil chain. That shows it *could* be deployed
 to an EVM chain; it does not show integration with any named chain. Whether a local-only EVM prototype satisfies any
 ecosystem track is not stated by the organizers → **UNKNOWN**, and on the stated criterion ("integrate with") the
-evidence is **NOT MET** for every named chain. Deploying to a public network inside 12 hours would also need new
+evidence is **NOT MET** for every named chain. Deploying to a public network would also need new
 secrets (a funded deployer key), a decision about which network, and re-verification of the public site; none of
 that is authorised here.
 
@@ -105,7 +104,7 @@ that is authorised here.
 | Potential impact | A playable explanation of conditional, all-or-nothing exchange | No users, no validation, no audience research. Impact is a hypothesis. |
 | Novelty | Conditional promises as separate NPC contracts plus a coordinator that settles one package atomically, explained as a puzzle | Close references exist (Ethernaut format, Tact; brief section 3). Uniqueness is not proven; do not claim "first". |
 | UX ("How well does this Project Submission utilize blockchain to create great UX for downstream users?") | Local chain mode explains rejections in plain words with the contract error, reads results back from the chain, restores after reload, handles wrong network, declined requests, RPC failure, stale preview, replaced transactions (`SCREENSHOT-INDEX.md`) | **The public demo uses no blockchain at all.** Judges using the URL see a simulation. The chain UX exists only on a developer machine and in screenshots. |
-| Open-source | Code is ready to publish after D1–D11; MIT SPDX headers in all `.sol` files | Repository not public, no commits, no LICENSE file (D1, D2, D8). |
+| Open-source | Code is ready to publish after D1–D11; MIT SPDX headers in all `.sol` files | Repository is private, judge access not confirmed, no LICENSE file (D2, D8). |
 | Business plan | An honest draft states that nothing is validated (`06-form-answers.md` §9) | No business model, distribution plan or demand data (B9). |
 
 ## G. Rules §1 "leverage public blockchains"
@@ -115,7 +114,7 @@ and the contracts have never been on a public blockchain (`OFFICIAL-REQUIREMENTS
 submission's main weakness. It must be stated plainly in the description, the videos and the form (the scripts in 07
 and 08 do so), not hidden. The rules do not say that a project without a public deployment is ineligible.
 
-## H. Prioritized user actions (about 12 h left at 19:00 UTC)
+## H. Prioritized user actions
 
 Times are estimates for one person, including checks. Stop adding features; do the submission.
 
@@ -123,12 +122,12 @@ Times are estimates for one person, including checks. Stop adding features; do t
 |---|---|---|---|
 | 1 | Register every member on colosseum.com; confirm eligibility (§3) and that Signor Scam is not a second submission (§7) | 15 min | A1, A3, A5 |
 | 2 | Open the portal now, create the project draft, check which fields are mandatory and how a track is chosen | 15 min | A2, E |
-| 3 | Repository: choose a LICENSE (MIT matches the SPDX headers); decide on forge-std (submodule or install note); re-run the secret scan on the staged list; first commit; create/push `arlmango/NOBODYFIRST`; make it public or grant access to hackathon@colosseum.com; open the link logged out | 60–90 min | B6, D1–D11, open-source |
+| 3 | Repository: choose a LICENSE (MIT matches the SPDX headers); decide on forge-std (submodule or install note); re-run the secret scan on the staged list; the repository already exists (private, commit `0daf26d`); make it public or grant access to hackathon@colosseum.com; open the link logged out | 60–90 min | B6, D1–D11, open-source |
 | 4 | Record the demo video from `07-demo-video-script.md` (Plan A stills for local chain), edit, caption, upload, test link | 2–3 h | B8 |
 | 5 | Record the pitch video from `08-pitch-video-script.md` after filling the [USER TO FILL] parts, upload, test link | 1.5–2 h | B7 |
 | 6 | Confirm or edit the go-to-market draft in `06-form-answers.md` §9 and add a short distribution plan; say plainly that no validation exists | 30 min | B9 |
 | 7 | Fill the remaining fields: name and description (01), blockchains and tools ("local EVM only"), team, location, logo, pre-existing work, third-party code list (D11) and AI-use disclosure; get permission from anyone appearing in the videos (B5a) | 30–45 min | B1–B5a, A6, D11 |
-| 8 | Decide the track: main awards only, or an ecosystem track knowing the evidence does not show integration (E). Do not start a public deployment without a separate, explicit decision; it would not fit safely in the remaining time with verification | 10 min to decide | E |
+| 8 | Decide the track: main awards only, or an ecosystem track knowing the evidence does not show integration (E). Do not start a public deployment without a separate, explicit decision; it would need its own secrets, network choice and re-verification of the public site | 10 min to decide | E |
 | 9 | Final read-through of every pasted text against `04-implemented-and-limits.md`; submit; screenshot the confirmation | 30 min | A2 |
 | — | Buffer for upload failures and portal issues | ≥ 2 h | — |
 

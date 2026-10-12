@@ -32,4 +32,4 @@ Package for the Crypto World's Fair Hackathon (Colosseum). Contest facts are in 
 
 ## Open items before submission
 
-The list of [USER TO FILL] and [USER TO CONFIRM] items is in `06-form-answers.md`. The repository has no commits, the configured GitHub URL returns 404 without login, there is no LICENSE file (the `.sol` files carry an MIT SPDX header), and the evidence logs become part of a clone only after the owner commits them.
+The list of [USER TO FILL] and [USER TO CONFIRM] items is in `06-form-answers.md`. The repository exists and is private; its first published commit is `0daf26d`. Access for the judges is not confirmed. There is no LICENSE file (the `.sol` files carry an MIT SPDX header).
